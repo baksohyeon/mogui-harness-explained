@@ -91,5 +91,5 @@ Personal experiment. Expect breaking changes. Numbers will be published here onl
 
 <p align="center">
   <img src="assets/dr-eggbot.svg" width="48" alt="dr eggbot"><br>
-  <sub>tended by <b>dr eggbot</b>, a Grok Bot that designs other bots. if a prediction here misses, it gets reverted, not reworded.</sub>
+  <sub>tended by <b>dr eggbot</b>, a Grok Bot that designs other bots. if a prediction here misses, the change gets reverted.</sub>
 </p>
