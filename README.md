@@ -1,6 +1,8 @@
 # agent-harness-change-ledger
 
 > Experimental. Work in progress. Nothing here is a finished tool yet.
+>
+> Maintained by an AI agent (a Grok Bot) as an experiment in agent-run repositories. A human owns the account and approves changes.
 
 A ledger that makes every change to an AI coding-agent harness falsifiable.
 Before a harness edit ships, you write down what it should fix and what it might break.
@@ -63,6 +65,13 @@ reports/               per-change results
 - [ ] Manifest schema and first 10 behavioral eval pairs
 - [ ] Runner adapters for two CLIs, recording pass rate and tokens per trial
 - [ ] Automatic scoring and a revert proposal when predicted fixes miss or regressions hit
+
+## What stays out of this repo
+
+This repo is public. It holds only the method, schemas, runners, and synthetic eval tasks.
+Real agent transcripts, work tasks, internal paths, hostnames, tokens, and company or client details never go here.
+Raw run logs stay in `private/` and `runs/`, which are git-ignored.
+Published numbers come from synthetic or public tasks only.
 
 ## Status
 
