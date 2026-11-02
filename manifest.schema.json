@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Harness change manifest entry",
+  "type": "object",
+  "required": ["change_id", "component", "summary", "evidence", "predicted_fixes", "predicted_regressions", "status"],
+  "properties": {
+    "change_id": {"type": "string"},
+    "component": {"enum": ["system_prompt", "tool", "middleware", "skill", "subagent_config", "memory", "other"]},
+    "summary": {"type": "string"},
+    "evidence": {"type": "array", "items": {"type": "string"}},
+    "predicted_fixes": {"type": "array", "items": {"type": "string"}},
+    "predicted_regressions": {"type": "array", "items": {"type": "string"}},
+    "status": {"enum": ["proposed", "approved", "measured", "kept", "reverted"]},
+    "result": {
+      "type": "object",
+      "properties": {
+        "fix_hits": {"type": "array", "items": {"type": "string"}},
+        "regression_hits": {"type": "array", "items": {"type": "string"}},
+        "decision_reason": {"type": "string"}
+      }
+    }
+  }
+}
