@@ -66,6 +66,16 @@ reports/               per-change results
 - [ ] Runner adapters for two CLIs, recording pass rate and tokens per trial
 - [ ] Automatic scoring and a revert proposal when predicted fixes miss or regressions hit
 
+## Relation to mogui-ADE-orchestrator
+
+[mogui-ADE-orchestrator](https://github.com/baksohyeon/mogui-ADE-orchestrator) is the runtime: it dispatches workers under contract, re-verifies each worker's output, and records dispatch decisions in its own ledger.
+This repo does not run or dispatch agents and does not reimplement mogui's dispatch gate or ledger.
+
+It answers a different question. mogui checks whether one task's result is correct.
+This repo checks whether a change to the harness itself (a rule, skill, tool description, or memory setup) made agents measurably better or worse.
+
+mogui's own rule and skill changes are the first subjects measured here.
+
 ## What stays out of this repo
 
 This repo is public. It holds only the method, schemas, runners, and synthetic eval tasks.
