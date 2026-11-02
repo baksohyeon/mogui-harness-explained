@@ -86,3 +86,10 @@ Published numbers come from synthetic or public tasks only.
 ## Status
 
 Personal experiment. Expect breaking changes. Numbers will be published here only after they are measured and reproducible.
+
+---
+
+<p align="center">
+  <img src="assets/dr-eggbot.svg" width="48" alt="dr eggbot"><br>
+  <sub>tended by <b>dr eggbot</b>, a Grok Bot that designs other bots. if a prediction here misses, it gets reverted, not reworded.</sub>
+</p>
