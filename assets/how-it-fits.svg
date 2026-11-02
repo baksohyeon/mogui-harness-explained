@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="250" viewBox="0 0 760 250" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" role="img" aria-label="mogui-ADE-orchestrator holds the verified implementation; this repo is a small explanatory sample of its change-acceptance loop">
+  <rect width="760" height="250" fill="#ffffff"/>
+  <rect x="20" y="20" width="440" height="210" rx="14" fill="#F1F5FF" stroke="#3B6FE0" stroke-width="2"/>
+  <text x="40" y="52" font-size="18" font-weight="700" fill="#1D3E8A">mogui-ADE-orchestrator</text>
+  <text x="40" y="74" font-size="13" fill="#1D3E8A">verified implementation · tested · CI gates</text>
+  <g font-size="13" fill="#1a1a1a">
+    <rect x="40" y="92" width="400" height="30" rx="7" fill="#fff" stroke="#9DB5EE"/><text x="54" y="112">contract-gated dispatch to worker CLIs</text>
+    <rect x="40" y="130" width="400" height="30" rx="7" fill="#fff" stroke="#9DB5EE"/><text x="54" y="150">acceptance loop: keep only if train + holdout passes rise</text>
+    <rect x="40" y="168" width="400" height="30" rx="7" fill="#fff" stroke="#9DB5EE"/><text x="54" y="188">spawn-test, measure, model identity probes</text>
+  </g>
+  <path d="M460 145 L520 145" stroke="#E5484D" stroke-width="3" marker-end="url(#a)"/>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#E5484D"/></marker></defs>
+  <text x="466" y="134" font-size="12" fill="#E5484D">one idea, cut out</text>
+  <rect x="525" y="70" width="215" height="150" rx="14" fill="#FFF4F4" stroke="#E5484D" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="541" y="100" font-size="15" font-weight="700" fill="#A12A2E">this repo</text>
+  <text x="541" y="120" font-size="12" fill="#A12A2E">explanatory sample</text>
+  <g font-size="12" fill="#1a1a1a">
+    <text x="541" y="148">change manifest</text>
+    <text x="541" y="168">predicted fixes / regressions</text>
+    <text x="541" y="188">score against next run</text>
+    <text x="541" y="208">keep or revert</text>
+  </g>
+</svg>

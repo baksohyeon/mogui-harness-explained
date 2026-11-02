@@ -1,91 +1,79 @@
+<p align="center"><img src="assets/how-it-fits.svg" width="760" alt="mogui-ADE-orchestrator holds the verified implementation; this repo is a small explanatory sample of its change-acceptance loop"></p>
+
 # agent-harness-change-ledger
 
-> Experimental. Work in progress. Nothing here is a finished tool yet.
->
-> Maintained by an AI agent (a Grok Bot) as an experiment in agent-run repositories. A human owns the account and approves changes.
+**An explanatory sample cut out of [mogui-ADE-orchestrator](https://github.com/baksohyeon/mogui-ADE-orchestrator).**
+The method shown here is already implemented and tested there. This repo isolates one idea so it can be read in ten minutes:
 
-A ledger that makes every change to an AI coding-agent harness falsifiable.
-Before a harness edit ships, you write down what it should fix and what it might break.
-After the next run, the ledger scores those predictions against real results and says keep or revert.
+> every change to an agent harness is a prediction, and the next run decides whether it stays.
 
-## Why
+Maintained by an AI agent (a Grok Bot) as an experiment in agent-run repositories. A human owns the account and approves changes.
 
-Agent quality depends heavily on the harness around the model: system prompt, tool descriptions, middleware, skills, subagent config, and memory.
-Most harness changes are made by feel and never measured.
+## Where the verified version lives
 
-Recent work points the same direction:
+| What | In mogui-ADE-orchestrator |
+| --- | --- |
+| Acceptance loop: a candidate is kept only when its combined pass count over visible and held-out cases strictly increases | [`src/master_runtime/core/acceptance/`](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/main/src/master_runtime/core/acceptance) |
+| Tests for that loop (casebook, config, loop, process, proposer, verdict) | [`tests/test_acceptance_*.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/main/tests) |
+| End-to-end spawn test of the installer per runtime | [`master-ops/scripts/spawn-test`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/master-ops/scripts/spawn-test), [runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/master-ops/docs/runbooks/spawn-test-harness.md) |
+| Exit status printed before output, so a failed command never reads as an empty finding | [`master-ops/scripts/measure`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/master-ops/scripts/measure) |
+| CI gates on every change | [`.github/workflows/gates.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/.github/workflows/gates.yml) |
 
-- [Agentic Harness Engineering (arXiv 2604.25850)](https://arxiv.org/abs/2604.25850) treats each harness edit as a prediction checked by the next round. Gains came from tools, middleware, and memory. Prompt-only edits regressed. Predicting regressions was much harder than predicting fixes.
-- [The state of AI harness engineering 2026 (marmelab)](https://marmelab.com/blog/2026/09/24/the-state-of-ai-harness-engineering-2026.html) found most agent-config repos ship without tests or evals, and the same model scored very differently across harnesses.
-- [Google: the anatomy of harness engineering](https://developers.googleblog.com/en/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/) recommends behavioral evals (does the agent ask when the task is ambiguous, does it run the validator before claiming done) over one end-to-end score.
+At the time of writing the repo has 54 Python test files under `tests/` and 25 shell test scripts under `master-ops/scripts/`.
+If you want the real thing, go there. If you want the idea, stay here.
 
-This repo is a small, concrete attempt at that loop for a personal multi-agent setup.
+## The idea in one loop
 
-## How it works
+```mermaid
+flowchart LR
+    P["propose a harness change<br/>+ predicted fixes<br/>+ predicted regressions"] --> A["human approves"]
+    A --> R["run behavioral evals<br/>before and after"]
+    R --> S["score each prediction<br/>hit or miss"]
+    S -->|"fixes hit, no regression"| K["keep"]
+    S -->|"fix missed or regression hit"| V["revert with evidence"]
+```
 
-1. **Propose.** A harness change gets a manifest entry: what changed, the evidence that motivated it, and its predictions.
-2. **Approve.** A human approves the change. Nothing is applied without approval.
-3. **Run.** Behavioral evals run against the agent CLIs before and after the change.
-4. **Score.** Each prediction is marked hit or miss. Prediction precision is tracked over time, with fixes and regressions counted separately.
-5. **Decide.** Keep the change, or revert it with the evidence attached.
+Why bother: harness edits pile up because each one looks reasonable on its own. Writing the prediction down first turns "this feels better" into something the next run can falsify.
+
+Background reading:
+
+- [Agentic Harness Engineering (arXiv 2604.25850)](https://arxiv.org/abs/2604.25850): harness edits as predictions checked by the next round. Gains came from tools, middleware, and memory; prompt-only edits regressed.
+- [The state of AI harness engineering 2026 (marmelab)](https://marmelab.com/blog/2026/09/24/the-state-of-ai-harness-engineering-2026.html): most agent-config repos ship without tests or evals.
+- [Google: the anatomy of harness engineering](https://developers.googleblog.com/en/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/): behavioral evals over one end-to-end score.
 
 ## Manifest entry
 
-See [`manifest.schema.json`](manifest.schema.json). Example:
+Format: [`manifest.schema.json`](manifest.schema.json).
 
 ```json
 {
   "change_id": "2026-11-02-verify-before-done",
   "component": "skill",
   "summary": "Require running the project verifier before the agent reports completion.",
-  "evidence": ["transcripts where the agent claimed done with failing tests"],
+  "evidence": ["sessions where the agent claimed done with failing tests"],
   "predicted_fixes": ["eval:claims-done-only-after-verifier"],
   "predicted_regressions": ["eval:trivial-task-token-cost"],
   "status": "proposed"
 }
 ```
 
-## Behavioral evals
+## Behavioral eval pairs
 
-Each eval is a pair under `evals/behavioral/`: one case where a rule should fire and one where it should not.
+Each eval under `evals/behavioral/` is a pair: one case where a rule should fire and one where it should not.
 Testing only the firing side hides rules that trigger everywhere.
 
-## Planned layout
+## What this sample adds on top
 
-```
-manifest.schema.json   manifest entry format
-evals/behavioral/      should-fire / should-not-fire eval pairs
-runner/                adapters per agent CLI (Claude Code, Codex, Cursor, Gemini, Grok)
-attribution/           compare predictions with results, compute precision
-reports/               per-change results
-```
+Two small things mogui does not do yet, kept here as open experiments:
 
-## Roadmap
-
-- [ ] Manifest schema and first 10 behavioral eval pairs
-- [ ] Runner adapters for two CLIs, recording pass rate and tokens per trial
-- [ ] Automatic scoring and a revert proposal when predicted fixes miss or regressions hit
-
-## Relation to mogui-ADE-orchestrator
-
-[mogui-ADE-orchestrator](https://github.com/baksohyeon/mogui-ADE-orchestrator) is the runtime: it dispatches workers under contract, re-verifies each worker's output, and records dispatch decisions in its own ledger.
-This repo does not run or dispatch agents and does not reimplement mogui's dispatch gate or ledger.
-
-It answers a different question. mogui checks whether one task's result is correct.
-This repo checks whether a change to the harness itself (a rule, skill, tool description, or memory setup) made agents measurably better or worse.
-
-mogui's own rule and skill changes are the first subjects measured here.
+- running the same eval pair across several agent CLIs (Claude Code, Codex, Cursor, Gemini, Grok) and comparing behavior
+- tracking how often predictions hit over time, fixes and regressions counted separately
 
 ## What stays out of this repo
 
-This repo is public. It holds only the method, schemas, runners, and synthetic eval tasks.
+This repo is public. It holds only the method, schemas, and synthetic eval tasks.
 Real agent transcripts, work tasks, internal paths, hostnames, tokens, and company or client details never go here.
 Raw run logs stay in `private/` and `runs/`, which are git-ignored.
-Published numbers come from synthetic or public tasks only.
-
-## Status
-
-Personal experiment. Expect breaking changes. Numbers will be published here only after they are measured and reproducible.
 
 ---
 
