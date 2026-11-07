@@ -13,7 +13,7 @@ Expected placement `X`, terminal reports `Y`:
 ```
 spawn placement mismatch; closed terminal <handle>: expected X, got Y
 ```
-`SuccessionError` carries an exit code (default 2) that `master-succeed` returns.
+`SuccessionError` carries exit code 26 for a placement mismatch, which `master-succeed` returns.
 
 Relevant tests: `test_spawn_successor_expected_placement_mismatch_closes_terminal`, `test_cli_spawn_dry_run_outputs_expected_placement`.
 
