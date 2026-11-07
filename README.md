@@ -24,6 +24,8 @@ This repo splits the mogui-ADE-orchestrator harness into 15 small units, each ex
 
 **Verified implementation:** [mogui-ADE-orchestrator](https://github.com/baksohyeon/mogui-ADE-orchestrator), with 54 Python test files in [`tests/`](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.288/tests), 26 shell tests under [`master-ops/scripts/test-*`](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.288/master-ops/scripts), measured at v0.5.288, 2026-11-07 ([release](https://github.com/baksohyeon/mogui-ADE-orchestrator/releases/tag/v0.5.288)), and CI in [`gates.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/.github/workflows/gates.yml).
 
+**Concepts:** six short notes on the ideas behind the units (role lock, fail closed, measured versus inferred, worker territory, template and seat, succession), each answering the same five questions with evidence links at `v0.5.288`, plus the twelve chat response rules a master follows when it writes to its owner. Start at [`concepts/`](concepts/).
+
 **What is not here:** no transcripts, work data, internal paths, or organization redaction rules. Examples are synthetic.
 
 <p align="center"><img src="assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>
