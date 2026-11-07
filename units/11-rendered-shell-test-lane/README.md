@@ -8,7 +8,7 @@
 
 ## Example (synthetic)
 
-```sh
+```
 bash /tmp/ops/scripts/test-seat-check.sh
 SKIP: ./scripts/harness-selfcheck.sh not found (instance-owned, not part of a template-only checkout)
 ```

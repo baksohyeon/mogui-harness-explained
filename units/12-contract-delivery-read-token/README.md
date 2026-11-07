@@ -8,9 +8,9 @@
 
 ## Example (synthetic)
 
-```sh
+```
 SHA=abcdef0123456789beef; printf 'ack-%s\n' "${SHA:8:12}"
-ack-ef0123456789
+ack-23456789beef
 ```
 
 ## Verified in mogui

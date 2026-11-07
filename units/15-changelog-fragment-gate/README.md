@@ -8,9 +8,10 @@
 
 ## Example (synthetic)
 
-```sh
+```
 scripts/changelog-fragment-check abc123
 changelog-fragment-check: master-ops/ changed outside changelog.d/ with no added fragment; add master-ops/changelog.d/<YYYY-MM-DD>-<slug>.md
+exit=1
 ```
 
 ## Verified in mogui

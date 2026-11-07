@@ -2,14 +2,14 @@
 
 **Mechanism.** `template-apply` builds a manifest-based dry-run plan, refuses instance-owned and unclaimed paths, and asks for the phrase `apply` before writing. It replaces each file atomically after preflighting the planned sources and destinations.
 
-**Failure it prevents.** An upgrade can leave `workspace-card/LOCAL.md` untouched and reject a path the manifest does not claim. Missing template files and unresolved placeholders stop the write before confirmation.
+**Failure it prevents.** An upgrade can overwrite `workspace-card/LOCAL.md` or `docs/runbooks/role-state.md`, or write a path the manifest never claimed. Missing template files and unresolved placeholders stop the write before confirmation.
 
 <p align="center"><img src="../../assets/units/13-template-manifest-instance-owned-paths.svg" alt="the template manifest controls dry-run, refusal, confirmation, and atomic writes" width="100%"></p>
 
 ## Example (synthetic)
 
-```sh
-python3 /tmp/ops/scripts/template-apply --ops /tmp/instance --template /tmp/template --attempt workspace-card/LOCAL.md --json
+```
+python3 /tmp/ops/scripts/template-apply --ops /tmp/instance --template /tmp/template --attempt workspace-card/LOCAL.md --json  # --attempt is test-only
 "action": "skipped-as-instance-owned"
 ```
 

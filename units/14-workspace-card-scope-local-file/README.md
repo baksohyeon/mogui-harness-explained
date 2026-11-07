@@ -8,7 +8,7 @@
 
 ## Example (synthetic)
 
-```sh
+```
 test -e /tmp/ops/workspace-card/LOCAL.md || echo 'When it is absent, nothing changes.'
 When it is absent, nothing changes.
 ```

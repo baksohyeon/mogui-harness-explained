@@ -8,7 +8,8 @@
 
 ## Example (synthetic)
 
-```sh
+```
+# master-ops/scripts copied to /tmp/scripts
 python3 -c 'import sys; sys.path.insert(0, sys.argv[1]); from lib import orca_json; print(orca_json.task_id({"taskId":"task_new1"}))' /tmp/scripts
 task_new1
 ```
