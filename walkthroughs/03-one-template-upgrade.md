@@ -75,6 +75,6 @@ After the merge, the two session-card files are copied from the operations repos
 
 ## What this page does not claim
 
-The counts are one seat's. How far other seats drift is unknown; the template has no telemetry and asks for none. Whether the one template-side test failure reproduces on another host was not measured here, and the two failures that predate the change on `main` have their own card.
+The counts are one seat's. How far other seats drift is unknown; the template has no telemetry and asks for none. Whether the one template-side test failure reproduces on another host was not measured here; the two failures that predate the change on `main` are outside this page.
 
 <p align="center"><img src="../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>
