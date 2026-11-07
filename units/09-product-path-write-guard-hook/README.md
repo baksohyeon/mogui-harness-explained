@@ -20,7 +20,7 @@ Bash parsing is best effort. `MOGUI_PRODUCT_GUARD_FAIL_CLOSED=1` admits only com
 
 ## Verified in mogui
 
-- Implementation: [`master-ops/scripts/hooks/product-path-guard.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/master-ops/scripts/hooks/product-path-guard.sh), [`master-ops/docs/runbooks/product-path-guard.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/master-ops/docs/runbooks/product-path-guard.md)
-- Tests: [`master-ops/scripts/test-product-path-guard.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/master-ops/scripts/test-product-path-guard.sh)
+- Implementation: [`master-ops/scripts/hooks/product-path-guard.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/hooks/product-path-guard.sh), [`master-ops/docs/runbooks/product-path-guard.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/product-path-guard.md)
+- Tests: [`master-ops/scripts/test-product-path-guard.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/test-product-path-guard.sh)
 
 <p align="center"><img src="../../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>
