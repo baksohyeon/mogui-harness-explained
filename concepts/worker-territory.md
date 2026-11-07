@@ -14,7 +14,7 @@ The corner is a Git worktree. The list of boards is the contract: branch, allowe
 
 **What is confirmed.** The contract delivery block and its token are in the dispatch script with that history in its comment. The runtime choice defaults to a host other than the master's, and the ledger records each same-host choice with its reason. The reaper refuses to remove a worktree that is dirty, unmerged, or holds ignored media.
 
-**What is inferred.** Separate hosts cost a little setup per worker. The measured gain is a master that keeps dispatching while a worker burns through a long test run.
+**What is inferred.** Separate hosts cost a little setup per worker. The expected gain is a master that keeps dispatching while a worker burns through a long test run; that gain was not measured.
 
 **What is unknown.** Whether the delivered contract should also live on the worker's own branch. It does not today, and the comment in the script says why.
 

@@ -7,7 +7,7 @@ Six short notes on the ideas behind the units, each written for a reader who has
 | [Role lock](role-lock.md) | The master proposes and verifies; workers write code; a hook enforces it. |
 | [Fail closed](fail-closed.md) | A gate that cannot decide stops the work; exit 2 is never a pass. |
 | [Measured, confirmed, inferred](measured-not-assumed.md) | Every claim says how it was obtained. |
-| [Worker territory](worker-territory.md) | One checkout, one contract, a different host, and a read token. |
+| [Worker territory](worker-territory.md) | One checkout, one contract, by default a different host, and a read token. |
 | [Template and seat](template-and-seat.md) | One upstream, many installs, upgrades against a manifest. |
 | [Succession](succession.md) | Generations of masters, placement proof, three measured disappearances. |
-| [Chat response rules](chat-response-rules.md) | Twelve sentence rules for replies to the owner, from ASD-STE100. |
+| [Chat response rules](chat-response-rules.md) | Twelve sentence rules for replies to the owner, most derived from ASD-STE100. |

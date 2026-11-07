@@ -10,11 +10,11 @@ The workbook is `master-ops/` in the public repository. The blanks are eight tok
 
 ## The five questions
 
-**What happened.** A shell test passed in the public repository and failed on an installed seat. The test read a placeholder token as a literal path, which only broke once the token was filled in. CI now renders the template into a scratch install and runs the same test loop against the rendered copy, next to the unrendered run.
+**What happened.** A shell test passed in the public repository and failed on an installed seat. The test read a placeholder token as a literal path, which only broke once the token was filled in (the v0.5.288 entry "CI runs the shell tests from a rendered copy" in [`CHANGELOG.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/CHANGELOG.md), issue 186). CI now renders the template into a scratch install and runs the same test loop against the rendered copy, next to the unrendered run.
 
 **What is confirmed.** The eight placeholders are listed in the rendered CI job. The instance-owned list is in the apply script's docstring. The manifest carries the template version and the file list, and the apply script's per-file outcomes are named.
 
-**What is inferred.** Seats drift. A seat that adapts a template file keeps its adaptation across upgrades, and the cost is a three-way merge at the next re-stamp. One seat measured its drift before an upgrade and found about a third of the manifest's files changed on the seat side; that number is one seat, one day.
+**What is inferred.** Seats drift. A seat that adapts a template file keeps its adaptation across upgrades, and the cost is a three-way merge at the next re-stamp. How much a seat drifts is not published anywhere; the apply script's dry run is the only instrument.
 
 **What is unknown.** How many seats exist and how far each has drifted. The template has no telemetry and asks for none.
 

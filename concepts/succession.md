@@ -10,7 +10,7 @@ Here the lighthouse is a workspace. The spawn command carries an expected placem
 
 ## The five questions
 
-**What happened.** The harness's rule is continue-and-compact: a long session is summarized and goes on. Succession happens only when the owner says so. One seat reached its twentieth generation this way, each boot checking the same list: role state, the model actually answering, the three placement facts, the predecessor's three disappearances, and a lineage entry with the measured values.
+**What happened.** The harness's rule is continue-and-compact: a long session is summarized and goes on. Succession happens only when the owner says so. One seat reports reaching its twentieth generation this way (a seat report, not a public record), each boot checking the same list: role state, the model actually answering, the three placement facts, the predecessor's three disappearances, and a lineage entry with the measured values.
 
 **What is confirmed.** The charter defines the clean-spawn procedure and forbids automatic succession. The spawn exit code for a placement mismatch is a named constant. The three-way retirement and the partial status are in the succession module with tests.
 

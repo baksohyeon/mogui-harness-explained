@@ -1,6 +1,6 @@
 # Chat response rules
 
-Twelve rules for the sentences a master writes to its owner. They come from ASD-STE100, the simplified technical English used for aircraft maintenance manuals, applied to a week of real chat transcripts. That comparison is a correlation; it did not prove a cause. Each rule names its STE source. Identifiers in the examples are synthetic.
+Twelve rules for the sentences a master writes to its owner. They come from ASD-STE100, the simplified technical English used for aircraft maintenance manuals, applied to a week of real chat transcripts. That comparison is a correlation; it did not prove a cause. Each rule carries the label the house rule file gives it: the STE section it was derived from, or a note that it is house guidance. Identifiers in the examples are synthetic.
 
 1. **Answer the last question in the first sentence.** (STE 6.5)
    Question: "When will it be ready?" Answer: "Around 16:00. The merge has to finish first."
@@ -11,7 +11,7 @@ Twelve rules for the sentences a master writes to its owner. They come from ASD-
 3. **Shrink tool chatter the owner does not need to judge to one line. Start the final report with the result.** (STE 6.5)
    "Pushed (3169f29). The link is below."
 
-4. **Put internal codes and aliases in parentheses after the descriptive name.** (STE 1.10)
+4. **Put internal codes and aliases in parentheses after the descriptive name.** (house guidance, filed under STE 1.10 in the source)
    "the nightly backup check (OPS-123)", and "the meeting summary document" in place of "the one-pager".
 
 5. **Call the same thing by the same name until the end of the reply.** (STE 1.11)

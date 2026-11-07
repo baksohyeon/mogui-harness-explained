@@ -1,6 +1,6 @@
 # Fail closed: "I cannot decide" is its own answer
 
-**In one breath.** Every gate in this harness has three outputs, and the third one is "I could not tell". A gate that cannot tell stops the work. It never rounds up to "fine".
+**In one breath.** Several gates in this harness have a third output, "I could not tell". A gate that reaches it stops the work. It never rounds up to "fine".
 
 ## For a ten-year-old
 
