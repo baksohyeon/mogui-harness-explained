@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="718" viewBox="0 0 640 718" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="arrow03" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#718096"/></marker></defs>
+<rect width="640" height="718" fill="#ffffff"/>
+<rect x="24" y="20" width="14" height="14" fill="#c05621"/>
+<text x="48" y="35" font-size="18" fill="#1a202c">template release</text>
+<rect x="24" y="44" width="14" height="14" fill="#2b6cb0"/>
+<text x="48" y="59" font-size="18" fill="#1a202c">seat</text>
+<rect x="24" y="68" width="14" height="14" fill="#2f855a"/>
+<text x="48" y="83" font-size="18" fill="#1a202c">template-apply</text>
+<rect x="24" y="92" width="14" height="14" fill="#6b46c1"/>
+<text x="48" y="107" font-size="18" fill="#1a202c">tests and PR</text>
+
+<line x1="54" y1="173" x2="54" y2="187" stroke="#718096" stroke-width="2" marker-end="url(#arrow03)"/>
+<line x1="54" y1="219" x2="54" y2="233" stroke="#718096" stroke-width="2" marker-end="url(#arrow03)"/>
+<line x1="54" y1="265" x2="54" y2="279" stroke="#718096" stroke-width="2" marker-end="url(#arrow03)"/>
+<line x1="54" y1="311" x2="54" y2="325" stroke="#718096" stroke-width="2" marker-end="url(#arrow03)"/>
+<line x1="54" y1="357" x2="54" y2="371" stroke="#718096" stroke-width="2" marker-end="url(#arrow03)"/>
+<line x1="54" y1="403" x2="54" y2="417" stroke="#718096" stroke-width="2" marker-end="url(#arrow03)"/>
+<line x1="54" y1="449" x2="54" y2="463" stroke="#718096" stroke-width="2" marker-end="url(#arrow03)"/>
+<line x1="54" y1="495" x2="54" y2="509" stroke="#718096" stroke-width="2" marker-end="url(#arrow03)"/>
+<line x1="54" y1="541" x2="54" y2="555" stroke="#718096" stroke-width="2" marker-end="url(#arrow03)"/>
+<line x1="54" y1="587" x2="54" y2="601" stroke="#718096" stroke-width="2" marker-end="url(#arrow03)"/>
+<line x1="54" y1="633" x2="54" y2="647" stroke="#718096" stroke-width="2" marker-end="url(#arrow03)"/>
+
+<rect x="24" y="139" width="6" height="34" fill="#c05621"/>
+<circle cx="54" cy="156" r="16" fill="#c05621"/>
+<text x="54" y="162" text-anchor="middle" font-size="18" fill="#ffffff">1</text>
+<text x="88" y="163" font-size="20" fill="#1a202c">release tag published</text>
+<rect x="24" y="185" width="6" height="34" fill="#2b6cb0"/>
+<circle cx="54" cy="202" r="16" fill="#2b6cb0"/>
+<text x="54" y="208" text-anchor="middle" font-size="18" fill="#ffffff">2</text>
+<text x="88" y="209" font-size="20" fill="#1a202c">template-check line</text>
+<rect x="24" y="231" width="6" height="34" fill="#2b6cb0"/>
+<circle cx="54" cy="248" r="16" fill="#2b6cb0"/>
+<text x="54" y="254" text-anchor="middle" font-size="18" fill="#ffffff">3</text>
+<text x="88" y="255" font-size="20" fill="#1a202c">render, 8 placeholders</text>
+<rect x="24" y="277" width="6" height="34" fill="#2b6cb0"/>
+<circle cx="54" cy="294" r="16" fill="#2b6cb0"/>
+<text x="54" y="300" text-anchor="middle" font-size="18" fill="#ffffff">4</text>
+<text x="88" y="301" font-size="20" fill="#1a202c">classify each path</text>
+<rect x="24" y="323" width="6" height="34" fill="#2f855a"/>
+<circle cx="54" cy="340" r="16" fill="#2f855a"/>
+<text x="54" y="346" text-anchor="middle" font-size="18" fill="#ffffff">5</text>
+<text x="88" y="347" font-size="20" fill="#1a202c">dry run, reasons listed</text>
+<rect x="24" y="369" width="6" height="34" fill="#2f855a"/>
+<circle cx="54" cy="386" r="16" fill="#2f855a"/>
+<text x="54" y="392" text-anchor="middle" font-size="18" fill="#ffffff">6</text>
+<text x="88" y="393" font-size="20" fill="#1a202c">instance-owned skipped</text>
+<rect x="24" y="415" width="6" height="34" fill="#2f855a"/>
+<circle cx="54" cy="432" r="16" fill="#2f855a"/>
+<text x="54" y="438" text-anchor="middle" font-size="18" fill="#ffffff">7</text>
+<text x="88" y="439" font-size="20" fill="#1a202c">confirmation phrase, write</text>
+<rect x="24" y="461" width="6" height="34" fill="#2b6cb0"/>
+<circle cx="54" cy="478" r="16" fill="#2b6cb0"/>
+<text x="54" y="484" text-anchor="middle" font-size="18" fill="#ffffff">8</text>
+<text x="88" y="485" font-size="20" fill="#1a202c">three-way merge by hand</text>
+<rect x="24" y="507" width="6" height="34" fill="#6b46c1"/>
+<circle cx="54" cy="524" r="16" fill="#6b46c1"/>
+<text x="54" y="530" text-anchor="middle" font-size="18" fill="#ffffff">9</text>
+<text x="88" y="531" font-size="20" fill="#1a202c">rendered shell-test lane</text>
+<rect x="24" y="553" width="6" height="34" fill="#6b46c1"/>
+<circle cx="54" cy="570" r="16" fill="#6b46c1"/>
+<text x="54" y="576" text-anchor="middle" font-size="18" fill="#ffffff">10</text>
+<text x="88" y="577" font-size="20" fill="#1a202c">self-check: stamped</text>
+<rect x="24" y="599" width="6" height="34" fill="#6b46c1"/>
+<circle cx="54" cy="616" r="16" fill="#6b46c1"/>
+<text x="54" y="622" text-anchor="middle" font-size="18" fill="#ffffff">11</text>
+<text x="88" y="623" font-size="20" fill="#1a202c">PR, scan, merge</text>
+<rect x="24" y="645" width="6" height="34" fill="#2b6cb0"/>
+<circle cx="54" cy="662" r="16" fill="#2b6cb0"/>
+<text x="54" y="668" text-anchor="middle" font-size="18" fill="#ffffff">12</text>
+<text x="88" y="669" font-size="20" fill="#1a202c">card redeployed</text>
+</svg>
