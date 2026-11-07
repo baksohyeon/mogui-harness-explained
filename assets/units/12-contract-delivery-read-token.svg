@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="380" viewBox="0 0 960 380" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="arrow12" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#718096"/></marker></defs>
+<rect width="960" height="380" fill="#ffffff"/>
+<rect x="20" y="145" width="170" height="76" rx="8" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="105" y="177" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="105" dy="0">contract</tspan><tspan x="105" dy="20">source file</tspan></text>
+<rect x="250" y="130" width="190" height="106" rx="10" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="345" y="163" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="345" dy="0">copy + cmp</tspan><tspan x="345" dy="20">byte-for-byte</tspan><tspan x="345" dy="20">delivery file</tspan></text>
+<rect x="500" y="55" width="190" height="92" rx="10" fill="#ffffff" stroke="#c05621" stroke-width="1.5"/>
+<text x="595" y="88" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="595" dy="0">read token</tspan><tspan x="595" dy="20">ack-${SHA:8:12}</tspan></text>
+<rect x="500" y="190" width="190" height="92" rx="10" fill="#ffffff" stroke="#6b46c1" stroke-width="1.5"/>
+<text x="595" y="223" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="595" dy="0">standing rules</tspan><tspan x="595" dy="20">named blocks</tspan></text>
+<rect x="750" y="130" width="190" height="106" rx="10" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="845" y="163" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="845" dy="0">dispatched spec</tspan><tspan x="845" dy="20">contract path</tspan><tspan x="845" dy="20">rule text</tspan></text>
+<path d="M190 183 L250 183" stroke="#718096" stroke-width="2" marker-end="url(#arrow12)"/>
+<path d="M440 155 C465 130 475 105 500 105" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow12)"/>
+<path d="M440 211 C465 225 475 236 500 236" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow12)"/>
+<path d="M690 105 C720 120 725 155 750 165" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow12)"/>
+<path d="M690 236 C720 225 725 205 750 200" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow12)"/>
+</svg>

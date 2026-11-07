@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="330" viewBox="0 0 960 330" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="arrow10" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#718096"/></marker></defs>
+<rect width="960" height="330" fill="#ffffff"/>
+<rect x="20" y="45" width="210" height="96" rx="8" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="125" y="76" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="125" dy="0">old shape</tspan><tspan x="125" dy="20">result.task.id</tspan><tspan x="125" dy="20">workers[].dispatchStatus</tspan></text>
+<rect x="20" y="188" width="210" height="96" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="125" y="219" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="125" dy="0">new shape</tspan><tspan x="125" dy="20">result.taskId</tspan><tspan x="125" dy="20">workers[].outcome</tspan></text>
+<rect x="340" y="105" width="230" height="120" rx="12" fill="#ffffff" stroke="#6b46c1" stroke-width="1.5"/>
+<text x="455" y="146" text-anchor="middle" font-size="15" fill="#1a202c"><tspan x="455" dy="0">orca_json</tspan><tspan x="455" dy="22">old path first</tspan><tspan x="455" dy="22">new path second</tspan></text>
+<rect x="700" y="55" width="220" height="70" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.5"/>
+<text x="810" y="84" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="810" dy="0">task_id</tspan><tspan x="810" dy="20">task_new1</tspan></text>
+<rect x="700" y="165" width="220" height="70" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="810" y="194" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="810" dy="0">workers()</tspan><tspan x="810" dy="20">status: in_progress</tspan></text>
+<path d="M230 93 C275 93 295 135 340 145" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow10)"/>
+<path d="M230 236 C275 236 295 195 340 185" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow10)"/>
+<path d="M570 145 C625 120 655 95 700 90" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow10)"/>
+<path d="M570 185 C625 200 655 200 700 200" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow10)"/>
+</svg>

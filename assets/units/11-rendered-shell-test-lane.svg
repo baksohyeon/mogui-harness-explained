@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="arrow11" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#718096"/></marker></defs>
+<rect width="960" height="360" fill="#ffffff"/>
+<rect x="20" y="130" width="190" height="72" rx="8" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="115" y="160" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="115" dy="0">master-ops</tspan><tspan x="115" dy="20">template</tspan></text>
+<rect x="285" y="115" width="205" height="102" rx="10" fill="#ffffff" stroke="#6b46c1" stroke-width="1.5"/>
+<text x="387.5" y="148" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="387.5" dy="0">template-apply</tspan><tspan x="387.5" dy="20">--write</tspan><tspan x="387.5" dy="20">scratch install</tspan></text>
+<rect x="565" y="70" width="205" height="102" rx="10" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="667.5" y="103" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="667.5" dy="0">scripts/test-*.sh</tspan><tspan x="667.5" dy="20">loop</tspan><tspan x="667.5" dy="20">exit code + SKIP</tspan></text>
+<rect x="565" y="225" width="205" height="72" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.5"/>
+<text x="667.5" y="255" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="667.5" dy="0">instance-owned</tspan><tspan x="667.5" dy="20">file absent: SKIP</tspan></text>
+<rect x="840" y="115" width="100" height="102" rx="10" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="890" y="158" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="890" dy="0">passed</tspan><tspan x="890" dy="20">failed</tspan><tspan x="890" dy="20">skip-lines</tspan></text>
+<path d="M210 166 L285 166" stroke="#718096" stroke-width="2" marker-end="url(#arrow11)"/>
+<path d="M490 166 C525 145 535 125 565 125" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow11)"/>
+<path d="M490 185 C525 220 535 255 565 255" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow11)"/>
+<path d="M770 125 L840 150" stroke="#718096" stroke-width="2" marker-end="url(#arrow11)"/>
+</svg>

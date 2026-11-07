@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="390" viewBox="0 0 960 390" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="arrow13" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#718096"/></marker></defs>
+<rect width="960" height="390" fill="#ffffff"/>
+<rect x="20" y="145" width="170" height="80" rx="8" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="105" y="178" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="105" dy="0">MANIFEST.json</tspan><tspan x="105" dy="20">claimed files</tspan></text>
+<rect x="250" y="130" width="190" height="110" rx="10" fill="#ffffff" stroke="#6b46c1" stroke-width="1.5"/>
+<text x="345" y="163" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="345" dy="0">dry-run plan</tspan><tspan x="345" dy="20">planned</tspan><tspan x="345" dy="20">refused / skipped</tspan></text>
+<rect x="500" y="55" width="190" height="90" rx="10" fill="#ffffff" stroke="#c05621" stroke-width="1.5"/>
+<text x="595" y="88" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="595" dy="0">instance-owned</tspan><tspan x="595" dy="20">or unclaimed</tspan></text>
+<rect x="500" y="185" width="190" height="90" rx="10" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="595" y="218" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="595" dy="0">type apply</tspan><tspan x="595" dy="20">preflight first</tspan></text>
+<rect x="750" y="185" width="190" height="90" rx="10" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="845" y="218" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="845" dy="0">file-by-file</tspan><tspan x="845" dy="20">atomic replace</tspan></text>
+<path d="M190 185 L250 185" stroke="#718096" stroke-width="2" marker-end="url(#arrow13)"/>
+<path d="M440 158 C465 130 475 100 500 100" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow13)"/>
+<path d="M440 213 L500 230" stroke="#718096" stroke-width="2" marker-end="url(#arrow13)"/>
+<path d="M690 230 L750 230" stroke="#718096" stroke-width="2" marker-end="url(#arrow13)"/>
+</svg>

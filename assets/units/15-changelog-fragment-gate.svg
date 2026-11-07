@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="370" viewBox="0 0 960 370" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="arrow15" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#718096"/></marker></defs>
+<rect width="960" height="370" fill="#ffffff"/>
+<rect x="20" y="135" width="190" height="78" rx="8" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="115" y="168" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="115" dy="0">master-ops diff</tspan><tspan x="115" dy="20">base SHA</tspan></text>
+<rect x="275" y="118" width="200" height="112" rx="10" fill="#ffffff" stroke="#6b46c1" stroke-width="1.5"/>
+<text x="375" y="151" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="375" dy="0">fragment gate</tspan><tspan x="375" dy="20">name + body</tspan><tspan x="375" dy="20">release shape</tspan></text>
+<rect x="550" y="45" width="170" height="72" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="635" y="75" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="635" dy="0">exit 0</tspan><tspan x="635" dy="20">allowed</tspan></text>
+<rect x="550" y="149" width="170" height="72" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.5"/>
+<text x="635" y="179" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="635" dy="0">exit 1</tspan><tspan x="635" dy="20">fragment needed</tspan></text>
+<rect x="550" y="253" width="170" height="72" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.5"/>
+<text x="635" y="283" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="635" dy="0">exit 2</tspan><tspan x="635" dy="20">usage or git error</tspan></text>
+<rect x="790" y="110" width="150" height="112" rx="10" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="865" y="143" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="865" dy="0">release</tspan><tspan x="865" dy="20">fold</tspan><tspan x="865" dy="20">CHANGELOG.md</tspan></text>
+<path d="M210 174 L275 174" stroke="#718096" stroke-width="2" marker-end="url(#arrow15)"/>
+<path d="M475 150 C505 120 520 80 550 80" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow15)"/>
+<path d="M475 174 L550 184" stroke="#718096" stroke-width="2" marker-end="url(#arrow15)"/>
+<path d="M475 205 C505 240 520 289 550 289" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow15)"/>
+<path d="M720 80 C755 95 760 140 790 155" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow15)"/>
+</svg>
