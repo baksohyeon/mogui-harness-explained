@@ -4,6 +4,14 @@
 
 This repo splits the mogui-ADE-orchestrator harness into 15 small units, each explaining one mechanism in about 5 minutes and linking to its tested implementation.
 
+**Start here.** Three reading paths, each about half an hour.
+
+- New to the harness: [role lock](concepts/role-lock.md), [worker territory](concepts/worker-territory.md), [fail closed](concepts/fail-closed.md), then units 02, 09, and 12.
+- Running an install: units 13, 14, 11, and 15, then [template and seat](concepts/template-and-seat.md).
+- Debugging a stuck worker: units 06, 07, 03, and 10, then [measured, confirmed, inferred](concepts/measured-not-assumed.md).
+
+A word you do not know is in the [glossary](concepts/glossary.md).
+
 | Unit | Mechanism |
 |---|---|
 | [01 harness change acceptance loop](units/01-harness-change-acceptance-loop/) | Keep a change only when combined visible+holdout passes strictly rise. |
