@@ -30,7 +30,7 @@ Pane titles and status lines are hints and do not count. The boot card also has 
 
 ## Step 4. Role state declared (successor)
 
-The [role state](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/role-state.md) file carries four lines: the current role, `Role Lock: ENABLED`, `Frozen: all other roles`, and `Unlock: explicit user instruction only`, with a generation counter. The successor increments the generation and keeps the role it inherited; the file's update rule names two occasions for a change, a role switch after an approved proposal and a succession boot, and only the second applies here. Seven roles are allowed, from Architecture to Maintenance, and the file changes only after a proposal the owner has approved. The concept note [role lock](../concepts/role-lock.md) explains what the lock is for.
+The [role state](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/role-state.md) file carries four lines: the current role, `Role Lock: ENABLED`, `Frozen: all other roles`, and `Unlock: explicit user instruction only`, with a generation counter. The successor increments the generation and keeps the role it inherited; the file's update rule names two occasions for a change, a role switch after an approved proposal and a succession boot, and only the second applies here. Seven roles are allowed, from Architecture to Maintenance, and a role switch happens only after a proposal the owner has approved. The concept note [role lock](../concepts/role-lock.md) explains what the lock is for.
 
 ## Step 5. Model measured (self-check)
 
@@ -51,7 +51,7 @@ Exit 0 means every layer was reachable, 1 means a gap, 2 means the check could n
 
 ## Step 7. Retire: three disappearances (successor)
 
-The predecessor is not retired when a close command returns. It is retired when three things are measured gone: the process (its pid), the host pane (no live handle in the terminal list), and the tty (device and login chain). The successor runs `master-succeed retire --execute` with the measured pid and tty and expects the status `CLOSED`; `CLOSED_PARTIAL` means one of the three was not measured and the generation is not clean yet. The boot card records one measured run: 17 minutes from spawn to `CLOSED` on 2026-10-01, when the test and drift sweep ran first; the card now orders the handshake before the sweep.
+The predecessor is not retired when a close command returns. It is retired when three things are measured gone: the process (its pid), the host pane (no live handle in the terminal list), and the tty (device and login chain). The successor runs `master-succeed retire --self-handle <its own pane> --target-handle <the predecessor's pane> --target-pid <measured> --target-tty <measured> --execute` and expects the status `CLOSED`; `CLOSED_PARTIAL` means one of the three was not measured and the generation is not clean yet. The boot card records one measured run: 17 minutes from spawn to `CLOSED` on 2026-10-01, when the test and drift sweep ran first; the card now orders the handshake before the sweep.
 
 A frozen session can be revived from any terminal, including a phone. The boot card records four retired masters revived at once by a mobile resume. So the successor also scans running agent processes for the session ids in the lineage, and on a hit reads the revived session's own record before terminating it.
 

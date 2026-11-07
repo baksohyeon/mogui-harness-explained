@@ -41,19 +41,19 @@ Measured on one seat, 2026-11-07, template `v0.5.265` to `v0.5.288`, 135 manifes
 
 **Step 6, instance-owned paths skipped.** A fixed list is refused by name: the lineage directory, both session-card files, the operations index, the closed-decisions record, the boot comparison set, role state, the succession boot card, the compaction probe, the self-check script, the local card extension, the tracker directory, `config/`, `contracts/`, and anything the manifest does not claim. Unit [13](../units/13-template-manifest-instance-owned-paths/) has the test that proves a refusal.
 
-**Step 7, confirmation phrase, write.** A write pass asks for an interactive confirmation phrase. There is no `--yes`. The batch is preflighted, then written file by file with a per-file atomic replace; a mid-batch OS error can leave earlier files written, and the docstring says to re-run after the fix. On this upgrade the dry run listed 126 planned paths and 9 skipped as instance-owned. A planned path means the tool would overwrite the whole file, and 52 of those paths carried seat adaptations, so the seat left the write pass unused: it wrote the 19 changed files, the 5 new files, and the version file itself, from the same render, and kept the dry run as the record of what the tool would have done.
+**Step 7, confirmation phrase, write.** A write pass asks for an interactive confirmation phrase. There is no `--yes`. The batch is preflighted, then written file by file with a per-file atomic replace; a mid-batch OS error can leave earlier files written, and the docstring says to re-run after the fix. On this upgrade the dry run listed 126 planned paths and 9 skipped as instance-owned. A planned path means the tool would overwrite the whole file, and 52 of those paths carried seat adaptations, so the seat did not run the write pass. A short script of the seat's own wrote the 19 changed files, the 5 new files, and the version file from the same render, and the dry run stayed as the record of what the tool would have done.
 
 ## Step 8. Three-way merge by hand (seat)
 
-`template-apply` writes whole files. A path the seat has adapted and the template has also changed is outside what a whole-file write can do, so the seat merges it. On this upgrade, 10 paths: 4 merged without conflict, 6 by hand. The pattern in the hand merges was the same each time: take the template's new mechanism, keep the seat's own interpreter standard, paths, and names. Two seat-owned files needed a one-line change each to follow the new layout: a test's end marker, and the self-check's interpreter line. No `{{...}}` token remained outside the two documented sentinel forms, and no conflict marker remained.
+`template-apply` writes whole files. A path the seat has adapted and the template has also changed is outside what a whole-file write can do, so the seat merges it. On this upgrade, 10 paths: 4 merged without conflict, 6 by hand. The pattern in the hand merges was the same each time: take the template's new mechanism, keep the seat's own interpreter standard, paths, and names. Two seat-owned files needed a one-line change each to follow the new layout: a test's end marker, and the self-check's interpreter line. The grep from step 3 found no `{{...}}` token afterwards, and no conflict marker remained.
 
 ## Step 9. Rendered shell-test lane (tests and PR)
 
-The template's CI renders a scratch install and runs the shell tests against it; the seat runs the same tests in its own worktree before pushing. One seat's lane on this upgrade:
+The template's CI renders a scratch install and runs its shell tests against it; the seat runs those plus its own seat-owned tests in its worktree before pushing. One seat's lane on this upgrade:
 
 | result | count |
 |---|---|
-| shell tests run | 34 |
+| shell tests run: the template's 26, plus 8 the seat added | 34 |
 | pass before the two seat edits above | 29 |
 | pass after them | 31 |
 | failing on `main` before the change, the same way | 2 |
@@ -75,6 +75,6 @@ After the merge, the two session-card files are copied from the operations repos
 
 ## What this page does not claim
 
-The counts are one seat's. How far other seats drift is unknown; the template has no telemetry and asks for none. Whether the three template-side test failures reproduce on another host was not measured here.
+The counts are one seat's. How far other seats drift is unknown; the template has no telemetry and asks for none. Whether the one template-side test failure reproduces on another host was not measured here, and the two failures that predate the change on `main` have their own card.
 
 <p align="center"><img src="../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

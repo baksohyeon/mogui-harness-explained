@@ -47,7 +47,7 @@ start screen ✓ codex · model-a xhigh
 
 **Step 5, `orca orchestration task-create --spec "$SPEC" --json`.** Orca records a task under the master's Run and returns a task id. The wrapper reads the id through a small normalizer, because Orca's JSON shape has changed between releases; unit [10](../units/10-orca-json-shape-normalizer/) explains that module.
 
-**Step 6, `orca terminal create --worktree "$WORKTREE" --command "<agent cli>" --json`.** Orca opens a pane in the worker's worktree and starts the agent CLI there. The wrapper then runs `orca terminal wait --for tui-idle` with a 60 second limit. `신규` is Korean for new; the wrapper prints `재사용`, reused, when the master passed an existing pane instead.
+**Step 6, `orca terminal create --worktree "$WORKTREE" --command "<agent cli>" --json`.** Orca opens a pane in the worker's worktree and starts the agent CLI there. The wrapper then runs `orca terminal wait --terminal "$TERMINAL" --for tui-idle --timeout-ms 60000`. `신규` is Korean for new; the wrapper prints `재사용`, reused, when the master passed an existing pane instead.
 
 **Step 7, the start screen.** A pane that reads idle may be sitting on a menu. A codex pane sitting on a selection menu, a provider limit notice, or an update notice is also idle. Section 3b reads the pane and classifies it; a pane that is not at a prompt with the expected model footer stops the dispatch with exit 3, before anything is injected.
 
@@ -64,7 +64,7 @@ delivery pre=unknown post=unknown status=dispatched class=unknown
 
 **Step 9, register and the model probe.** The wrapper writes a ledger row with the dispatch id, the task id, the pane, and the model, and then tries to measure the model from the worker's own transcript. `원장대조` is Korean for ledger reconciliation. On the dispatch above, a new transcript file appeared for this worker and the probe reports `transcript실측`, measured from the transcript. On six of eight dispatches measured on the same seat that day, no new file had appeared yet, and the same line carried `warn:MODEL_UNVERIFIED` followed by three lines telling the master to verify by hand. The declared model is never promoted to a measured one by the passage of time. Unit [03](../units/03-transcript-model-identity-probe/) covers the probe.
 
-**Step 10, a delivery verdict.** Section 6 reads the pane before and after the inject, polls it for thirty seconds, and asks Orca for the dispatch status. A pane that returns to the same prepared prompt carries no signal at all, so the wrapper folds Orca's own status into the verdict. On all eight dispatches measured on this seat on 2026-11-07, the pane matched no known prepared-prompt pattern, the verdict was `UNVERIFIED`, and the wrapper printed the exact command to run next. The master ran it, saw the preamble and the task text in the pane, and trusted the dispatch from that reading, with the reading recorded.
+**Step 10, a delivery verdict.** Section 6 reads the pane before and after the inject, polls it for thirty seconds, and asks Orca for the dispatch status with `orca orchestration dispatch-show --task "$TASK" --json`. A pane that returns to the same prepared prompt carries no signal at all, so the wrapper folds Orca's own status into the verdict. On all eight dispatches measured on this seat on 2026-11-07, the pane matched no known prepared-prompt pattern, the verdict was `UNVERIFIED`, and the wrapper printed the exact command to run next. The master ran it, saw the preamble and the task text in the pane, and trusted the dispatch from that reading, with the reading recorded.
 
 ## Steps 11 to 13. The worker's side
 
@@ -72,7 +72,7 @@ The preamble Orca injects tells the worker its task id and dispatch id, how to a
 
 ```
 orca orchestration send --from term_7f3e2d1c-0000-4000-8000-000000000001 --type worker_done \
-  --subject "<short status>" --body "<3-sentence summary>" \
+  --subject "<short status>" --body "<3-sentence summary, then the read token>" \
   --task-id task_0a1b2c3d4e5f --dispatch-id ctx_5e6f7a8b9c0d --outcome succeeded
 ```
 
@@ -92,7 +92,7 @@ A `yes` on the second line stops the contract. Four workers once landed in the m
 
 ## Steps 14 and 15. The master's side
 
-**Step 14, verify, then merge.** The master is woken with an Orca message and reads it with `orca orchestration check`. It does not take the summary on faith. It reads the pull request's merge state and check runs, counts unresolved review threads, diffs the branch against the paths the contract allowed, greps the token in the delivered copy, and runs its redaction scans over the added lines. Only then does it merge, and only with the owner's word where the house rules require one.
+**Step 14, verify, then merge.** The master is woken with an Orca message, reads the batch with `orca orchestration check`, handles every message in it, and acknowledges the batch by its delivery id. It does not take the summary on faith. It reads the pull request's merge state and check runs, counts unresolved review threads, diffs the branch against the paths the contract allowed, greps the token in the delivered copy, and runs its redaction scans over the added lines. Only then does it merge, and only with the owner's word where the house rules require one.
 
 **Step 15, pane closed, tree removed.** `orca terminal close` on the worker's pane, `orca worktree remove` on its worktree, and the local clone fast-forwarded. When a worker stops without `worker_done`, [`worker-wait`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/worker-wait) labels it dead or stalled from measured state, and `worker-reap` closes only a pane that is listed, unclaimed, and without a live agent process; unit [06](../units/06-worker-wait-and-reap/). The whole history of the dispatch, ledger row, event log lines, and Orca's record, joins into one table with `dispatch-timeline`; unit [07](../units/07-dispatch-timeline-join/).
 
