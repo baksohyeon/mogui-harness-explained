@@ -4,10 +4,12 @@
 
 This repo splits the mogui-ADE-orchestrator harness into 15 small units, each explaining one mechanism in about 5 minutes and linking to its tested implementation.
 
-**Start here.** Three reading paths, each about half an hour.
+**Start here.** Five reading paths. The first takes twenty minutes; the others about half an hour each.
 
-- New to the harness: [role lock](concepts/role-lock.md), [worker territory](concepts/worker-territory.md), [fail closed](concepts/fail-closed.md), then units 02, 09, and 12.
-- Running an install: units 13, 14, 11, and 15, then [template and seat](concepts/template-and-seat.md).
+- The whole shape, once: the [Orca primer](concepts/orca-primer.md), then the walkthrough [one dispatch](walkthroughs/01-one-dispatch.md).
+- New to the harness: [role lock](concepts/role-lock.md), [worker territory](concepts/worker-territory.md), [fail closed](concepts/fail-closed.md), then units 02, 09, and 12, then [one dispatch](walkthroughs/01-one-dispatch.md).
+- Running an install: [one template upgrade](walkthroughs/03-one-template-upgrade.md), then units 13, 14, 11, and 15, then [template and seat](concepts/template-and-seat.md).
+- Taking over a seat: [one master generation](walkthroughs/02-one-master-generation.md), then units 04 and 03, then [succession](concepts/succession.md).
 - Debugging a stuck worker: units 06, 07, 03, and 10, then [measured, confirmed, inferred](concepts/measured-not-assumed.md).
 
 A word you do not know is in the [glossary](concepts/glossary.md).
@@ -32,7 +34,9 @@ A word you do not know is in the [glossary](concepts/glossary.md).
 
 **Verified implementation:** [mogui-ADE-orchestrator](https://github.com/baksohyeon/mogui-ADE-orchestrator), with 54 Python test files in [`tests/`](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.288/tests), 26 shell tests under [`master-ops/scripts/test-*`](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.288/master-ops/scripts), measured at v0.5.288, 2026-11-07 ([release](https://github.com/baksohyeon/mogui-ADE-orchestrator/releases/tag/v0.5.288)), and CI in [`gates.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/.github/workflows/gates.yml).
 
-**Concepts:** six short notes on the ideas behind the units (role lock, fail closed, measured versus inferred, worker territory, template and seat, succession), each answering the same five questions with evidence links at `v0.5.288`, plus the twelve chat response rules a master follows when it writes to its owner. Start at [`concepts/`](concepts/).
+**Walkthroughs:** three procedures followed end to end, each step naming the Orca command it runs and the harness line it prints: [one dispatch](walkthroughs/01-one-dispatch.md), [one master generation](walkthroughs/02-one-master-generation.md), [one template upgrade](walkthroughs/03-one-template-upgrade.md). Index at [`walkthroughs/`](walkthroughs/).
+
+**Concepts:** seven short notes on the ideas behind the units (an Orca primer, role lock, fail closed, measured versus inferred, worker territory, template and seat, succession), each answering the same five questions with evidence links at `v0.5.288`, plus the twelve chat response rules a master follows when it writes to its owner. Start at [`concepts/`](concepts/).
 
 **What is not here:** no transcripts, work data, internal paths, or organization redaction rules. Examples are synthetic.
 
