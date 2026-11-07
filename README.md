@@ -16,7 +16,7 @@ A word you do not know is in the [glossary](concepts/glossary.md).
 |---|---|
 | [01 harness change acceptance loop](units/01-harness-change-acceptance-loop/) | Keep a change only when combined visible+holdout passes strictly rise. |
 | [02 dispatch tier fan-out gate](units/02-dispatch-tier-fanout-gate/) | Gate each dispatch on budget, routing, model tier, and per-tier fan-out. |
-| [03 transcript model identity probe](units/03-transcript-model-identity-probe/) | Measure the model that actually answered and find mid-session switches. |
+| [03 transcript model identity probe](units/03-transcript-model-identity-probe/) | Measure the model that answered and find mid-session switches. |
 | [04 master succession placement check](units/04-master-succession-placement-check/) | Close a successor terminal that lands in the wrong worktree. |
 | [05 read-only recovery flow](units/05-read-only-recovery-flow/) | Run recovery steps 0 to 6 as reads, fail-closed after a charter miss. |
 | [06 worker wait and reap](units/06-worker-wait-and-reap/) | Label dead or stalled workers; close only settled, unoccupied panes. |
