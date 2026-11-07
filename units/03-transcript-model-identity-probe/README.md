@@ -1,6 +1,6 @@
 # 03. Transcript model identity probe
 
-**Mechanism.** Read the session transcript to measure which model actually answered, and report any model change across the whole session.
+**Mechanism.** Read the session transcript to measure which model answered, and report any model change across the whole session.
 
 **Failure it prevents.** `model-identity-probe` samples the last turns, so a switch earlier in a session stays hidden. `model-drift-audit` walks every assistant turn. See the [succession boot card](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/succession-boot-card.md).
 
