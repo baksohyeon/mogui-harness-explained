@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="390" viewBox="0 0 960 390" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="arrow03" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#718096"/></marker></defs>
+<rect width="960" height="390" fill="#ffffff"/>
+<rect x="20" y="150" width="170" height="60" rx="8" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="105" y="185" text-anchor="middle" font-size="14" fill="#1a202c">transcript JSONL</text>
+<rect x="275" y="70" width="220" height="60" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="385" y="95" text-anchor="middle" font-size="13" fill="#1a202c"><tspan x="385" dy="0">model-identity-probe:</tspan><tspan x="385" dy="18">recent turns</tspan></text>
+<rect x="275" y="230" width="220" height="60" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.5"/>
+<text x="385" y="255" text-anchor="middle" font-size="13" fill="#1a202c"><tspan x="385" dy="0">model-drift-audit:</tspan><tspan x="385" dy="18">all turns</tspan></text>
+<rect x="570" y="215" width="130" height="90" rx="14" fill="#ffffff" stroke="#6b46c1" stroke-width="1.5"/>
+<text x="635" y="265" text-anchor="middle" font-size="14" fill="#1a202c">transitions?</text>
+<rect x="780" y="40" width="140" height="52" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="850" y="71" text-anchor="middle" font-size="14" fill="#1a202c">exit 0</text>
+<rect x="780" y="165" width="140" height="52" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.5"/>
+<text x="850" y="196" text-anchor="middle" font-size="14" fill="#1a202c">exit 1</text>
+<rect x="750" y="290" width="180" height="64" rx="8" fill="#ffffff" stroke="#6b46c1" stroke-width="1.5"/>
+<text x="840" y="315" text-anchor="middle" font-size="13" fill="#1a202c"><tspan x="840" dy="0">exit 2</tspan><tspan x="840" dy="18">undecidable</tspan></text>
+<path d="M190 175 C220 145 235 105 275 100" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow03)"/>
+<path d="M190 185 C220 215 235 255 275 260" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow03)"/>
+<path d="M495 260 L570 260" stroke="#718096" stroke-width="2" marker-end="url(#arrow03)"/>
+<path d="M700 240 C735 205 750 85 780 66" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow03)"/>
+<text x="733" y="156" text-anchor="middle" font-size="12" fill="#1a202c">none</text>
+<path d="M700 260 L780 190" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow03)"/>
+<text x="742" y="238" text-anchor="middle" font-size="12" fill="#1a202c">found or expect mismatch</text>
+<path d="M700 280 C730 300 735 320 750 322" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow03)"/>
+<text x="724" y="310" text-anchor="middle" font-size="12" fill="#1a202c">no transcript / no turns</text>
+</svg>

@@ -4,14 +4,7 @@
 
 **Failure it prevents.** A proposer that tunes against the cases it can see can raise the train score while losing holdout cases. The holdout split is never written into the proposer workspace.
 
-```mermaid
-flowchart LR
-  B[baseline score] --> P[proposer writes candidate]
-  P --> E[evaluate train + holdout]
-  E --> D{combined passes > baseline?}
-  D -- yes --> K[keep, PASS_COUNT_INCREASED]
-  D -- no --> R[reject, NO_PASS_COUNT_INCREASE]
-```
+<p align="center"><img src="../../assets/units/01-harness-change-acceptance-loop.svg" alt="baseline score flows through proposal and evaluation to an acceptance decision" width="100%"></p>
 
 ## Example (synthetic)
 
@@ -45,7 +38,7 @@ Background: [Agentic Harness Engineering (arXiv 2604.25850)](https://arxiv.org/a
 
 ## Verified in mogui
 
-- Implementation: [`src/master_runtime/core/acceptance/`](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/main/src/master_runtime/core/acceptance/)
-- Tests: [`tests/test_acceptance_loop.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/tests/test_acceptance_loop.py), [`tests/test_acceptance_verdict.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/tests/test_acceptance_verdict.py), [`tests/test_acceptance_casebook.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/tests/test_acceptance_casebook.py), [`tests/test_acceptance_proposer.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/tests/test_acceptance_proposer.py), [`tests/test_acceptance_process.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/tests/test_acceptance_process.py), [`tests/test_acceptance_config.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/tests/test_acceptance_config.py)
+- Implementation: [`src/master_runtime/core/acceptance/`](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.288/src/master_runtime/core/acceptance/)
+- Tests: [`tests/test_acceptance_loop.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_acceptance_loop.py), [`tests/test_acceptance_verdict.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_acceptance_verdict.py), [`tests/test_acceptance_casebook.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_acceptance_casebook.py), [`tests/test_acceptance_proposer.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_acceptance_proposer.py), [`tests/test_acceptance_process.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_acceptance_process.py), [`tests/test_acceptance_config.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_acceptance_config.py)
 
 <p align="center"><img src="../../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

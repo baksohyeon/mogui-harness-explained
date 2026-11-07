@@ -2,17 +2,9 @@
 
 **Mechanism.** Scan tracked content, commit messages, and conversation surfaces for secrets and identifiers, state what was covered, and separate "cannot decide" from "clean".
 
-**Failure it prevents.** Identifiers leaking where the repo scan did not look, such as PR bodies. See the [conversation redaction runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/master-ops/docs/runbooks/conversation-redaction.md).
+**Failure it prevents.** Identifiers leaking where the repo scan did not look, such as PR bodies. See the [conversation redaction runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/conversation-redaction.md).
 
-```mermaid
-flowchart LR
-  A[redaction-scan.sh: tracked files, messages] --> X{exit}
-  B[redaction-inventory: tokens no rule covers] --> X
-  C[conversation-redaction-scan: PR bodies, comments] --> X
-  X --> Z[0 clean]
-  X --> O[1 findings]
-  X --> U[2 cannot decide]
-```
+<p align="center"><img src="../../assets/units/08-scope-stating-redaction-scan.svg" alt="three redaction scans feed clean, findings, or cannot decide outcomes" width="100%"></p>
 
 ## Example (synthetic)
 
@@ -27,7 +19,7 @@ gitleaks is the matching engine. Organization rules are supplied per checkout an
 
 ## Verified in mogui
 
-- Implementation: [`scripts/redaction-scan.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/scripts/redaction-scan.sh), [`scripts/redaction-inventory`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/scripts/redaction-inventory), [`master-ops/scripts/conversation-redaction-scan`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/master-ops/scripts/conversation-redaction-scan)
-- Tests: [`tests/test_redaction_gate_coverage.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/tests/test_redaction_gate_coverage.py), [`tests/test_redaction_inventory.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/tests/test_redaction_inventory.py), [`tests/test_redaction_scan_commit_messages.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/tests/test_redaction_scan_commit_messages.py), [`tests/test_redaction_scan_engine_validation.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/tests/test_redaction_scan_engine_validation.py), [`tests/test_redaction_scan_native_script.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/tests/test_redaction_scan_native_script.py), [`tests/test_redaction_scan_python_override.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/tests/test_redaction_scan_python_override.py), [`tests/test_redaction_scan_repo_root.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/tests/test_redaction_scan_repo_root.py)
+- Implementation: [`scripts/redaction-scan.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/scripts/redaction-scan.sh), [`scripts/redaction-inventory`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/scripts/redaction-inventory), [`master-ops/scripts/conversation-redaction-scan`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/conversation-redaction-scan)
+- Tests: [`tests/test_redaction_gate_coverage.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_redaction_gate_coverage.py), [`tests/test_redaction_inventory.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_redaction_inventory.py), [`tests/test_redaction_scan_commit_messages.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_redaction_scan_commit_messages.py), [`tests/test_redaction_scan_engine_validation.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_redaction_scan_engine_validation.py), [`tests/test_redaction_scan_native_script.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_redaction_scan_native_script.py), [`tests/test_redaction_scan_python_override.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_redaction_scan_python_override.py), [`tests/test_redaction_scan_repo_root.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_redaction_scan_repo_root.py)
 
 <p align="center"><img src="../../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

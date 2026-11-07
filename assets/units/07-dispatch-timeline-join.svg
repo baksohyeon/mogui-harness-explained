@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="340" viewBox="0 0 960 340" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="arrow07" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#718096"/></marker></defs>
+<rect width="960" height="340" fill="#ffffff"/>
+<rect x="20" y="30" width="190" height="52" rx="8" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="115" y="61" text-anchor="middle" font-size="14" fill="#1a202c">dispatch-ledger.jsonl</text>
+<rect x="20" y="145" width="190" height="52" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="115" y="176" text-anchor="middle" font-size="14" fill="#1a202c">event-log.jsonl</text>
+<rect x="20" y="260" width="190" height="52" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.5"/>
+<text x="115" y="291" text-anchor="middle" font-size="14" fill="#1a202c">orca dispatch-show</text>
+<rect x="350" y="115" width="215" height="100" rx="10" fill="#ffffff" stroke="#6b46c1" stroke-width="1.5"/>
+<text x="457.5" y="171" text-anchor="middle" font-size="14" fill="#1a202c">DispatchTimelineBuilder</text>
+<rect x="710" y="65" width="210" height="58" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="815" y="89" text-anchor="middle" font-size="13" fill="#1a202c"><tspan x="815" dy="0">time-ordered</tspan><tspan x="815" dy="18">table</tspan></text>
+<rect x="700" y="220" width="230" height="58" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.5"/>
+<text x="815" y="244" text-anchor="middle" font-size="13" fill="#1a202c"><tspan x="815" dy="0">missing sources</tspan><tspan x="815" dy="18">line</tspan></text>
+<path d="M210 56 C270 70 290 125 350 145" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow07)"/>
+<path d="M210 171 L350 165" stroke="#718096" stroke-width="2" marker-end="url(#arrow07)"/>
+<path d="M210 286 C270 270 290 215 350 185" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow07)"/>
+<path d="M565 145 C620 120 660 105 710 95" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow07)"/>
+<path d="M565 185 C620 215 655 235 700 248" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow07)"/>
+</svg>
