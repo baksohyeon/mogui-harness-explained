@@ -4,14 +4,7 @@
 
 **Failure it prevents.** A proposer that tunes against the cases it can see can raise the train score while losing holdout cases. The holdout split is never written into the proposer workspace.
 
-```mermaid
-flowchart LR
-  B[baseline score] --> P[proposer writes candidate]
-  P --> E[evaluate train + holdout]
-  E --> D{combined passes > baseline?}
-  D -- yes --> K[keep, PASS_COUNT_INCREASED]
-  D -- no --> R[reject, NO_PASS_COUNT_INCREASE]
-```
+<p align="center"><img src="../../assets/units/01-harness-change-acceptance-loop.svg" alt="baseline score flows through proposal and evaluation to an acceptance decision" width="100%"></p>
 
 ## Example (synthetic)
 

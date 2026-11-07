@@ -4,14 +4,7 @@
 
 **Failure it prevents.** Silence that looks the same as "nothing happened". A source with zero matching rows is named in `missing_sources`.
 
-```mermaid
-flowchart LR
-  L[dispatch-ledger.jsonl] --> J[DispatchTimelineBuilder]
-  E[event-log.jsonl] --> J
-  S[orca dispatch-show] --> J
-  J --> T[time-ordered table]
-  J --> M[missing sources line]
-```
+<p align="center"><img src="../../assets/units/07-dispatch-timeline-join.svg" alt="three dispatch sources join into a time-ordered table" width="100%"></p>
 
 ## Example (synthetic)
 

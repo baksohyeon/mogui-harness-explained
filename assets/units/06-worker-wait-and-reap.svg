@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="arrow06" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#718096"/></marker></defs>
+<rect width="960" height="500" fill="#ffffff"/>
+<rect x="20" y="80" width="145" height="56" rx="8" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="92.5" y="113" text-anchor="middle" font-size="14" fill="#1a202c">worker-wait</text>
+<rect x="225" y="65" width="145" height="86" rx="14" fill="#ffffff" stroke="#6b46c1" stroke-width="1.5"/>
+<text x="297.5" y="114" text-anchor="middle" font-size="14" fill="#1a202c">measured state</text>
+<rect x="450" y="20" width="185" height="58" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.5"/>
+<text x="542.5" y="43" text-anchor="middle" font-size="12" fill="#1a202c"><tspan x="542.5" dy="0">pid gone, no</tspan><tspan x="542.5" dy="16">worker_done</tspan></text>
+<text x="410" y="48" text-anchor="middle" font-size="12" fill="#1a202c">DEAD</text>
+<rect x="450" y="125" width="185" height="58" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.5"/>
+<text x="542.5" y="148" text-anchor="middle" font-size="12" fill="#1a202c"><tspan x="542.5" dy="0">output stale,</tspan><tspan x="542.5" dy="16">idle</tspan></text>
+<text x="410" y="153" text-anchor="middle" font-size="12" fill="#1a202c">STALL</text>
+<rect x="20" y="310" width="175" height="56" rx="8" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="107.5" y="343" text-anchor="middle" font-size="14" fill="#1a202c">worker-reap task</text>
+<rect x="255" y="295" width="145" height="86" rx="14" fill="#ffffff" stroke="#6b46c1" stroke-width="1.5"/>
+<text x="327.5" y="344" text-anchor="middle" font-size="14" fill="#1a202c">dispatch settled?</text>
+<rect x="470" y="270" width="100" height="52" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.5"/>
+<text x="520" y="301" text-anchor="middle" font-size="14" fill="#1a202c">exit 3</text>
+<rect x="470" y="365" width="190" height="70" rx="14" fill="#ffffff" stroke="#6b46c1" stroke-width="1.5"/>
+<text x="565" y="405" text-anchor="middle" font-size="14" fill="#1a202c">agent process in worktree?</text>
+<rect x="735" y="315" width="145" height="58" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.5"/>
+<text x="807.5" y="338" text-anchor="middle" font-size="12" fill="#1a202c"><tspan x="807.5" dy="0">yes or</tspan><tspan x="807.5" dy="16">unmeasured</tspan><tspan x="807.5" dy="16">leave pane</tspan></text>
+<rect x="735" y="415" width="185" height="58" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="827.5" y="438" text-anchor="middle" font-size="12" fill="#1a202c"><tspan x="827.5" dy="0">close pane, remove</tspan><tspan x="827.5" dy="16">worktree</tspan></text>
+<path d="M165 108 L225 108" stroke="#718096" stroke-width="2" marker-end="url(#arrow06)"/>
+<path d="M370 88 C405 65 420 55 450 50" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow06)"/>
+<path d="M370 128 C405 145 420 150 450 154" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow06)"/>
+<path d="M195 338 L255 338" stroke="#718096" stroke-width="2" marker-end="url(#arrow06)"/>
+<path d="M400 320 C430 305 440 300 470 296" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow06)"/>
+<text x="430" y="309" text-anchor="middle" font-size="12" fill="#1a202c">no</text>
+<path d="M400 360 C430 380 440 395 470 400" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow06)"/>
+<text x="430" y="378" text-anchor="middle" font-size="12" fill="#1a202c">yes</text>
+<path d="M660 385 C700 365 710 350 735 345" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow06)"/>
+<text x="700" y="366" text-anchor="middle" font-size="12" fill="#1a202c">yes or unmeasured</text>
+<path d="M660 415 C700 430 710 440 735 444" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow06)"/>
+<text x="700" y="445" text-anchor="middle" font-size="12" fill="#1a202c">no</text>
+</svg>

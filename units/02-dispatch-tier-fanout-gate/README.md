@@ -4,15 +4,7 @@
 
 **Failure it prevents.** A top-tier model multiplied across many workers. The gate reads the tier table from `model-tier-policy.json` and fails closed when the policy is missing.
 
-```mermaid
-flowchart LR
-  Q[DispatchRequest: runtime, model, n_agents] --> G[DispatchGate.check]
-  G --> T{tier policy}
-  T -- denied tier --> X[allow=False TIER_POLICY]
-  T -- over cap --> F[allow=False TIER_FANOUT_CAP]
-  T -- unlisted model --> W[warning TIER_UNKNOWN_MODEL]
-  T -- ok --> A[allow=True OK, ledger row]
-```
+<p align="center"><img src="../../assets/units/02-dispatch-tier-fanout-gate.svg" alt="a dispatch request flows through the tier policy to gate outcomes" width="100%"></p>
 
 ## Example (synthetic)
 

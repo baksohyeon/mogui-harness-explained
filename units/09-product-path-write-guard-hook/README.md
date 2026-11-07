@@ -2,15 +2,9 @@
 
 **Mechanism.** A `PreToolUse(Edit|Write|NotebookEdit|Bash)` hook that blocks writes into a configured product repository root.
 
-**Failure it prevents.** An agent writing into the product repo from the ops workspace. See the [product path guard runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/master-ops/docs/runbooks/product-path-guard.md).
+**Failure it prevents.** An agent writing into the product repo from the ops workspace. See the [product path guard runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/product-path-guard.md).
 
-```mermaid
-flowchart LR
-  T[tool call JSON] --> H[product-path-guard.sh]
-  H --> F{file tool path or parsed Bash write into product root?}
-  F -- yes --> B[BLOCKED, exit 2]
-  F -- no --> P[exit 0]
-```
+<p align="center"><img src="../../assets/units/09-product-path-write-guard-hook.svg" alt="tool call JSON flows through the product path guard to an exit decision" width="100%"></p>
 
 ## Example (synthetic)
 

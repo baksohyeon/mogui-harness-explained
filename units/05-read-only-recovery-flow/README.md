@@ -4,15 +4,7 @@
 
 **Failure it prevents.** A new master acting on missing context. If step 0 (charter) misses, later steps are skipped fail-closed.
 
-```mermaid
-flowchart LR
-  S0[0 charter] --> S1[1 handoff + ledger]
-  S1 --> S23[2-3 repos]
-  S23 --> S4[4 misses summary]
-  S4 --> S5[5 monitors]
-  S5 --> S6[6 successor checklist]
-  S0 -. MISS .-> K[1, 2-3, 5 SKIP]
-```
+<p align="center"><img src="../../assets/units/05-read-only-recovery-flow.svg" alt="recovery steps flow from the charter to the successor checklist" width="100%"></p>
 
 ## Example (synthetic)
 

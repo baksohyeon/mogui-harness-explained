@@ -2,17 +2,9 @@
 
 **Mechanism.** Scan tracked content, commit messages, and conversation surfaces for secrets and identifiers, state what was covered, and separate "cannot decide" from "clean".
 
-**Failure it prevents.** Identifiers leaking where the repo scan did not look, such as PR bodies. See the [conversation redaction runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/main/master-ops/docs/runbooks/conversation-redaction.md).
+**Failure it prevents.** Identifiers leaking where the repo scan did not look, such as PR bodies. See the [conversation redaction runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/conversation-redaction.md).
 
-```mermaid
-flowchart LR
-  A[redaction-scan.sh: tracked files, messages] --> X{exit}
-  B[redaction-inventory: tokens no rule covers] --> X
-  C[conversation-redaction-scan: PR bodies, comments] --> X
-  X --> Z[0 clean]
-  X --> O[1 findings]
-  X --> U[2 cannot decide]
-```
+<p align="center"><img src="../../assets/units/08-scope-stating-redaction-scan.svg" alt="three redaction scans feed clean, findings, or cannot decide outcomes" width="100%"></p>
 
 ## Example (synthetic)
 
