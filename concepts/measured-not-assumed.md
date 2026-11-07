@@ -21,8 +21,8 @@ The harness writes like the second kid. The self-check prints what it measured a
 **Evidence.** [`harness-selfcheck.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/harness-selfcheck.sh) and [its runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/harness-selfcheck.md); the model probe section of [`dispatch`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/dispatch) and the reason codes in [`dispatch_gate.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/src/master_runtime/core/dispatch_gate.py); the measured-shapes table in [`orca-json.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/orca-json.md).
 
 ```
-Orca: 1.4.249 (last install 2026-11-04T23:41:48) changed since 1.4.247
-Template: v0.5.288 stamped
+Orca: 1.4.249 (last install 2026-11-04T23:41:48), changed since 1.4.247
+Template: v0.5.288 stamped, adoption ledger missing
 Hooks: 16 wired
 Card: deployed copy matches canonical
 ```

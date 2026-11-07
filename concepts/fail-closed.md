@@ -21,8 +21,9 @@ The harness is full of that third flag. The redaction scanner exits with 0 when 
 **Evidence.** [`redaction-scan.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/scripts/redaction-scan.sh) header lines; [product-path-guard runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/product-path-guard.md); [`succession.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/src/master_runtime/core/succession.py) (`CLOSED_PARTIAL`, `DISAPPEARANCE_MEASURED`); the rollout snapshot entry under v0.5.288 in [`CHANGELOG.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/CHANGELOG.md).
 
 ```
-$ scripts/redaction-scan.sh --range origin/main..HEAD
-redaction-scan: cannot decide (gitleaks not found on PATH)        exit=2
+$ scripts/redaction-scan.sh --range main
+redaction-scan: --range requires A..B
+exit=2
 ```
 
 ## Glossary

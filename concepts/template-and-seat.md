@@ -21,11 +21,13 @@ The workbook is `master-ops/` in the public repository. The blanks are eight tok
 **Evidence.** [`template-apply`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/template-apply) docstring; [`template_common.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/template_common.py); [`MANIFEST.json`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/MANIFEST.json); the `rendered-shell-tests` job in [`gates.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/.github/workflows/gates.yml); [`test_template_check_apply.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_template_check_apply.py).
 
 ```
-$ python3 master-ops/scripts/template-apply --ops /tmp/example/ops --template master-ops
-planned   scripts/worker-wait            template changed
-skipped-as-instance-owned   docs/runbooks/role-state.md
-refused-not-in-manifest     scripts/my-local-helper
-type "apply" to write, anything else to stop:
+# shape only: each real plan line also carries a reason after the path
+$ python3 master-ops/scripts/template-apply --ops /tmp/example/ops --template master-ops --write
+dry-run plan (no writes):
+entries: 2
+  planned: scripts/worker-wait
+  skipped-as-instance-owned: docs/runbooks/role-state.md
+Type 'apply' to write template-layer files
 ```
 
 ## Glossary

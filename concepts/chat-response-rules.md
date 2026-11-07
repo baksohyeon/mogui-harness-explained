@@ -1,6 +1,6 @@
 # Chat response rules
 
-Twelve rules for the sentences a master writes to its owner. They come from ASD-STE100, the simplified technical English used for aircraft maintenance manuals, applied to a week of real chat transcripts. The transcript study showed a correlation between these shapes and fewer follow-up questions; it did not prove a cause. Each rule names its STE source. Identifiers in the examples are synthetic.
+Twelve rules for the sentences a master writes to its owner. They come from ASD-STE100, the simplified technical English used for aircraft maintenance manuals, applied to a week of real chat transcripts. That comparison is a correlation; it did not prove a cause. Each rule names its STE source. Identifiers in the examples are synthetic.
 
 1. **Answer the last question in the first sentence.** (STE 6.5)
    Question: "When will it be ready?" Answer: "Around 16:00. The merge has to finish first."

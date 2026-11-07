@@ -14,7 +14,7 @@ Here the lighthouse is a workspace. The spawn command carries an expected placem
 
 **What is confirmed.** The charter defines the clean-spawn procedure and forbids automatic succession. The spawn exit code for a placement mismatch is a named constant. The three-way retirement and the partial status are in the succession module with tests.
 
-**What is inferred.** The ceremony costs a few minutes per generation. The seat that counted twenty generations also counted zero duplicate masters, and credits the ceremony; that is a correlation.
+**What is inferred.** The ceremony costs a few minutes per generation. Whether it prevented a duplicate master was never measured.
 
 **What is unknown.** Whether a successor can verify its predecessor's pid on every host. The host terminal record sometimes reports no process id, and the procedure then needs the pid measured by hand.
 
@@ -23,7 +23,8 @@ Here the lighthouse is a workspace. The spawn command carries an expected placem
 ```
 $ scripts/master-succeed retire --self-handle term_new01 --target-handle term_old01 \
     --target-pid 4242 --target-tty ttys011 --execute
-status=CLOSED  disappearances: pane=measured process=measured tty=measured
+# JSON report, abridged to the keys this note discusses
+{"status":"CLOSED","closed":true,"disappearances":{"pane":"measured","process":"measured","tty":"measured"}}
 ```
 
 ## Glossary

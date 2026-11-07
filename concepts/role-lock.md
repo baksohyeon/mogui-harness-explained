@@ -21,8 +21,9 @@ In this harness the master is the head chef. It writes a short order (a contract
 **Evidence.** [`product-path-guard.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/hooks/product-path-guard.sh) and [its test](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/test-product-path-guard.sh); the execution rule in [§3 execution principles](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/charter/03-execution-principles.md); the gate in [§5 dispatch gate](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/charter/05-dispatch-gate.md); the synthetic session below.
 
 ```
-Edit  example-product/src/reader.py
-[product-path-guard] BLOCKED: product root is worker territory      exit=2
+Edit  /tmp/example/example-product/src/reader.py
+[product-path-guard] BLOCKED: /tmp/example/example-product/src/reader.py is product-repo territory; dispatch product writes through a contract
+exit=2
 ```
 
 ## Glossary
