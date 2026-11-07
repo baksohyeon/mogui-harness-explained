@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="350" viewBox="0 0 960 350" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="arrow14" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#718096"/></marker></defs>
+<rect width="960" height="350" fill="#ffffff"/>
+<rect x="20" y="120" width="190" height="100" rx="10" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="115" y="153" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="115" dy="0">CLAUDE.md</tspan><tspan x="115" dy="20">AGENTS.md</tspan><tspan x="115" dy="20">scope sentence</tspan></text>
+<rect x="290" y="120" width="200" height="100" rx="10" fill="#ffffff" stroke="#6b46c1" stroke-width="1.5"/>
+<text x="390" y="153" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="390" dy="0">master card</tspan><tspan x="390" dy="20">role rules</tspan><tspan x="390" dy="20">byte-identical pair</tspan></text>
+<rect x="570" y="45" width="190" height="82" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="665" y="78" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="665" dy="0">LOCAL.md</tspan><tspan x="665" dy="20">read after card</tspan></text>
+<rect x="570" y="180" width="190" height="82" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.5"/>
+<text x="665" y="213" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="665" dy="0">absent</tspan><tspan x="665" dy="20">nothing changes</tspan></text>
+<rect x="830" y="112" width="100" height="100" rx="10" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="880" y="153" text-anchor="middle" font-size="14" fill="#1a202c"><tspan x="880" dy="0">scoped</tspan><tspan x="880" dy="20">session</tspan><tspan x="880" dy="20">role</tspan></text>
+<path d="M210 170 L290 170" stroke="#718096" stroke-width="2" marker-end="url(#arrow14)"/>
+<path d="M490 150 C525 120 535 90 570 90" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow14)"/>
+<path d="M490 190 C525 215 535 220 570 220" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow14)"/>
+<path d="M760 90 C795 105 805 135 830 150" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow14)"/>
+<path d="M760 220 C795 205 805 185 830 175" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow14)"/>
+</svg>
