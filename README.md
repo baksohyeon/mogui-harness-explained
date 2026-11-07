@@ -1,8 +1,8 @@
-<p align="center"><img src="assets/map.svg" alt="map of the 9 units by lifecycle" width="100%"></p>
+<p align="center"><img src="assets/map.svg" alt="map of the 15 units by lifecycle" width="100%"></p>
 
 # mogui harness, explained
 
-This repo splits the mogui-ADE-orchestrator harness into 9 small units, each explaining one mechanism in about 5 minutes and linking to its tested implementation.
+This repo splits the mogui-ADE-orchestrator harness into 15 small units, each explaining one mechanism in about 5 minutes and linking to its tested implementation.
 
 | Unit | Mechanism |
 |---|---|
@@ -15,6 +15,12 @@ This repo splits the mogui-ADE-orchestrator harness into 9 small units, each exp
 | [07 dispatch timeline join](units/07-dispatch-timeline-join/) | Join ledger, event log, and live record; name sources with no rows. |
 | [08 scope-stating redaction scan](units/08-scope-stating-redaction-scan/) | Scan repo and conversation surfaces; exit 2 means cannot decide. |
 | [09 product path write guard hook](units/09-product-path-write-guard-hook/) | Block tool writes into a configured product repository root. |
+| [10 orca JSON shape normalizer](units/10-orca-json-shape-normalizer/) | Normalize old and new orchestration JSON shapes in one module. |
+| [11 rendered shell-test lane](units/11-rendered-shell-test-lane/) | Run shell tests against a rendered master-ops scratch install. |
+| [12 contract delivery and read token](units/12-contract-delivery-read-token/) | Deliver contracts byte-for-byte with a hash-derived read token. |
+| [13 template manifest and instance-owned paths](units/13-template-manifest-instance-owned-paths/) | Apply manifest-owned files while protecting instance-owned paths. |
+| [14 workspace card scope and LOCAL.md](units/14-workspace-card-scope-local-file/) | Scope the master card and preserve its local extension. |
+| [15 changelog fragment gate](units/15-changelog-fragment-gate/) | Require dated fragments before release-time changelog folding. |
 
 **Verified implementation:** [mogui-ADE-orchestrator](https://github.com/baksohyeon/mogui-ADE-orchestrator), with 54 Python test files in [`tests/`](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.288/tests), 26 shell tests under [`master-ops/scripts/test-*`](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.288/master-ops/scripts), measured at v0.5.288, 2026-11-07 ([release](https://github.com/baksohyeon/mogui-ADE-orchestrator/releases/tag/v0.5.288)), and CI in [`gates.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/.github/workflows/gates.yml).
 

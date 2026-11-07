@@ -1,34 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" font-family="Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" font-family="Helvetica, Arial, sans-serif">
 <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#718096"/></marker></defs>
-<rect width="960" height="300" fill="#ffffff"/>
-<text x="480" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a202c">mogui harness: 9 mechanisms by lifecycle</text>
-<rect x="20" y="50" width="215" height="230" rx="10" fill="#e8f1fb" stroke="#2b6cb0" stroke-width="1.5"/>
+<rect width="960" height="440" fill="#ffffff"/>
+<text x="480" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a202c">mogui harness: 15 mechanisms by lifecycle</text>
+<rect x="20" y="50" width="215" height="370" rx="10" fill="#e8f1fb" stroke="#2b6cb0" stroke-width="1.5"/>
 <text x="127.5" y="76" text-anchor="middle" font-size="14" font-weight="bold" fill="#2b6cb0">Before dispatch</text>
 <rect x="32" y="92" width="191" height="46" rx="6" fill="#ffffff" stroke="#2b6cb0"/>
 <text x="127.5" y="120" text-anchor="middle" font-size="12" fill="#1a202c">02 dispatch tier fan-out gate</text>
-<rect x="32" y="152" width="191" height="46" rx="6" fill="#ffffff" stroke="#2b6cb0"/>
-<text x="127.5" y="180" text-anchor="middle" font-size="12" fill="#1a202c">09 product path write guard</text>
-<path d="M237 165 L253 165" stroke="#718096" stroke-width="2" marker-end="url(#a)"/>
-<rect x="255" y="50" width="215" height="230" rx="10" fill="#eaf7ee" stroke="#2f855a" stroke-width="1.5"/>
+<rect x="32" y="148" width="191" height="46" rx="6" fill="#ffffff" stroke="#2b6cb0"/>
+<text x="127.5" y="176" text-anchor="middle" font-size="12" fill="#1a202c">09 product path write guard</text>
+<rect x="32" y="204" width="191" height="46" rx="6" fill="#ffffff" stroke="#2b6cb0"/>
+<text x="127.5" y="232" text-anchor="middle" font-size="12" fill="#1a202c">10 orca JSON normalizer</text>
+<rect x="32" y="260" width="191" height="46" rx="6" fill="#ffffff" stroke="#2b6cb0"/>
+<text x="127.5" y="288" text-anchor="middle" font-size="12" fill="#1a202c">12 contract delivery token</text>
+<path d="M237 235 L253 235" stroke="#718096" stroke-width="2" marker-end="url(#a)"/>
+<rect x="255" y="50" width="215" height="370" rx="10" fill="#eaf7ee" stroke="#2f855a" stroke-width="1.5"/>
 <text x="362.5" y="76" text-anchor="middle" font-size="14" font-weight="bold" fill="#2f855a">During</text>
 <rect x="267" y="92" width="191" height="46" rx="6" fill="#ffffff" stroke="#2f855a"/>
 <text x="362.5" y="120" text-anchor="middle" font-size="12" fill="#1a202c">03 model identity probe</text>
-<rect x="267" y="152" width="191" height="46" rx="6" fill="#ffffff" stroke="#2f855a"/>
-<text x="362.5" y="180" text-anchor="middle" font-size="12" fill="#1a202c">06 worker wait and reap</text>
-<rect x="267" y="212" width="191" height="46" rx="6" fill="#ffffff" stroke="#2f855a"/>
-<text x="362.5" y="240" text-anchor="middle" font-size="12" fill="#1a202c">07 dispatch timeline join</text>
-<path d="M472 165 L488 165" stroke="#718096" stroke-width="2" marker-end="url(#a)"/>
-<rect x="490" y="50" width="215" height="230" rx="10" fill="#fdf3e6" stroke="#c05621" stroke-width="1.5"/>
+<rect x="267" y="148" width="191" height="46" rx="6" fill="#ffffff" stroke="#2f855a"/>
+<text x="362.5" y="176" text-anchor="middle" font-size="12" fill="#1a202c">06 worker wait and reap</text>
+<rect x="267" y="204" width="191" height="46" rx="6" fill="#ffffff" stroke="#2f855a"/>
+<text x="362.5" y="232" text-anchor="middle" font-size="12" fill="#1a202c">07 dispatch timeline join</text>
+<path d="M472 235 L488 235" stroke="#718096" stroke-width="2" marker-end="url(#a)"/>
+<rect x="490" y="50" width="215" height="370" rx="10" fill="#fdf3e6" stroke="#c05621" stroke-width="1.5"/>
 <text x="597.5" y="76" text-anchor="middle" font-size="14" font-weight="bold" fill="#c05621">After / accept</text>
 <rect x="502" y="92" width="191" height="46" rx="6" fill="#ffffff" stroke="#c05621"/>
 <text x="597.5" y="120" text-anchor="middle" font-size="12" fill="#1a202c">01 change acceptance loop</text>
-<rect x="502" y="152" width="191" height="46" rx="6" fill="#ffffff" stroke="#c05621"/>
-<text x="597.5" y="180" text-anchor="middle" font-size="12" fill="#1a202c">08 redaction scan</text>
-<path d="M707 165 L723 165" stroke="#718096" stroke-width="2" marker-end="url(#a)"/>
-<rect x="725" y="50" width="215" height="230" rx="10" fill="#f3eefb" stroke="#6b46c1" stroke-width="1.5"/>
+<rect x="502" y="148" width="191" height="46" rx="6" fill="#ffffff" stroke="#c05621"/>
+<text x="597.5" y="176" text-anchor="middle" font-size="12" fill="#1a202c">08 redaction scan</text>
+<rect x="502" y="204" width="191" height="46" rx="6" fill="#ffffff" stroke="#c05621"/>
+<text x="597.5" y="232" text-anchor="middle" font-size="12" fill="#1a202c">11 rendered shell tests</text>
+<rect x="502" y="260" width="191" height="46" rx="6" fill="#ffffff" stroke="#c05621"/>
+<text x="597.5" y="288" text-anchor="middle" font-size="12" fill="#1a202c">13 template manifest</text>
+<rect x="502" y="316" width="191" height="46" rx="6" fill="#ffffff" stroke="#c05621"/>
+<text x="597.5" y="344" text-anchor="middle" font-size="12" fill="#1a202c">15 changelog fragment</text>
+<path d="M707 235 L723 235" stroke="#718096" stroke-width="2" marker-end="url(#a)"/>
+<rect x="725" y="50" width="215" height="370" rx="10" fill="#f3eefb" stroke="#6b46c1" stroke-width="1.5"/>
 <text x="832.5" y="76" text-anchor="middle" font-size="14" font-weight="bold" fill="#6b46c1">Master lifecycle</text>
 <rect x="737" y="92" width="191" height="46" rx="6" fill="#ffffff" stroke="#6b46c1"/>
 <text x="832.5" y="120" text-anchor="middle" font-size="12" fill="#1a202c">04 succession placement check</text>
-<rect x="737" y="152" width="191" height="46" rx="6" fill="#ffffff" stroke="#6b46c1"/>
-<text x="832.5" y="180" text-anchor="middle" font-size="12" fill="#1a202c">05 read-only recovery flow</text>
+<rect x="737" y="148" width="191" height="46" rx="6" fill="#ffffff" stroke="#6b46c1"/>
+<text x="832.5" y="176" text-anchor="middle" font-size="12" fill="#1a202c">05 read-only recovery flow</text>
+<rect x="737" y="204" width="191" height="46" rx="6" fill="#ffffff" stroke="#6b46c1"/>
+<text x="832.5" y="232" text-anchor="middle" font-size="12" fill="#1a202c">14 workspace card scope</text>
 </svg>
