@@ -32,7 +32,7 @@
 <rect x="24" y="181" width="6" height="34" fill="#2f855a"/>
 <circle cx="54" cy="198" r="16" fill="#2f855a"/>
 <text x="54" y="204" text-anchor="middle" font-size="18" fill="#ffffff">2</text>
-<text x="88" y="205" font-size="20" fill="#1a202c">gate: tier, budget, hash</text>
+<text x="88" y="205" font-size="20" fill="#1a202c">gate: tier and budget</text>
 <rect x="24" y="223" width="6" height="34" fill="#2f855a"/>
 <circle cx="54" cy="240" r="16" fill="#2f855a"/>
 <text x="54" y="246" text-anchor="middle" font-size="18" fill="#ffffff">3</text>
@@ -64,7 +64,7 @@
 <rect x="24" y="517" width="6" height="34" fill="#2f855a"/>
 <circle cx="54" cy="534" r="16" fill="#2f855a"/>
 <text x="54" y="540" text-anchor="middle" font-size="18" fill="#ffffff">10</text>
-<text x="88" y="541" font-size="20" fill="#1a202c">delivery classified</text>
+<text x="88" y="541" font-size="20" fill="#1a202c">delivery verdict</text>
 <rect x="24" y="559" width="6" height="34" fill="#6b46c1"/>
 <circle cx="54" cy="576" r="16" fill="#6b46c1"/>
 <text x="54" y="582" text-anchor="middle" font-size="18" fill="#ffffff">11</text>
