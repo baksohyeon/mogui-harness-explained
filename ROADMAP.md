@@ -1,6 +1,10 @@
 # Roadmap
 
-What the public record says is unfinished or unmeasured in the mogui harness, read at tag `v0.5.288` and on `main` as of 2026-11-08. The sources are four. The repository's open issues. The changelog fragments on `main` that no release has folded yet. The "What this page does not claim" and "What is unknown" sections on these pages. The modules that ship with tests and no caller. Nothing here states a date or a direction the record does not state. The owner adds intent; this page records what is on file.
+What the public record says is unfinished or unmeasured in the mogui harness, read at tag `v0.5.288` and on `main` as of 2026-11-08. The sources are four. The repository's open issues. The changelog fragments on `main` that no release has folded yet. The "What this page does not claim" and "What is unknown" sections on these pages. The modules that ship with tests and no caller. Nothing here states a date the record does not state.
+
+## Direction
+
+The owner's stated direction, 2026-11-08: a harness an outside contributor can run from the install alone. The items below that bear on it are the install checks and the session-mode router of unit [18](units/18-progressive-onboarding-and-install-checks/), the tool probes of unit [19](units/19-adapter-layer-tool-neutral-profiles/), the instance facts that keep one machine's values out of the template in unit [24](units/24-instance-config-and-workspace-descriptor/), issue #216 on reading the seat at install instead of asking for a selector, and the unknown of how far installed seats drift. Everything else on this page is on file without a stated direction.
 
 ## Shipped on `main`, not yet released
 
