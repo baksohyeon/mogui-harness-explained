@@ -4,6 +4,8 @@
 
 The mogui harness is a set of scripts that let one agent, the master, run other agents as workers under a human owner. It runs on Orca, a terminal program with an orchestration layer. This repository explains the harness in three layers, each written for a reader who has never run it. Three walkthroughs follow a procedure from start to end. Twenty-seven units each explain one mechanism. Eight concept notes cover the ideas behind the mechanisms. A glossary defines the words the pages use without stopping to explain them. Every evidence link points at the public implementation at tag `v0.5.288`.
 
+Every mechanism here exists because something measurable went wrong once. A contract reached the gate and never reached the worker, so the wrapper now delivers it with a token the worker must quote back. A successor master was seated in the wrong worktree and found from two phone screenshots, so a spawn now proves its placement or closes. A worker sat on an approval prompt while the inbox and the pull request stayed quiet, so a sweep now classifies every pane. Four commands were read without their exit status in one day, so a wrapper now prints the status first. The pages name the incident behind each mechanism and what one seat measured afterwards. What the record says is still open is on the [roadmap](ROADMAP.md).
+
 ## How to read this
 
 Five reading paths.
@@ -85,6 +87,6 @@ The implementation is [mogui-ADE-orchestrator](https://github.com/baksohyeon/mog
 
 ## What is not here
 
-No transcripts, work data, internal paths, or organization redaction rules. Identifiers in the examples are synthetic.
+No transcripts, work data, internal paths, or organization redaction rules. Identifiers in the examples are synthetic. What is unfinished or unmeasured in the harness is listed on the [roadmap](ROADMAP.md), from the public record only.
 
 <p align="center"><img src="assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>
