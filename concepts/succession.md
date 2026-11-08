@@ -2,7 +2,7 @@
 
 **In one breath.** Masters come in generations. A successor is spawned on purpose, proves it landed in the right place, retires its predecessor by three measured disappearances, and writes one lineage entry.
 
-The words this page uses are in the [glossary](glossary.md).
+The harness's own words on this page are in the [glossary](glossary.md).
 
 ## For a ten-year-old
 

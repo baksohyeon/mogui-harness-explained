@@ -1,6 +1,6 @@
 # Glossary
 
-Sixty-one entries for the words the unit, concept, and walkthrough pages use without stopping to explain them; an entry covers one word or a few that mean the same thing. Each line says what the word means in this harness and where to read more. Words marked (Orca) come from Orca, the terminal program the harness runs inside; Orca's own documentation is the authority on them.
+Sixty-three entries for the words the unit, concept, and walkthrough pages use without stopping to explain them; an entry covers one word or a few that mean the same thing. Each line says what the word means in this harness and where to read more. Words marked (Orca) come from Orca, the terminal program the harness runs inside; Orca's own documentation is the authority on them.
 
 ## People and roles
 
@@ -67,6 +67,8 @@ Sixty-one entries for the words the unit, concept, and walkthrough pages use wit
 - **placeholder**: a `{{TOKEN}}` the render fills in, such as the workspace root.
 - **manifest**: the list of files the template owns, with the template version. See [unit 13](../units/13-template-manifest-instance-owned-paths/).
 - **instance-owned path**: a file the template never overwrites: role state, lineage, local config, contracts, `LOCAL.md`. See [unit 13](../units/13-template-manifest-instance-owned-paths/).
+- **drift**: the difference between a seat's copy of a template file and the template's current one, measured file by file; the only instrument for it is the apply tool's dry run. See [template and seat](template-and-seat.md).
+- **dry run**: the plan pass of `template-apply`: it prints every file it would write, with a reason, and writes nothing. See [one template upgrade](../walkthroughs/03-one-template-upgrade.md).
 - **re-stamp**: applying a newer template onto a seat, file by file. See [one template upgrade](../walkthroughs/03-one-template-upgrade.md).
 - **workspace card**: the two identical files at the workspace root that tell a session what role it holds. See [unit 14](../units/14-workspace-card-scope-local-file/).
 - **changelog fragment**: one dated file per change, folded into the changelog at release time. See [unit 15](../units/15-changelog-fragment-gate/).

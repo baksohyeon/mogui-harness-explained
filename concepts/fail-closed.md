@@ -2,7 +2,7 @@
 
 **In one breath.** Several gates in this harness have a third output, "I could not tell". A gate that reaches it stops the work. It never rounds up to "fine".
 
-The words this page uses are in the [glossary](glossary.md).
+The harness's own words on this page are in the [glossary](glossary.md).
 
 ## For a ten-year-old
 
