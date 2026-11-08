@@ -1,129 +1,129 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="1320" viewBox="0 0 640 1320" font-family="Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="1970" viewBox="0 0 640 1970" font-family="Helvetica, Arial, sans-serif">
 <defs><marker id="system-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1a202c"/></marker></defs>
-<rect width="640" height="1320" fill="#ffffff"/>
-<text x="320" y="28" text-anchor="middle" font-size="24" font-weight="bold" fill="#1a202c">the mogui harness in one picture</text>
-<text x="320" y="52" text-anchor="middle" font-size="18" fill="#718096"><tspan x="320" dy="0">numbers are unit ids;</tspan><tspan dy="0"> color is when a check</tspan><tspan dy="0"> fires</tspan></text>
+<rect width="640" height="1970" fill="#ffffff"/>
+<text x="320" y="30" text-anchor="middle" font-size="24" font-weight="bold" fill="#1a202c">the mogui harness in one picture</text>
+<text x="320" y="55" text-anchor="middle" font-size="18" fill="#718096"><tspan x="320" dy="0">numbers are unit ids;</tspan><tspan dy="0"> color is when a check</tspan><tspan dy="0"> fires</tspan></text>
 
-<rect x="20" y="92" width="100" height="104" rx="8" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
-<text x="70" y="137" text-anchor="middle" font-size="20" fill="#1a202c"><tspan x="70" dy="0">you</tspan><tspan x="70" dy="27">the owner</tspan></text>
+<rect x="20" y="100" width="150" height="90" rx="8" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
+<text x="95" y="137" text-anchor="middle" font-size="18" fill="#1a202c"><tspan x="95" dy="0">you</tspan><tspan x="95" dy="25">the owner</tspan></text>
 
-<rect x="140" y="92" width="220" height="170" rx="12" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
-<text x="250" y="158" text-anchor="middle" font-size="20" fill="#1a202c"><tspan x="250" dy="0">master</tspan><tspan x="250" dy="27">an Orca pane</tspan></text>
+<rect x="190" y="100" width="120" height="600" rx="12" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
+<text x="250" y="370" text-anchor="middle" font-size="18" fill="#1a202c"><tspan x="250" dy="0">master</tspan><tspan x="250" dy="25" textLength="110" lengthAdjust="spacingAndGlyphs">an Orca pane</tspan></text>
 
-<rect x="450" y="100" width="170" height="60" rx="8" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
-<text x="535" y="126" text-anchor="middle" font-size="20" fill="#1a202c"><tspan x="535" dy="0">worker</tspan><tspan x="535" dy="25">its own checkout</tspan></text>
-<rect x="450" y="190" width="170" height="60" rx="8" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
-<text x="535" y="216" text-anchor="middle" font-size="20" fill="#1a202c"><tspan x="535" dy="0">worker</tspan><tspan x="535" dy="25">its own checkout</tspan></text>
-<rect x="450" y="280" width="170" height="60" rx="8" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
-<text x="535" y="306" text-anchor="middle" font-size="20" fill="#1a202c"><tspan x="535" dy="0">worker</tspan><tspan x="535" dy="25">its own checkout</tspan></text>
+<rect x="430" y="150" width="200" height="90" rx="8" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
+<text x="530" y="185" text-anchor="middle" font-size="18" fill="#1a202c"><tspan x="530" dy="0">worker</tspan><tspan x="530" dy="25" textLength="150" lengthAdjust="spacingAndGlyphs">its own checkout</tspan></text>
+<rect x="430" y="350" width="200" height="90" rx="8" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
+<text x="530" y="385" text-anchor="middle" font-size="18" fill="#1a202c"><tspan x="530" dy="0">worker</tspan><tspan x="530" dy="25" textLength="150" lengthAdjust="spacingAndGlyphs">its own checkout</tspan></text>
+<rect x="430" y="550" width="200" height="90" rx="8" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
+<text x="530" y="585" text-anchor="middle" font-size="18" fill="#1a202c"><tspan x="530" dy="0">worker</tspan><tspan x="530" dy="25" textLength="150" lengthAdjust="spacingAndGlyphs">its own checkout</tspan></text>
 
-<path id="P1" d="M120 144 L128 144 L128 225 L140 225" fill="none" stroke="#1a202c" stroke-width="2" marker-end="url(#system-arrow)"/>
-<text x="100" y="285" text-anchor="middle" font-size="18" fill="#1a202c">P1 one instruction</text>
-<circle id="check-09" cx="128" cy="180" r="18" fill="#2b6cb0" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.054167;0.064583;0.075000;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="128" y="187" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">09</text>
+<path id="P1" d="M95 190 V240 H190" fill="none" stroke="#1a202c" stroke-width="2" stroke-linejoin="round" marker-end="url(#system-arrow)"/>
+<text x="95" y="300" text-anchor="middle" font-size="18" fill="#1a202c" textLength="140" lengthAdjust="spacingAndGlyphs">P1 one instruction</text>
+<circle id="check-09" cx="145" cy="240" r="18" fill="#2b6cb0" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.050000;0.060417;0.070833;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="145" y="247" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">09</text>
 
-<path id="P2" d="M360 120 L370 74 L620 74 L620 130 L450 130" fill="none" stroke="#1a202c" stroke-width="2" marker-end="url(#system-arrow)"/>
-<text x="250" y="80" text-anchor="middle" font-size="18" fill="#1a202c">P2 contract + token</text>
-<circle id="check-02" cx="400" cy="74" r="18" fill="#2b6cb0" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.127083;0.137500;0.147917;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="400" y="81" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">02</text>
-<circle id="check-24" cx="450" cy="74" r="18" fill="#2b6cb0" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.145833;0.156250;0.166667;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="450" y="81" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">24</text>
-<circle id="check-12" cx="500" cy="74" r="18" fill="#2b6cb0" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.164583;0.175000;0.185417;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="500" y="81" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">12</text>
-<circle id="check-10" cx="550" cy="74" r="18" fill="#2b6cb0" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.183333;0.193750;0.204167;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="550" y="81" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">10</text>
-<circle id="check-19" cx="600" cy="74" r="18" fill="#2b6cb0" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.202083;0.212500;0.222917;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="600" y="81" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">19</text>
+<path id="P2" d="M290 100 V90 H620 V120 H400 V175 H430" fill="none" stroke="#1a202c" stroke-width="2" stroke-linejoin="round" marker-end="url(#system-arrow)"/>
+<text x="550" y="140" text-anchor="middle" font-size="18" fill="#1a202c" textLength="110" lengthAdjust="spacingAndGlyphs">P2 contract + token</text>
+<circle id="check-02" cx="340" cy="90" r="18" fill="#2b6cb0" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.120833;0.131250;0.141667;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="340" y="97" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">02</text>
+<circle id="check-24" cx="400" cy="90" r="18" fill="#2b6cb0" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.137500;0.147917;0.158333;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="400" y="97" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">24</text>
+<circle id="check-12" cx="460" cy="90" r="18" fill="#2b6cb0" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.154167;0.164583;0.175000;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="460" y="97" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">12</text>
+<circle id="check-10" cx="520" cy="90" r="18" fill="#2b6cb0" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.170833;0.181250;0.191667;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="520" y="97" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">10</text>
+<circle id="check-19" cx="580" cy="90" r="18" fill="#2b6cb0" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.187500;0.197917;0.208333;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="580" y="97" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">19</text>
 
-<path id="P7" d="M360 120 C378 100 395 110 395 145 L395 250 C395 290 380 315 360 300 L360 220" fill="none" stroke="#1a202c" stroke-width="2" marker-end="url(#system-arrow)"/>
-<text x="510" y="270" text-anchor="middle" font-size="18" fill="#1a202c">P7 compact, then succeed</text>
-<circle id="check-22" cx="375" cy="110" r="18" fill="#6b46c1" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.679167;0.689583;0.700000;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="375" y="117" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">22</text>
-<circle id="check-17" cx="393" cy="145" r="18" fill="#6b46c1" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.693750;0.704167;0.714583;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="393" y="152" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">17</text>
-<circle id="check-16" cx="395" cy="185" r="18" fill="#6b46c1" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.708333;0.718750;0.729167;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="395" y="192" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">16</text>
-<circle id="check-04" cx="395" cy="230" r="18" fill="#6b46c1" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.722917;0.733333;0.743750;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="395" y="237" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">04</text>
-<circle id="check-05" cx="390" cy="270" r="18" fill="#6b46c1" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.737500;0.747917;0.758333;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="390" y="277" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">05</text>
-<circle id="check-23" cx="375" cy="300" r="18" fill="#6b46c1" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.752083;0.762500;0.772917;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="375" y="307" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">23</text>
+<path id="P7" d="M310 150 H370 V700 H310" fill="none" stroke="#1a202c" stroke-width="2" stroke-linejoin="round" marker-end="url(#system-arrow)"/>
+<text x="520" y="500" text-anchor="middle" font-size="18" fill="#1a202c" textLength="180" lengthAdjust="spacingAndGlyphs">P7 compact, then succeed</text>
+<circle id="check-22" cx="370" cy="180" r="18" fill="#6b46c1" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.687500;0.697917;0.708333;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="370" y="187" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">22</text>
+<circle id="check-17" cx="370" cy="280" r="18" fill="#6b46c1" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.708333;0.718750;0.729167;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="370" y="287" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">17</text>
+<circle id="check-16" cx="370" cy="380" r="18" fill="#6b46c1" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.729167;0.739583;0.750000;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="370" y="387" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">16</text>
+<circle id="check-04" cx="370" cy="480" r="18" fill="#6b46c1" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.750000;0.760417;0.770833;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="370" y="487" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">04</text>
+<circle id="check-05" cx="370" cy="580" r="18" fill="#6b46c1" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.770833;0.781250;0.791667;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="370" y="587" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">05</text>
+<circle id="check-23" cx="370" cy="680" r="18" fill="#6b46c1" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.791667;0.802083;0.812500;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="370" y="687" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">23</text>
 
-<path id="P3" d="M450 130 L420 190 L420 300 L470 300 L540 350 L540 395" fill="none" stroke="#1a202c" stroke-width="2" marker-end="url(#system-arrow)"/>
-<text x="500" y="460" text-anchor="middle" font-size="18" fill="#1a202c">P3 worker_done</text>
-<circle id="check-03" cx="440" cy="170" r="18" fill="#2f855a" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.235417;0.245833;0.256250;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="440" y="177" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">03</text>
-<circle id="check-20" cx="420" cy="220" r="18" fill="#2f855a" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.250000;0.260417;0.270833;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="420" y="227" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">20</text>
-<circle id="check-26" cx="420" cy="270" r="18" fill="#2f855a" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.264583;0.275000;0.285417;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="420" y="277" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">26</text>
-<circle id="check-06" cx="470" cy="300" r="18" fill="#2f855a" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.287500;0.297917;0.308333;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="470" y="307" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">06</text>
+<path id="P3" d="M430 195 H400 V700 H500 V760" fill="none" stroke="#1a202c" stroke-width="2" stroke-linejoin="round" marker-end="url(#system-arrow)"/>
+<text x="520" y="675" text-anchor="middle" font-size="18" fill="#1a202c" textLength="130" lengthAdjust="spacingAndGlyphs">P3 worker_done</text>
+<circle id="check-03" cx="400" cy="230" r="18" fill="#2f855a" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.229167;0.239583;0.250000;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="400" y="237" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">03</text>
+<circle id="check-20" cx="400" cy="330" r="18" fill="#2f855a" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.250000;0.260417;0.270833;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="400" y="337" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">20</text>
+<circle id="check-26" cx="400" cy="430" r="18" fill="#2f855a" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.270833;0.281250;0.291667;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="400" y="437" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">26</text>
+<circle id="check-06" cx="400" cy="530" r="18" fill="#2f855a" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.291667;0.302083;0.312500;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="400" y="537" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">06</text>
 
-<rect x="260" y="350" width="280" height="90" rx="10" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
-<text x="400" y="384" text-anchor="middle" font-size="20" fill="#1a202c"><tspan x="400" dy="0">Orca mailbox</tspan><tspan x="400" dy="27">ask, reply, worker_done</tspan></text>
+<rect x="430" y="760" width="170" height="140" rx="10" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
+<text x="515" y="812" text-anchor="middle" font-size="18" fill="#1a202c"><tspan x="515" dy="0">Orca mailbox</tspan><tspan x="515" dy="25" textLength="150" lengthAdjust="spacingAndGlyphs">ask, reply, worker_done</tspan></text>
 
-<path id="P4" d="M300 350 L300 290 L250 260" fill="none" stroke="#1a202c" stroke-width="2" marker-end="url(#system-arrow)"/>
-<text x="180" y="310" text-anchor="middle" font-size="18" fill="#1a202c">P4 wakes the master</text>
-<circle id="check-07" cx="300" cy="320" r="18" fill="#2f855a" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.379167;0.389583;0.400000;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="300" y="327" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">07</text>
+<path id="P4" d="M430 780 H300 V700" fill="none" stroke="#1a202c" stroke-width="2" stroke-linejoin="round" marker-end="url(#system-arrow)"/>
+<text x="100" y="740" text-anchor="middle" font-size="18" fill="#1a202c" textLength="100" lengthAdjust="spacingAndGlyphs">P4 wakes the master</text>
+<circle id="check-07" cx="380" cy="780" r="18" fill="#2f855a" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.375000;0.385417;0.395833;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="380" y="787" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">07</text>
 
-<path id="P5" d="M620 130 L620 440 L510 500" fill="none" stroke="#1a202c" stroke-width="2" marker-end="url(#system-arrow)"/>
-<text x="575" y="475" text-anchor="middle" font-size="18" fill="#1a202c">P5 one PR</text>
-<circle id="check-27" cx="620" cy="410" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.489583;0.500000;0.510417;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="620" y="417" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">27</text>
+<path id="P5" d="M630 595 V650 H620 V1020 H560 V1050" fill="none" stroke="#1a202c" stroke-width="2" stroke-linejoin="round" marker-end="url(#system-arrow)"/>
+<text x="500" y="1025" text-anchor="middle" font-size="18" fill="#1a202c" textLength="100" lengthAdjust="spacingAndGlyphs">P5 one PR</text>
+<circle id="check-27" cx="580" cy="1020" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.479167;0.489583;0.500000;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="580" y="1027" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">27</text>
 
-<path id="P6" d="M345 220 L345 330 L365 420 L400 500" fill="none" stroke="#1a202c" stroke-width="2" marker-end="url(#system-arrow)"/>
-<text x="320" y="475" text-anchor="middle" font-size="18" fill="#1a202c">P6 verifies, merges</text>
-<circle id="check-08" cx="345" cy="275" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.579167;0.589583;0.600000;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="345" y="282" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">08</text>
-<circle id="check-21" cx="345" cy="335" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.604167;0.614583;0.625000;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="345" y="342" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">21</text>
-<circle id="check-01" cx="365" cy="420" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.635417;0.645833;0.656250;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="365" y="427" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">01</text>
+<path id="P6" d="M280 700 V920 H610 V970 H430 V1130" fill="none" stroke="#1a202c" stroke-width="2" stroke-linejoin="round" marker-end="url(#system-arrow)"/>
+<text x="340" y="945" text-anchor="middle" font-size="18" fill="#1a202c" textLength="150" lengthAdjust="spacingAndGlyphs">P6 verifies, merges</text>
+<circle id="check-08" cx="580" cy="970" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.572917;0.583333;0.593750;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="580" y="977" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">08</text>
+<circle id="check-21" cx="520" cy="970" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.593750;0.604167;0.614583;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="520" y="977" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">21</text>
+<circle id="check-01" cx="460" cy="970" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.614583;0.625000;0.635417;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="460" y="977" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">01</text>
 
-<rect x="20" y="450" width="230" height="100" rx="8" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
-<text x="135" y="489" text-anchor="middle" font-size="20" fill="#1a202c"><tspan x="135" dy="0">operations repo</tspan><tspan x="135" dy="27">contracts, lineage, rules</tspan></text>
-<path id="P9" d="M180 260 L150 340 L150 450" fill="none" stroke="#1a202c" stroke-width="2" marker-end="url(#system-arrow)"/>
-<text x="95" y="415" text-anchor="middle" font-size="18" fill="#1a202c">P9 writes</text>
-<circle id="check-18" cx="150" cy="370" r="18" fill="#718096" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.937500;0.947917;0.958333;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="150" y="377" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">18</text>
+<rect x="20" y="840" width="150" height="120" rx="8" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
+<text x="95" y="887" text-anchor="middle" font-size="18" fill="#1a202c"><tspan x="95" dy="0">operations repo</tspan><tspan x="95" dy="25" textLength="130" lengthAdjust="spacingAndGlyphs">contracts, lineage, rules</tspan></text>
+<path id="P9" d="M210 700 V780 H160 V840" fill="none" stroke="#1a202c" stroke-width="2" stroke-linejoin="round" marker-end="url(#system-arrow)"/>
+<text x="100" y="660" text-anchor="middle" font-size="18" fill="#1a202c" textLength="90" lengthAdjust="spacingAndGlyphs">P9 writes</text>
+<circle id="check-18" cx="160" cy="810" r="18" fill="#718096" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.958333;0.968750;0.979167;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="160" y="817" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">18</text>
 
-<path id="P10" d="M280 260 L310 370 L300 500 L230 590" fill="none" stroke="#1a202c" stroke-width="2" marker-end="url(#system-arrow)"/>
-<text x="310" y="570" text-anchor="middle" font-size="18" fill="#1a202c">P10 reads tracks</text>
-<rect x="20" y="590" width="230" height="100" rx="8" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
-<text x="135" y="629" text-anchor="middle" font-size="20" fill="#1a202c"><tspan x="135" dy="0">issue tracker</tspan><tspan x="135" dy="27">active tracks</tspan></text>
+<path id="P10" d="M230 700 V800 H200 V1040 H160 V1150" fill="none" stroke="#1a202c" stroke-width="2" stroke-linejoin="round" marker-end="url(#system-arrow)"/>
+<text x="100" y="1020" text-anchor="middle" font-size="18" fill="#1a202c" textLength="140" lengthAdjust="spacingAndGlyphs">P10 reads tracks</text>
+<rect x="20" y="1150" width="150" height="120" rx="8" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
+<text x="95" y="1197" text-anchor="middle" font-size="18" fill="#1a202c"><tspan x="95" dy="0">issue tracker</tspan><tspan x="95" dy="25">active tracks</tspan></text>
 
-<rect x="400" y="500" width="220" height="110" rx="10" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
-<text x="510" y="543" text-anchor="middle" font-size="20" fill="#1a202c"><tspan x="510" dy="0">pull request</tspan><tspan x="510" dy="27">reviewed, then merged</tspan></text>
+<rect x="430" y="1050" width="200" height="150" rx="10" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
+<text x="530" y="1110" text-anchor="middle" font-size="18" fill="#1a202c"><tspan x="530" dy="0">pull request</tspan><tspan x="530" dy="25" textLength="170" lengthAdjust="spacingAndGlyphs">reviewed, then merged</tspan></text>
 
-<path id="P8" d="M320 1120 L320 1000 L300 900 L300 760 L280 650 L280 500 L260 430 L260 350 L250 260" fill="none" stroke="#1a202c" stroke-width="2" marker-end="url(#system-arrow)"/>
-<text x="180" y="1020" text-anchor="middle" font-size="18" fill="#1a202c">P8 render, upgrade</text>
-<circle id="check-13" cx="320" cy="1040" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.791667;0.802083;0.812500;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="320" y="1047" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">13</text>
-<circle id="check-14" cx="320" cy="960" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.812500;0.822917;0.833333;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="320" y="967" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">14</text>
-<circle id="check-11" cx="300" cy="880" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.833333;0.843750;0.854167;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="300" y="887" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">11</text>
-<circle id="check-15" cx="300" cy="800" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.854167;0.864583;0.875000;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="300" y="807" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">15</text>
-<circle id="check-25" cx="300" cy="720" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.875000;0.885417;0.895833;1" dur="48s" repeatCount="indefinite"/></circle>
-<text x="300" y="727" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">25</text>
+<path id="P8" d="M260 1840 V700" fill="none" stroke="#1a202c" stroke-width="2" stroke-linejoin="round" marker-end="url(#system-arrow)"/>
+<text x="100" y="1710" text-anchor="middle" font-size="18" fill="#1a202c" textLength="150" lengthAdjust="spacingAndGlyphs">P8 render, upgrade</text>
+<circle id="check-13" cx="260" cy="1600" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.833333;0.843750;0.854167;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="260" y="1607" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">13</text>
+<circle id="check-14" cx="260" cy="1450" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.854167;0.864583;0.875000;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="260" y="1457" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">14</text>
+<circle id="check-11" cx="260" cy="1300" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.875000;0.885417;0.895833;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="260" y="1307" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">11</text>
+<circle id="check-15" cx="260" cy="1150" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.895833;0.906250;0.916667;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="260" y="1157" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">15</text>
+<circle id="check-25" cx="260" cy="1000" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.916667;0.927083;0.937500;1" dur="48s" repeatCount="indefinite"/></circle>
+<text x="260" y="1007" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">25</text>
 
-<rect x="380" y="890" width="240" height="180" rx="8" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
-<circle cx="400" cy="915" r="10" fill="#2b6cb0"/>
-<text x="420" y="921" font-size="18" fill="#1a202c">before dispatch</text>
-<circle cx="400" cy="947" r="10" fill="#2f855a"/>
-<text x="420" y="953" font-size="18" fill="#1a202c">during</text>
-<circle cx="400" cy="979" r="10" fill="#c05621"/>
-<text x="420" y="985" font-size="18" fill="#1a202c">after, accept</text>
-<circle cx="400" cy="1011" r="10" fill="#6b46c1"/>
-<text x="420" y="1017" font-size="18" fill="#1a202c">master lifecycle</text>
-<circle cx="400" cy="1043" r="10" fill="#718096"/>
-<text x="420" y="1049" font-size="18" fill="#1a202c">install</text>
+<rect x="440" y="1620" width="190" height="180" rx="8" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
+<circle cx="460" cy="1648" r="10" fill="#2b6cb0"/>
+<text x="480" y="1654" font-size="18" fill="#1a202c">before dispatch</text>
+<circle cx="460" cy="1680" r="10" fill="#2f855a"/>
+<text x="480" y="1686" font-size="18" fill="#1a202c">during</text>
+<circle cx="460" cy="1712" r="10" fill="#c05621"/>
+<text x="480" y="1718" font-size="18" fill="#1a202c">after, accept</text>
+<circle cx="460" cy="1744" r="10" fill="#6b46c1"/>
+<text x="480" y="1750" font-size="18" fill="#1a202c">master lifecycle</text>
+<circle cx="460" cy="1776" r="10" fill="#718096"/>
+<text x="480" y="1782" font-size="18" fill="#1a202c">install</text>
 
-<rect x="20" y="1120" width="600" height="180" rx="12" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
-<text x="320" y="1182" text-anchor="middle" font-size="20" fill="#1a202c"><tspan x="320" dy="0">template</tspan><tspan x="320" dy="27">one upstream, many seats</tspan></text>
-<circle id="ring" cx="120" cy="144" r="22" fill="none" stroke="#1a202c" stroke-width="4"><animateMotion path="M120 144 L128 144 L128 225 L140 225 M360 120 L370 74 L620 74 L620 130 L450 130 M450 130 L420 190 L420 300 L470 300 L540 350 L540 395 M300 350 L300 290 L250 260 M620 130 L620 440 L510 500 M345 220 L345 330 L365 420 L400 500 M360 120 C378 100 395 110 395 145 L395 250 C395 290 380 315 360 300 L360 220 M320 1120 L320 1000 L300 900 L300 760 L280 650 L280 500 L260 430 L260 350 L250 260 M180 260 L150 340 L150 450" dur="48s" repeatCount="indefinite"/></circle>
+<rect x="20" y="1840" width="600" height="130" rx="12" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
+<text x="320" y="1890" text-anchor="middle" font-size="20" fill="#1a202c"><tspan x="320" dy="0">template</tspan><tspan x="320" dy="27" textLength="220" lengthAdjust="spacingAndGlyphs">one upstream, many seats</tspan></text>
+<circle id="ring" cx="95" cy="190" r="22" fill="none" stroke="#1a202c" stroke-width="4"><animateMotion path="M95 190 V240 H190 M290 100 V90 H620 V120 H400 V175 H430 M430 195 H400 V700 H500 V760 M430 780 H300 V700 M630 595 V650 H620 V1020 H560 V1050 M280 700 V920 H610 V970 H430 V1130 M310 150 H370 V700 H310 M260 1840 V700 M210 700 V780 H160 V840" dur="48s" repeatCount="indefinite"/></circle>
 </svg>
