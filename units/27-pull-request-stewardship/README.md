@@ -8,6 +8,8 @@
 
 **Failure it prevents.** A pull request whose body still says what the template told the author to write. A home path pushed in a body the repository scan never looked at. A fresh install that received the review procedure and none of the voice, which happened until 2026-08-05 because the voice lived only in the tracker's memory.
 
+<p align="center"><img src="../../assets/units/27-pull-request-stewardship.svg" alt="pull request checks body and review stewardship" width="100%"></p>
+
 ## Example (synthetic)
 
 ```

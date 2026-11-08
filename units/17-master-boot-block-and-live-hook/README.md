@@ -10,6 +10,8 @@
 
 **Failure it prevents.** A master that boots with another master's context, with no role, or with a stale tracker and does not notice. A compaction that looks like continuity because the hook handed the answers back before the recall probe asked its questions.
 
+<p align="center"><img src="../../assets/units/17-master-boot-block-and-live-hook.svg" alt="master boot block branches for compact and fallback" width="100%"></p>
+
 ## Example (synthetic)
 
 ```

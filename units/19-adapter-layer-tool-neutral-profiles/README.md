@@ -8,6 +8,8 @@
 
 **Failure it prevents.** A vendor flag spreading into the core modules, so that adding a runtime means editing the dispatcher. A tool check that passes because the command exited 0 without checking anything.
 
+<p align="center"><img src="../../assets/units/19-adapter-layer-tool-neutral-profiles.svg" alt="runtime profiles and adapter doctor probes" width="100%"></p>
+
 ## Example (synthetic)
 
 ```

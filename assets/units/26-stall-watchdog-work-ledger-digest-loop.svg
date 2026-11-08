@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="1160" viewBox="0 0 640 1160" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="arrow26" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#718096"/></marker></defs>
+<rect width="640" height="1160" fill="#ffffff"/>
+<rect x="40" y="30" width="560" height="66" rx="8" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="320" y="71" text-anchor="middle" font-size="20" fill="#1a202c">progress log</text>
+<path d="M320 96 L320 132" stroke="#718096" stroke-width="2" marker-end="url(#arrow26)"/>
+<rect x="40" y="142" width="560" height="70" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="320" y="185" text-anchor="middle" font-size="20" fill="#1a202c">check_stall</text>
+<path d="M250 212 L115 272" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow26)"/>
+<path d="M320 212 L320 272" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow26)"/>
+<path d="M390 212 L525 272" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow26)"/>
+<rect x="20" y="282" width="190" height="70" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="115" y="325" text-anchor="middle" font-size="20" fill="#1a202c">OK</text>
+<rect x="225" y="282" width="190" height="70" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.5"/>
+<text x="320" y="325" text-anchor="middle" font-size="20" fill="#1a202c">STALLED</text>
+<rect x="430" y="282" width="190" height="70" rx="8" fill="#ffffff" stroke="#718096" stroke-width="1.5"/>
+<text x="525" y="325" text-anchor="middle" font-size="20" fill="#1a202c">MISSING</text>
+<rect x="40" y="410" width="560" height="66" rx="8" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="320" y="451" text-anchor="middle" font-size="20" fill="#1a202c">JSONL</text>
+<path d="M320 476 L320 512" stroke="#718096" stroke-width="2" marker-end="url(#arrow26)"/>
+<rect x="40" y="522" width="560" height="70" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="320" y="565" text-anchor="middle" font-size="20" fill="#1a202c">work ledger</text>
+<path d="M320 592 L320 628" stroke="#718096" stroke-width="2" marker-end="url(#arrow26)"/>
+<rect x="120" y="638" width="400" height="70" rx="8" fill="#ffffff" stroke="#6b46c1" stroke-width="1.5"/>
+<text x="320" y="681" text-anchor="middle" font-size="20" fill="#1a202c">track states</text>
+<rect x="40" y="756" width="560" height="66" rx="8" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="320" y="797" text-anchor="middle" font-size="20" fill="#1a202c">timer</text>
+<path d="M320 822 L320 858" stroke="#718096" stroke-width="2" marker-end="url(#arrow26)"/>
+<rect x="40" y="868" width="560" height="70" rx="8" fill="#ffffff" stroke="#6b46c1" stroke-width="1.5"/>
+<text x="320" y="911" text-anchor="middle" font-size="20" fill="#1a202c">digest snapshot</text>
+<path d="M250 938 L115 998" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow26)"/>
+<path d="M320 938 L320 998" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow26)"/>
+<path d="M390 938 L525 998" fill="none" stroke="#718096" stroke-width="2" marker-end="url(#arrow26)"/>
+<rect x="20" y="1008" width="190" height="70" rx="8" fill="#ffffff" stroke="#718096" stroke-width="1.5"/>
+<text x="115" y="1051" text-anchor="middle" font-size="20" fill="#1a202c">echo</text>
+<rect x="225" y="1008" width="190" height="70" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.5"/>
+<text x="320" y="1051" text-anchor="middle" font-size="20" fill="#1a202c">expected</text>
+<rect x="430" y="1008" width="190" height="70" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.5"/>
+<text x="525" y="1051" text-anchor="middle" font-size="20" fill="#1a202c">unexplained</text>
+</svg>

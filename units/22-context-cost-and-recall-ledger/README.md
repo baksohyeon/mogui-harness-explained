@@ -8,6 +8,8 @@
 
 **Failure it prevents.** Turn-0 growing by a few thousand characters per installed skill until a session begins half full, with nobody noticing when. A recall ledger with another seat's records in it.
 
+<p align="center"><img src="../../assets/units/22-context-cost-and-recall-ledger.svg" alt="context payload and recall ledger flow" width="100%"></p>
+
 ## Example (synthetic)
 
 ```
