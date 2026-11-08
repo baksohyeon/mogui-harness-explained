@@ -2,6 +2,8 @@
 
 **In one breath.** A worker gets its own checkout, one contract that names what it may write, and by default a runtime (the agent CLI that runs its model) different from the master's. The master keeps the verification and the merge.
 
+The words this page uses are in the [glossary](glossary.md).
+
 ## For a ten-year-old
 
 Three friends build a treehouse. One holds the drawing and checks each board. The others each get a corner, a list of boards for that corner, and their own toolbox. Nobody reaches into another corner. When a corner is done, the friend with the drawing climbs up and pulls on every board before anyone sits on it.
@@ -25,6 +27,3 @@ The corner is a Git worktree. The list of boards is the contract: branch, allowe
 📎 standing rules · headless ack-token placement
 ```
 
-## Glossary
-
-The words on this page are defined in the [glossary](glossary.md).

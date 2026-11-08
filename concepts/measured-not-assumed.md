@@ -2,6 +2,8 @@
 
 **In one breath.** Every report in this harness marks each claim as something it measured, something a source confirmed, or something it inferred. A number without its instrument and date is a guess with good posture.
 
+The words this page uses are in the [glossary](glossary.md).
+
 ## For a ten-year-old
 
 Two kids report the temperature outside. One says "it is cold". The other says "the thermometer by the door read 4 degrees at eight this morning". If you need a coat, the second kid helped you. If the thermometer was broken, you can find out.
@@ -28,6 +30,3 @@ Hooks: 16 wired
 Card: deployed copy matches canonical
 ```
 
-## Glossary
-
-The words on this page are defined in the [glossary](glossary.md).

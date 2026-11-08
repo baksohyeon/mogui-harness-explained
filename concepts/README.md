@@ -1,6 +1,6 @@
 # Concepts
 
-Seven short notes on the ideas behind the units, each written for a reader who has never run the harness, followed by the house rules for a master's chat replies and a glossary. Each note answers the same five questions: what happened, what is confirmed, what is inferred, what is unknown, and where the evidence is. Every term is defined in the glossary. Every evidence link points at the public repository at tag `v0.5.288`.
+Seven short notes on the ideas behind the units, each written for a reader who has never run the harness, followed by the house rules for a master's chat replies and a glossary. Each note answers the same five questions: what happened, what is confirmed, what is inferred, what is unknown, and where the evidence is. The words the notes lean on are in the glossary. Every evidence link points at the public repository at tag `v0.5.288`.
 
 | Note | One line |
 |---|---|
@@ -12,4 +12,4 @@ Seven short notes on the ideas behind the units, each written for a reader who h
 | [Template and seat](template-and-seat.md) | One upstream, many installs, upgrades against a manifest. |
 | [Succession](succession.md) | Generations of masters, placement proof, three measured disappearances. |
 | [Chat response rules](chat-response-rules.md) | Twelve sentence rules for replies to the owner, most derived from ASD-STE100. |
-| [Glossary](glossary.md) | Sixty words the unit, concept, and walkthrough pages use, one line each, with where to read more. |
+| [Glossary](glossary.md) | Sixty-one entries for the words the unit, concept, and walkthrough pages use, one line each, with where to read more. |

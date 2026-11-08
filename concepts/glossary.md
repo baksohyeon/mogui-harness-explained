@@ -1,6 +1,6 @@
 # Glossary
 
-Sixty words the unit, concept, and walkthrough pages use without stopping to explain them. Each line says what the word means in this harness and where to read more. Words marked (Orca) come from Orca, the terminal program the harness runs inside; Orca's own documentation is the authority on them.
+Sixty-one entries for the words the unit, concept, and walkthrough pages use without stopping to explain them; an entry covers one word or a few that mean the same thing. Each line says what the word means in this harness and where to read more. Words marked (Orca) come from Orca, the terminal program the harness runs inside; Orca's own documentation is the authority on them.
 
 ## People and roles
 
@@ -19,8 +19,8 @@ Sixty words the unit, concept, and walkthrough pages use without stopping to exp
 - **operations repository**: the master's own repository: contracts, runbooks, lineage, local config. The template renders into it.
 - **worktree**: a second checkout of a repository on its own branch in its own directory; every worker gets one. See [unit 06](../units/06-worker-wait-and-reap/).
 - **pane**, **terminal**, **handle** (Orca): one terminal session, and the id Orca gives it. A worker runs in a pane; the master reads and closes panes by handle. A handle begins with `term_` and lasts only as long as the Orca app runs.
-- **selector** (Orca): how a command names a place: `path:<absolute path>` for a checkout, `id:folder:<id>` for a folder workspace. See the [Orca primer](orca-primer.md).
-- **runtime**, **agent CLI**: the program that runs a model inside a pane, named in a contract's front matter (`codex`, `claude`, and others). The runbooks also call it the worker's host.
+- **selector** (Orca): how a command names a place: `path:<absolute path>` for a checkout, `id:folder:<workspace selector>` for a folder workspace. See the [Orca primer](orca-primer.md).
+- **runtime**, **agent CLI**: the program that runs a model inside a pane, named in a contract's front matter (`codex`, `claude`, and others).
 - **runtime diversity**: running the worker on a runtime other than the master's; the runbook that sets the default calls it host diversity. See [worker territory](worker-territory.md).
 - **machine**: the computer a seat runs on. The runbooks call it a host, and a measurement from one machine says so.
 
@@ -41,8 +41,9 @@ Sixty words the unit, concept, and walkthrough pages use without stopping to exp
 
 ## Gates and checks
 
+- **dispatch wrapper**, **wrapper**: `master-ops/scripts/dispatch`, the script the master runs to dispatch a contract; it owns the gate, the delivery, the standing rules, the Orca calls, and the delivery verdict. See [one dispatch](../walkthroughs/01-one-dispatch.md).
 - **dispatch gate**: the check every dispatch passes: budget, routing, model tier, fan-out. See [unit 02](../units/02-dispatch-tier-fanout-gate/).
-- **tier**, **tier policy**, **fan-out**: a tier is a named group of models in the policy file; the shipped policy has `top` and `efficient`. The policy also says how many workers of one tier may run at once. A top-tier dispatch is refused until the master passes the owner's approval. See [unit 02](../units/02-dispatch-tier-fanout-gate/).
+- **tier**, **tier policy**, **fan-out**: a tier is a named group of models in the policy file; the shipped policy has `top` and `efficient`. The policy can also cap how many workers of one tier run at once; the shipped policy caps none. A top-tier dispatch is refused until the master passes the owner's approval. See [unit 02](../units/02-dispatch-tier-fanout-gate/).
 - **pre-trust**: marking the worker's worktree as trusted for its runtime before launch, so the worker does not stop on a trust prompt. See [one dispatch](../walkthroughs/01-one-dispatch.md), step 2.
 - **start screen**: what the pane shows after the runtime starts. The wrapper reads it and stops when it is a menu or a notice instead of a prompt. See [one dispatch](../walkthroughs/01-one-dispatch.md), step 7.
 - **prepared prompt**: a pane state the wrapper recognizes as the runtime waiting for input; a pane that matches none is reported as `UNVERIFIED`. See [one dispatch](../walkthroughs/01-one-dispatch.md), step 10.

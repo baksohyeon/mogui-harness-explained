@@ -2,13 +2,15 @@
 
 **In one breath.** Orca is the program the harness runs inside. It owns terminals, worktrees, and a mailbox between one master and many workers. Orca's own word for the master is coordinator. The harness is a set of scripts that decide what goes into that mailbox, prove that it arrived, and record what happened.
 
+The words this page uses are in the [glossary](glossary.md).
+
 ## For a ten-year-old
 
 A school has a building with classrooms, a timetable, and a system of notes that go between the head teacher and each class. The building does not decide what is taught. The head teacher writes the lesson, picks a room, checks the class is in the room, and reads the note that comes back. Here Orca is the building and the notes. The harness is what the head teacher does with them.
 
 ## The line between the two
 
-This page has two sources. The first is the harness itself: for each Orca command a harness script invokes, the page cites the file that calls it at tag `v0.5.288`. The second is the Orca CLI's own help and built-in guide, used for the worker's `ask` and the master's `reply`, which no harness script calls. A sentence from that source says so, with the binary version and the date it was read. Orca is a separate product and its own documentation is the authority on what every command does.
+This page has two sources. The first is the harness itself: for each Orca command the harness uses, the page cites the harness file, a script or a runbook, that names it at tag `v0.5.288`. The second is the Orca CLI's own help and built-in guide, used for the worker's `ask` and the master's `reply`, which no harness script calls. A sentence from that source says so, with the binary version and the date it was read. Orca is a separate product and its own documentation is the authority on what every command does.
 
 ## What Orca provides
 
@@ -43,9 +45,5 @@ Each one records a fact Orca does not record, or declines to assume one Orca doe
 **What is unknown.** How Orca behaves on machines the authoring seat has not run. The [host-harness inventory runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/host-harness-inventory.md) is a snapshot of one machine, dated 2026-08-03, and says so in its first line.
 
 **Evidence.** The files linked above, all at tag `v0.5.288`; the walkthrough [one dispatch](../walkthroughs/01-one-dispatch.md) for the commands in the order they run.
-
-## Glossary
-
-The words on this page are defined in the [glossary](glossary.md).
 
 <p align="center"><img src="../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

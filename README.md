@@ -28,7 +28,7 @@ Three procedures in the order they run, about fifteen minutes each, with the Orc
 
 ## Units
 
-Fifteen mechanisms, each explained in about five minutes and linked to its tested implementation. The number in front of a unit is its id, the same as its directory name; it carries no rank and no reading order. The map above groups the units by when they act in a dispatch's life, which is why the numbers there are out of sequence.
+Fifteen mechanisms, each explained in about five minutes and linked to its tested implementation. The number in front of a unit is its id, the number that starts its directory name; it carries no rank and no reading order. The map above groups the units by when they act in a dispatch's life, which is why the numbers there are out of sequence.
 
 | Unit | Mechanism |
 |---|---|
@@ -62,7 +62,7 @@ Seven short notes on the ideas behind the units. Each answers the same five ques
 | [Template and seat](concepts/template-and-seat.md) | One upstream, many installs, upgrades against a manifest. |
 | [Succession](concepts/succession.md) | Generations of masters, placement proof, three measured disappearances. |
 | [Chat response rules](concepts/chat-response-rules.md) | Twelve sentence rules for replies to the owner, most derived from ASD-STE100. |
-| [Glossary](concepts/glossary.md) | Sixty words the pages use, one line each, with where to read more. |
+| [Glossary](concepts/glossary.md) | Sixty-one entries for the words the pages use, one line each, with where to read more. |
 
 ## Where the evidence is
 

@@ -2,6 +2,8 @@
 
 **In one breath.** The master agent plans and checks. Workers write code. A hook and a dispatch gate keep it that way even when the master is sure it knows the fix.
 
+The words this page uses are in the [glossary](glossary.md).
+
 ## For a ten-year-old
 
 Picture a kitchen with one head chef and a few cooks. The head chef tastes, decides, and tells a cook what to make. The chef never grabs a pan, even for a small dish. If the chef cooked, nobody would be tasting, and a burnt dish would reach the table before anyone noticed.
@@ -26,6 +28,3 @@ Edit  /tmp/example/example-product/src/reader.py
 exit=2
 ```
 
-## Glossary
-
-The words on this page are defined in the [glossary](glossary.md).
