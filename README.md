@@ -2,7 +2,7 @@
 
 # mogui harness, explained
 
-The mogui harness is a set of scripts that let one agent, the master, run other agents as workers under a human owner. It runs on Orca, a terminal program with an orchestration layer. This repository explains the harness in three layers, each written for a reader who has never run it. Three walkthroughs follow a procedure from start to end. Nineteen units each explain one mechanism. Seven concept notes cover the ideas behind the mechanisms. A glossary defines the words the pages use without stopping to explain them. Every evidence link points at the public implementation at tag `v0.5.288`.
+The mogui harness is a set of scripts that let one agent, the master, run other agents as workers under a human owner. It runs on Orca, a terminal program with an orchestration layer. This repository explains the harness in three layers, each written for a reader who has never run it. Three walkthroughs follow a procedure from start to end. Twenty-three units each explain one mechanism. Seven concept notes cover the ideas behind the mechanisms. A glossary defines the words the pages use without stopping to explain them. Every evidence link points at the public implementation at tag `v0.5.288`.
 
 ## How to read this
 
@@ -13,7 +13,7 @@ Five reading paths.
 - Running an install: [one template upgrade](walkthroughs/03-one-template-upgrade.md), then units 13, 14, 11, and 15, then [template and seat](concepts/template-and-seat.md).
 - Taking over a seat: [one master generation](walkthroughs/02-one-master-generation.md), then units 04, 16, 17, and 03, then [succession](concepts/succession.md).
 - Installing a workspace: unit 18, then unit 19, then [one template upgrade](walkthroughs/03-one-template-upgrade.md).
-- Debugging a stuck worker: units 06, 07, 03, and 10, then [measured, confirmed, inferred](concepts/measured-not-assumed.md).
+- Debugging a stuck worker: units 20, 06, 07, 03, 21, and 10, then [measured, confirmed, inferred](concepts/measured-not-assumed.md).
 
 The [glossary](concepts/glossary.md) defines the words the pages use without stopping to explain them.
 
@@ -29,7 +29,7 @@ Three procedures in the order they run, about fifteen minutes each, with the Orc
 
 ## Units
 
-Nineteen mechanisms, each explained in about five minutes and linked to its tested implementation. Seventeen of them run inside a dispatch, a master's life, or an install. Unit 01 is the loop that decides whether a change to the harness itself is kept. Unit 19 is the layer that keeps vendor flags out of the core. The map shows the first fifteen; the four newest join it in the next diagram round. The number in front of a unit is its id, the number that starts its directory name; it carries no rank and no reading order. The map above groups the units by when they act in a dispatch's life, which is why the numbers there are out of sequence.
+Twenty-three mechanisms, each explained in about five minutes and linked to its tested implementation. Twenty-one of them run inside a dispatch, a master's life, or an install. Unit 01 is the loop that decides whether a change to the harness itself is kept. Unit 19 is the layer that keeps vendor flags out of the core. The map shows the first fifteen; the four newest join it in the next diagram round. The number in front of a unit is its id, the number that starts its directory name; it carries no rank and no reading order. The map above groups the units by when they act in a dispatch's life, which is why the numbers there are out of sequence.
 
 | Unit | Mechanism |
 |---|---|
@@ -52,6 +52,10 @@ Nineteen mechanisms, each explained in about five minutes and linked to its test
 | [17 master boot block and live hook](units/17-master-boot-block-and-live-hook/) | Print role, tracks, and alerts at every boot; hold them back after a compaction. |
 | [18 progressive onboarding and install checks](units/18-progressive-onboarding-and-install-checks/) | Install one step per turn; measure the machine before and the install after. |
 | [19 adapter layer](units/19-adapter-layer-tool-neutral-profiles/) | Keep each runtime's CLI flags in one profile; probe installed tools for real. |
+| [20 blocked-worker detection](units/20-blocked-worker-detection/) | Classify every live pane; tell the master when a worker waits on a prompt. |
+| [21 fire log, event log, exit vocabulary](units/21-fire-log-event-log-exit-vocabulary/) | Record every hook firing and gate decision; 0 pass, 1 finding, 2 undetermined. |
+| [22 context cost and recall ledger](units/22-context-cost-and-recall-ledger/) | Measure turn-0 context and recall loss across compactions. |
+| [23 advisory Bash hooks](units/23-advisory-bash-hooks/) | Warn, never block, on bare cd, unfiltered output, oversized results, and poll loops. |
 
 ## Concepts
 
@@ -67,7 +71,7 @@ Seven short notes on the ideas behind the units. Each answers the same five ques
 | [Template and seat](concepts/template-and-seat.md) | One upstream, many installs, upgrades against a manifest. |
 | [Succession](concepts/succession.md) | Generations of masters, placement proof, three measured disappearances. |
 | [Chat response rules](concepts/chat-response-rules.md) | Twelve sentence rules for replies to the owner, most derived from ASD-STE100. |
-| [Glossary](concepts/glossary.md) | Seventy-nine entries for the words the pages use, one line each, with where to read more. |
+| [Glossary](concepts/glossary.md) | Eighty-four entries for the words the pages use, one line each, with where to read more. |
 
 ## Where the evidence is
 

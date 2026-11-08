@@ -1,6 +1,6 @@
 # Glossary
 
-Seventy-nine entries for the words the unit, concept, and walkthrough pages use without stopping to explain them; an entry covers one word or a few that mean the same thing. Each line says what the word means in this harness and where to read more. Words marked (Orca) come from Orca, the terminal program the harness runs inside; Orca's own documentation is the authority on them.
+Eighty-four entries for the words the unit, concept, and walkthrough pages use without stopping to explain them; an entry covers one word or a few that mean the same thing. Each line says what the word means in this harness and where to read more. Words marked (Orca) come from Orca, the terminal program the harness runs inside; Orca's own documentation is the authority on them.
 
 ## People and roles
 
@@ -47,6 +47,7 @@ Seventy-nine entries for the words the unit, concept, and walkthrough pages use 
 - **dispatch gate**: the check every dispatch passes: budget, routing, model tier, fan-out. See [unit 02](../units/02-dispatch-tier-fanout-gate/).
 - **tier**, **tier policy**, **fan-out**: a tier is a named group of models in the policy file; the shipped policy has `top` and `efficient`. The policy can also cap how many workers of one tier run at once; the shipped policy caps none. A top-tier dispatch is refused until the master passes the owner's approval. See [unit 02](../units/02-dispatch-tier-fanout-gate/).
 - **pre-trust**: marking the worker's worktree as trusted for its runtime before launch, so the worker does not stop on a trust prompt. See [one dispatch](../walkthroughs/01-one-dispatch.md), step 2.
+- **pane class**: one of the seven states the pane sweep assigns a live pane: working, idle, approval, start-screen, update, limit, shell. See [unit 20](../units/20-blocked-worker-detection/).
 - **start screen**: what the pane shows after the runtime starts. The wrapper reads it and stops when it is a menu or a notice instead of a prompt. See [one dispatch](../walkthroughs/01-one-dispatch.md), step 7.
 - **prepared prompt**: a pane state the wrapper recognizes as the runtime waiting for input; a pane that matches none is reported as `UNVERIFIED`. See [one dispatch](../walkthroughs/01-one-dispatch.md), step 10.
 - **delivery verdict**: the wrapper's last line about a dispatch: what the pane and Orca's status proved, or `UNVERIFIED` with the command to run next. See [one dispatch](../walkthroughs/01-one-dispatch.md), step 10.
@@ -67,6 +68,9 @@ Seventy-nine entries for the words the unit, concept, and walkthrough pages use 
 - **surface baseline**: a stored record of the Orca commands, flags, and output shapes the harness depends on; `orca-surface-check.sh` compares the installed Orca against it. See the [Orca primer](orca-primer.md).
 - **twins**: the two workspace-card files, `CLAUDE.md` and `AGENTS.md`, which must stay byte-identical; the self-check's `Twins:` line compares them. See [unit 14](../units/14-workspace-card-scope-local-file/).
 - **hook**: a small script the runtime runs before or after a tool call; the guard and the role-state injector are hooks.
+- **fire log**: `~/.mogui/hook-fire-log.jsonl`, one line per hook firing with its verdict; `hook-coverage-report` summarizes it. See [unit 21](../units/21-fire-log-event-log-exit-vocabulary/).
+- **event log**: `~/.mogui/event-log.jsonl`, one value-free line per gate decision: event, outcome, reason, command class. See [unit 21](../units/21-fire-log-event-log-exit-vocabulary/).
+- **measure**: the wrapper that prints a command's `exit=<status>` on the first line and names empty output as empty. See [unit 21](../units/21-fire-log-event-log-exit-vocabulary/).
 - **measured**, **confirmed**, **inferred**: the three labels a claim carries. Measured is read from the machine by the script that reports it; confirmed is stated by a source the reader can open; inferred is reasoned by the author from the other two. See [measured, confirmed, inferred](measured-not-assumed.md).
 
 ## Template, upgrade, lineage
@@ -89,6 +93,7 @@ Seventy-nine entries for the words the unit, concept, and walkthrough pages use 
 - **three disappearances**: pane, process, and tty of the predecessor, each measured gone, in that order. See [succession](succession.md).
 - **CLOSED_PARTIAL**: a retirement in which one of the three disappearances was not measured; a full close is `CLOSED`. See [succession](succession.md).
 - **compaction**: the runtime summarizing a long session and continuing with the summary. The harness's rule is continue-and-compact. See [one master generation](../walkthroughs/02-one-master-generation.md), step 9.
+- **turn-0 context**: the context a session has spent before its first action: instruction files, skill listings, tool schemas, hook output. `context-budget` reports it. See [unit 22](../units/22-context-cost-and-recall-ledger/).
 - **compaction recall probe**: the hook that fires after a compaction and has the master write what it remembers before it opens any source of truth. See [one master generation](../walkthroughs/02-one-master-generation.md), step 10.
 - **charter**: the numbered documents under `master-ops/docs/charter/` that state the harness's rules: execution principles, the dispatch gate, succession, and the rest.
 - **boot card**: the succession boot card, the runbook a successor master follows at boot: placement, role state, the model, the predecessor's retirement, and the lineage entry. See [one master generation](../walkthroughs/02-one-master-generation.md).
