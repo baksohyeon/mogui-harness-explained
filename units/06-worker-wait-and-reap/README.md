@@ -21,7 +21,7 @@
 
 ## Verified in mogui
 
-- Implementation: [`src/master_runtime/core/worker_reap.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/src/master_runtime/core/worker_reap.py), [`scripts/worker-reap`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/scripts/worker-reap), [`master-ops/scripts/worker-wait`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/worker-wait)
-- Tests: [`tests/test_worker_reap.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_worker_reap.py), [`tests/test_worker_wait.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_worker_wait.py), [`master-ops/scripts/test-worker-wait.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/test-worker-wait.sh)
+- Implementation: [`src/master_runtime/core/worker_reap.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/src/master_runtime/core/worker_reap.py), [`scripts/worker-reap`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/scripts/worker-reap), [`master-ops/scripts/worker-wait`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/worker-wait)
+- Tests: [`tests/test_worker_reap.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/tests/test_worker_reap.py), [`tests/test_worker_wait.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/tests/test_worker_wait.py), [`master-ops/scripts/test-worker-wait.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/test-worker-wait.sh)
 
 <p align="center"><img src="../../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

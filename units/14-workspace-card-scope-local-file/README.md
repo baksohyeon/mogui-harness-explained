@@ -19,7 +19,7 @@ When it is absent, nothing changes.
 
 ## Verified in mogui
 
-- Implementation: [`master-ops/workspace-card/CLAUDE.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/workspace-card/CLAUDE.md), [`master-ops/workspace-card/AGENTS.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/workspace-card/AGENTS.md), [`master-ops/workspace-card/README.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/workspace-card/README.md)
-- Tests: [`master-ops/scripts/test-workspace-card-scope.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/test-workspace-card-scope.sh), [`tests/test_template_apply_card_extension.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_template_apply_card_extension.py)
+- Implementation: [`master-ops/workspace-card/CLAUDE.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/workspace-card/CLAUDE.md), [`master-ops/workspace-card/AGENTS.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/workspace-card/AGENTS.md), [`master-ops/workspace-card/README.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/workspace-card/README.md)
+- Tests: [`master-ops/scripts/test-workspace-card-scope.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/test-workspace-card-scope.sh), [`tests/test_template_apply_card_extension.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/tests/test_template_apply_card_extension.py)
 
 <p align="center"><img src="../../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

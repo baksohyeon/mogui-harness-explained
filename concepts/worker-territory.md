@@ -20,7 +20,7 @@ The corner is a Git worktree. The list of boards is the contract: branch, allowe
 
 **What is unknown.** Whether the delivered contract should also live on the worker's own branch. It does not today, and the comment in the script says why.
 
-**Evidence.** Sections "1.5 deliver the contract" and "1.6 append standing rules" in [`dispatch`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/dispatch); [worker host diversity runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/worker-host-diversity.md); [`worker_reap.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/src/master_runtime/core/worker_reap.py); [contract conventions](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/contract-conventions.md).
+**Evidence.** Sections "1.5 deliver the contract" and "1.6 append standing rules" in [`dispatch`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/dispatch); [worker host diversity runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/docs/runbooks/worker-host-diversity.md); [`worker_reap.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/src/master_runtime/core/worker_reap.py); [contract conventions](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/docs/runbooks/contract-conventions.md).
 
 ```
 # synthetic: two lines of the wrapper's output

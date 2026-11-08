@@ -23,11 +23,11 @@ $ scripts/master-recover --charter nope.md --handoff nope2.md
 exit=0
 ```
 
-The command is a reporter, so it exits 0 whenever it ran; the verdict is in the step lines (or `--json`), and the fail-closed behavior is the `SKIP` after a `MISS`. `--handoff` names the predecessor's handoff note. Step 4 reports that the search of the Trace Archive, the history index of past sessions, is manual. The [ctx query doctrine](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/ctx-query-doctrine.md) says when that index must be queried and when it must not. Four generations of masters answered "I searched the files and found nothing" to questions whose answers sat in the conversation index.
+The command is a reporter, so it exits 0 whenever it ran; the verdict is in the step lines (or `--json`), and the fail-closed behavior is the `SKIP` after a `MISS`. `--handoff` names the predecessor's handoff note. Step 4 reports that the search of the Trace Archive, the history index of past sessions, is manual. The [ctx query doctrine](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/docs/runbooks/ctx-query-doctrine.md) says when that index must be queried and when it must not. Four generations of masters answered "I searched the files and found nothing" to questions whose answers sat in the conversation index.
 
 ## Verified in mogui
 
-- Implementation: [`src/master_runtime/core/recovery.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/src/master_runtime/core/recovery.py), [`scripts/master-recover`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/scripts/master-recover)
-- Tests: [`tests/test_recovery.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_recovery.py), [`master-ops/scripts/test-tool-naming.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/test-tool-naming.sh) for the doctrine's rule that a tool is named, never described
+- Implementation: [`src/master_runtime/core/recovery.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/src/master_runtime/core/recovery.py), [`scripts/master-recover`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/scripts/master-recover)
+- Tests: [`tests/test_recovery.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/tests/test_recovery.py), [`master-ops/scripts/test-tool-naming.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/test-tool-naming.sh) for the doctrine's rule that a tool is named, never described
 
 <p align="center"><img src="../../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

@@ -20,7 +20,7 @@ The harness is full of that third flag. The redaction scanner exits with 0 when 
 
 **What is unknown.** How often a gate's "cannot decide" hides a real failure behind a boring cause. Nobody has classified the exit-2 events.
 
-**Evidence.** [`redaction-scan.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/scripts/redaction-scan.sh) header lines; [product-path-guard runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/product-path-guard.md); [`succession.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/src/master_runtime/core/succession.py) (`CLOSED_PARTIAL`, `DISAPPEARANCE_MEASURED`); the rollout snapshot entry under v0.5.288 in [`CHANGELOG.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/CHANGELOG.md).
+**Evidence.** [`redaction-scan.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/scripts/redaction-scan.sh) header lines; [product-path-guard runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/docs/runbooks/product-path-guard.md); [`succession.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/src/master_runtime/core/succession.py) (`CLOSED_PARTIAL`, `DISAPPEARANCE_MEASURED`); the rollout snapshot entry under v0.5.288 in [`CHANGELOG.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/CHANGELOG.md).
 
 ```
 # synthetic: a bad invocation, which the scanner also reports with exit 2

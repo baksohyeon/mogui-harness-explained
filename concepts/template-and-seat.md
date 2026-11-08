@@ -12,7 +12,7 @@ The workbook is `master-ops/` in the public repository. The blanks are eight tok
 
 ## The five questions
 
-**What happened.** A shell test passed in the public repository and failed on an installed seat. The test read a placeholder token as a literal path, which only broke once the token was filled in (the v0.5.288 entry "CI runs the shell tests from a rendered copy" in [`CHANGELOG.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/CHANGELOG.md), issue 186). CI now renders the template into a scratch install and runs the same test loop against the rendered copy, next to the unrendered run.
+**What happened.** A shell test passed in the public repository and failed on an installed seat. The test read a placeholder token as a literal path, which only broke once the token was filled in (the v0.5.288 entry "CI runs the shell tests from a rendered copy" in [`CHANGELOG.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/CHANGELOG.md), issue 186). CI now renders the template into a scratch install and runs the same test loop against the rendered copy, next to the unrendered run.
 
 **What is confirmed.** The eight placeholders are listed in the rendered CI job. The instance-owned list is in the apply script's docstring. The manifest carries the template version and the file list, and the apply script's per-file outcomes are named.
 
@@ -20,7 +20,7 @@ The workbook is `master-ops/` in the public repository. The blanks are eight tok
 
 **What is unknown.** How many seats exist and how far each has drifted. The template has no telemetry and asks for none.
 
-**Evidence.** [`template-apply`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/template-apply) docstring; [`template_common.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/template_common.py); [`MANIFEST.json`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/MANIFEST.json); the `rendered-shell-tests` job in [`gates.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/.github/workflows/gates.yml); [`test_template_check_apply.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_template_check_apply.py).
+**Evidence.** [`template-apply`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/template-apply) docstring; [`template_common.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/template_common.py); [`MANIFEST.json`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/MANIFEST.json); the `rendered-shell-tests` job in [`gates.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/.github/workflows/gates.yml); [`test_template_check_apply.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/tests/test_template_check_apply.py).
 
 ```
 # synthetic, shape only: each real plan line also carries a reason after the path

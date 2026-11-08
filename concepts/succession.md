@@ -20,7 +20,7 @@ Here the lighthouse is a workspace. The spawn command carries an expected placem
 
 **What is unknown.** Whether a successor can verify its predecessor's pid on every machine. Orca's terminal record sometimes reports no process id, and the procedure then needs the pid measured by hand.
 
-**Evidence.** [§6 succession](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/charter/06-succession.md); [`succession.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/src/master_runtime/core/succession.py) (`SPAWN_PLACEMENT_MISMATCH`, `retire_predecessor`); [`master-succeed`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/scripts/master-succeed); [`test_succession.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_succession.py).
+**Evidence.** [§6 succession](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/docs/charter/06-succession.md); [`succession.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/src/master_runtime/core/succession.py) (`SPAWN_PLACEMENT_MISMATCH`, `retire_predecessor`); [`master-succeed`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/scripts/master-succeed); [`test_succession.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/tests/test_succession.py).
 
 ```
 $ scripts/master-succeed retire --self-handle term_new01 --target-handle term_old01 \

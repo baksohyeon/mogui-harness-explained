@@ -6,17 +6,17 @@ Eleven steps, and the last one points back at the first.
 
 <p align="center"><img src="../assets/walkthroughs/02-one-master-generation.svg" alt="eleven steps of one master generation, from promotion audit to the owner's word to succeed, with an arrow back to the start" width="100%"></p>
 
-The rule behind the page is one sentence from [charter §6](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/charter/06-succession.md): normal operation is continue-and-compact, succession is triggered by explicit user instruction, and automatic succession is not allowed. A generation ends when the owner ends it.
+The rule behind the page is one sentence from [charter §6](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/docs/charter/06-succession.md): normal operation is continue-and-compact, succession is triggered by explicit user instruction, and automatic succession is not allowed. A generation ends when the owner ends it.
 
 ## Step 1. Promotion audit (predecessor)
 
-Promotion here means moving knowledge up, out of a session's memory and into places that outlive it. Before anything is spawned, the sitting master moves what must survive out of its own context. Accepted knowledge goes into Git, active tracks and open decisions into the issue tracker, unresolved acceptance evidence into the lineage. The [succession boot card](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/succession-boot-card.md) lists this as the first of four steps and ends its trap list with "do not spawn a successor without a promotion audit". Whatever is still only in the old session's memory after this step is lost on purpose.
+Promotion here means moving knowledge up, out of a session's memory and into places that outlive it. Before anything is spawned, the sitting master moves what must survive out of its own context. Accepted knowledge goes into Git, active tracks and open decisions into the issue tracker, unresolved acceptance evidence into the lineage. The [succession boot card](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/docs/runbooks/succession-boot-card.md) lists this as the first of four steps and ends its trap list with "do not spawn a successor without a promotion audit". Whatever is still only in the old session's memory after this step is lost on purpose.
 
 ## Step 2. Spawn, expected placement (Orca)
 
 The predecessor opens a new pane with an explicit workspace selector, a kickoff file, the workspace root, and the model id. The selector is the durable identity of the seat; a terminal handle is not. The spawn carries the expected placement, and a successor that lands in a different worktree is closed with exit code 26, the named constant `SPAWN_PLACEMENT_MISMATCH`. Unit [04](../units/04-master-succession-placement-check/) covers that check.
 
-The reason it exists is on the public record. On 2026-08-04 the selector for the workspace folder was not found, and the predecessor substituted the operations repository's worktree without asking. The owner found the new master from two phone screenshots, buried in the wrong group. The incident record (the harness calls these blame records) is [BLAME-2026-08-04-succession-misseat](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/blame/BLAME-2026-08-04-succession-misseat.md), written in Korean. Its timeline shows the failed `orca terminal create`, the substitution with zero questions asked, and the "succession complete" report that never mentioned the seat.
+The reason it exists is on the public record. On 2026-08-04 the selector for the workspace folder was not found, and the predecessor substituted the operations repository's worktree without asking. The owner found the new master from two phone screenshots, buried in the wrong group. The incident record (the harness calls these blame records) is [BLAME-2026-08-04-succession-misseat](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/docs/blame/BLAME-2026-08-04-succession-misseat.md), written in Korean. Its timeline shows the failed `orca terminal create`, the substitution with zero questions asked, and the "succession complete" report that never mentioned the seat.
 
 ## Step 3. Placement proof, three items (successor)
 
@@ -30,7 +30,7 @@ Pane titles and status lines are hints and do not count. The boot card also has 
 
 ## Step 4. Role state declared (successor)
 
-The [role state](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/role-state.md) file carries four lines: the current role, `Role Lock: ENABLED`, `Frozen: all other roles`, and `Unlock: explicit user instruction only`, with a generation counter. The successor increments the generation and keeps the role it inherited. The file's update rule names two occasions for a change, a role switch after an approved proposal and a succession boot; only the second applies here. Seven roles are allowed, from Architecture to Maintenance, and a role switch happens only after a proposal the owner has approved. The concept note [role lock](../concepts/role-lock.md) explains what the lock is for.
+The [role state](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/docs/runbooks/role-state.md) file carries four lines: the current role, `Role Lock: ENABLED`, `Frozen: all other roles`, and `Unlock: explicit user instruction only`, with a generation counter. The successor increments the generation and keeps the role it inherited. The file's update rule names two occasions for a change, a role switch after an approved proposal and a succession boot; only the second applies here. Seven roles are allowed, from Architecture to Maintenance, and a role switch happens only after a proposal the owner has approved. The concept note [role lock](../concepts/role-lock.md) explains what the lock is for.
 
 ## Step 5. Model measured (self-check)
 
@@ -38,18 +38,18 @@ Two values: the model flag the pane was configured with, and the model field the
 
 ## Step 6. Self-check lines (self-check)
 
-[`harness-selfcheck.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/harness-selfcheck.sh) prints one line per layer and names the scope of each pass. The strings below are from the script at the tag; the counts are a shape, not a measurement:
+[`harness-selfcheck.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/harness-selfcheck.sh) prints one line per layer and names the scope of each pass. The strings below are from the script at the tag; the counts are a shape, not a measurement:
 
 ```
 Skills: 3 reachable
 Hooks: 16 wired
 Card: deployed copy matches canonical
 Twins: canonical, deployed, and ops entry pairs all byte-identical
-Template: v0.5.288 stamped, adoption ledger missing
-Template: v0.5.288 (matches template v0.5.288)
+Template: v0.5.294 stamped, adoption ledger missing
+Template: v0.5.294 (matches template v0.5.294)
 ```
 
-Exit 0 means every layer was reachable, 1 means a gap, 2 means the check could not measure. Reachability is not correctness: a wired hook can still be wrong, and the runbook says proving a hook works means feeding it a case it must reject. The `Card:` line compares the deployed session card with the canonical copy byte for byte, and the `Twins:` line does the same for the two card files, `CLAUDE.md` and `AGENTS.md`, which must be identical. A stale or diverged session card is the silent failure both exist to catch. The two `Template:` lines come from two checks. The first is the seat's adoption probe, which reads the stamped version and looks for the adoption ledger, the file in which a seat records its adoption progress. The second is `template-check`, which compares the install with a template checkout. The [self-check runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/harness-selfcheck.md) has the layer list.
+Exit 0 means every layer was reachable, 1 means a gap, 2 means the check could not measure. Reachability is not correctness: a wired hook can still be wrong, and the runbook says proving a hook works means feeding it a case it must reject. The `Card:` line compares the deployed session card with the canonical copy byte for byte, and the `Twins:` line does the same for the two card files, `CLAUDE.md` and `AGENTS.md`, which must be identical. A stale or diverged session card is the silent failure both exist to catch. The two `Template:` lines come from two checks. The first is the seat's adoption probe, which reads the stamped version and looks for the adoption ledger, the file in which a seat records its adoption progress. The second is `template-check`, which compares the install with a template checkout. The [self-check runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/docs/runbooks/harness-selfcheck.md) has the layer list.
 
 ## Step 7. Retire: three disappearances (successor)
 
@@ -59,7 +59,7 @@ A session that was closed can be resumed from any terminal, including a phone. T
 
 ## Step 8. Lineage entry appended (successor)
 
-One entry in `docs/lineage/MASTER-LINEAGE.md`: generation, reason, inherited role, open tracks, the measured boot values with the instrument for each, and anything unmeasured marked as such. The [lineage README](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/lineage/README.md) says an entry without measured values is incomplete and that narrative does not replace instrument output. It also draws the public boundary: session ids, pids, and handles stay in the private operations record and are never copied into a public file. This page follows that rule.
+One entry in `docs/lineage/MASTER-LINEAGE.md`: generation, reason, inherited role, open tracks, the measured boot values with the instrument for each, and anything unmeasured marked as such. The [lineage README](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/docs/lineage/README.md) says an entry without measured values is incomplete and that narrative does not replace instrument output. It also draws the public boundary: session ids, pids, and handles stay in the private operations record and are never copied into a public file. This page follows that rule.
 
 ## Step 9. Continue and compact (successor)
 
@@ -67,7 +67,7 @@ Now the generation works. Dispatches go out as in [one dispatch](01-one-dispatch
 
 ## Step 10. Compaction recall probe (self-check)
 
-A hook, [`compaction-probe.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/compaction-probe.sh), fires on every compaction and emits instructions only. The order is the test: the master writes from memory first, then checks the sources. Four items, R1 to R4 in the script: active tracks, recent accepted decisions, role state, and the turn that was in progress. The script marks the last one as possibly having no independent source. The master appends one JSON record to a ledger under the monitor namespace, the seat's directory for monitor output, before opening any source of truth, then prints a comparison table. Loss is written as `loss_notes`. The ledger's writer is `context-quality-log.sh`, which also prints a seven-day summary; unit [22](../units/22-context-cost-and-recall-ledger/). The record carries `proposed_succession`, set true only when the workspace threshold says succession should be proposed, and the probe text repeats the charter: automatic succession is not allowed.
+A hook, [`compaction-probe.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/compaction-probe.sh), fires on every compaction and emits instructions only. The order is the test: the master writes from memory first, then checks the sources. Four items, R1 to R4 in the script: active tracks, recent accepted decisions, role state, and the turn that was in progress. The script marks the last one as possibly having no independent source. The master appends one JSON record to a ledger under the monitor namespace, the seat's directory for monitor output, before opening any source of truth, then prints a comparison table. Loss is written as `loss_notes`. The ledger's writer is `context-quality-log.sh`, which also prints a seven-day summary; unit [22](../units/22-context-cost-and-recall-ledger/). The record carries `proposed_succession`, set true only when the workspace threshold says succession should be proposed, and the probe text repeats the charter: automatic succession is not allowed.
 
 ## Step 11. Owner says: succeed (successor)
 

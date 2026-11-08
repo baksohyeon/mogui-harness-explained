@@ -18,11 +18,11 @@ changelog-fragment-check: master-ops/ changed outside changelog.d/ with no added
 exit=1
 ```
 
-The version a release would carry comes from [`next-version`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/scripts/next-version): the owner sets major and minor by hand, and the build number is the commit count on `origin/main`.
+The version a release would carry comes from [`next-version`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/scripts/next-version): the owner sets major and minor by hand, and the build number is the commit count on `origin/main`.
 
 ## Verified in mogui
 
-- Implementation: [`scripts/changelog-fragment-check`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/scripts/changelog-fragment-check), [`scripts/changelog-release`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/scripts/changelog-release), [`master-ops/changelog.d/README.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/changelog.d/README.md), [`.github/workflows/gates.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/.github/workflows/gates.yml)
-- Tests: [`master-ops/scripts/test-changelog-fragment-check.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/test-changelog-fragment-check.sh), [`tests/test_changelog_release.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_changelog_release.py)
+- Implementation: [`scripts/changelog-fragment-check`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/scripts/changelog-fragment-check), [`scripts/changelog-release`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/scripts/changelog-release), [`master-ops/changelog.d/README.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/changelog.d/README.md), [`.github/workflows/gates.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/.github/workflows/gates.yml)
+- Tests: [`master-ops/scripts/test-changelog-fragment-check.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/test-changelog-fragment-check.sh), [`tests/test_changelog_release.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/tests/test_changelog_release.py)
 
 <p align="center"><img src="../../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

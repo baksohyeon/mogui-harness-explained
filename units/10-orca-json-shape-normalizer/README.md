@@ -18,11 +18,11 @@ python3 -c 'import sys; sys.path.insert(0, sys.argv[1]); from lib import orca_js
 task_new1
 ```
 
-The shape change this module absorbs is also watched from the other side: [`orca-surface-check.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/orca-surface-check.sh) compares the installed Orca's version, schema, command count, and per-command digests against a stored baseline, and exits 0 unchanged, 1 drift, 2 unmeasurable.
+The shape change this module absorbs is also watched from the other side: [`orca-surface-check.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/orca-surface-check.sh) compares the installed Orca's version, schema, command count, and per-command digests against a stored baseline, and exits 0 unchanged, 1 drift, 2 unmeasurable.
 
 ## Verified in mogui
 
-- Implementation: [`master-ops/scripts/lib/orca_json.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/lib/orca_json.py), [`master-ops/docs/runbooks/orca-json.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/orca-json.md), [`master-ops/scripts/dispatch`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/dispatch)
-- Tests: [`master-ops/scripts/test-orca-json.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/test-orca-json.sh)
+- Implementation: [`master-ops/scripts/lib/orca_json.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/lib/orca_json.py), [`master-ops/docs/runbooks/orca-json.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/docs/runbooks/orca-json.md), [`master-ops/scripts/dispatch`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/dispatch)
+- Tests: [`master-ops/scripts/test-orca-json.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/test-orca-json.sh)
 
 <p align="center"><img src="../../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

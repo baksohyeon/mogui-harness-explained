@@ -20,13 +20,13 @@ The harness writes like the second kid. The self-check prints what it measured a
 
 **What is unknown.** Whether readers outside the harness read the labels or skip them.
 
-**Evidence.** [`harness-selfcheck.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/harness-selfcheck.sh) and [its runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/harness-selfcheck.md); the model probe section of [`dispatch`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/dispatch) and the reason codes in [`dispatch_gate.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/src/master_runtime/core/dispatch_gate.py); the measured-shapes table in [`orca-json.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/orca-json.md).
+**Evidence.** [`harness-selfcheck.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/harness-selfcheck.sh) and [its runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/docs/runbooks/harness-selfcheck.md); the model probe section of [`dispatch`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/dispatch) and the reason codes in [`dispatch_gate.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/src/master_runtime/core/dispatch_gate.py); the measured-shapes table in [`orca-json.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/docs/runbooks/orca-json.md).
 
 ```
 # synthetic: the shape of `bash master-ops/scripts/harness-selfcheck.sh` output
 Orca: 1.4.249 (last install 2026-11-04T23:41:48), changed since 1.4.247
-Template: v0.5.288 stamped, adoption ledger missing
-Template: v0.5.288 (matches template v0.5.288)
+Template: v0.5.294 stamped, adoption ledger missing
+Template: v0.5.294 (matches template v0.5.294)
 Hooks: 16 wired
 Card: deployed copy matches canonical
 Twins: canonical, deployed, and ops entry pairs all byte-identical

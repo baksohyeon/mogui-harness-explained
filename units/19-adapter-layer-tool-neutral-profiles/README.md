@@ -26,7 +26,7 @@ $ scripts/adapter doctor
 
 ## Verified in mogui
 
-- Implementation: [`scripts/adapter`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/scripts/adapter), [`src/master_runtime/core/adapter/profile.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/src/master_runtime/core/adapter/profile.py), [`src/master_runtime/core/adapter/doctor.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/src/master_runtime/core/adapter/doctor.py)
-- Tests: the adapter has no test file of its own at `v0.5.288`; `scripts/adapter doctor` is one of the three commands the repository README offers for trying the core without setup.
+- Implementation: [`scripts/adapter`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/scripts/adapter), [`src/master_runtime/core/adapter/profile.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/src/master_runtime/core/adapter/profile.py), [`src/master_runtime/core/adapter/doctor.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/src/master_runtime/core/adapter/doctor.py)
+- Tests: the adapter has no test file of its own at `v0.5.294`; `scripts/adapter doctor` is one of the three commands the repository README offers for trying the core without setup.
 
 <p align="center"><img src="../../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

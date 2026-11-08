@@ -1,6 +1,6 @@
 # Roadmap
 
-What the public record says is unfinished or unmeasured in the mogui harness, read at tag `v0.5.288` and on `main` as of 2026-11-08. The sources are four. The repository's open issues. The changelog fragments on `main` that no release has folded yet. The "What this page does not claim" and "What is unknown" sections on these pages. The modules that ship with tests and no caller. Nothing here states a date the record does not state.
+What the public record says is unfinished or unmeasured in the mogui harness, read at tag `v0.5.294` and on `main` as of 2026-11-08 23:40 KST. The sources are four. The repository's open issues. The changelog fragments on `main` that no release has folded yet. The "What this page does not claim" and "What is unknown" sections on these pages. The modules that ship with tests and no caller. Nothing here states a date the record does not state.
 
 ## Direction
 
@@ -16,12 +16,7 @@ Everything else on this page is on file without a stated direction.
 
 ## Shipped on `main`, not yet released
 
-Two changelog fragments sit on `main` above `v0.5.288` ([fragment directory](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/main/master-ops/changelog.d)):
-
-- The dispatch wrapper passes `--from` on `task-create` and `dispatch` when it is told which terminal it dispatches from.
-- The skill-composition guide refers to a peer seat's operations repository generically, without a commit hash that cannot be located.
-
-They become part of the next tag when `changelog-release` folds them; unit [15](units/15-changelog-fragment-gate/) covers the mechanism.
+Nothing. `main` is the tagged commit of `v0.5.294` (`30d0b8f`, read 2026-11-08 23:40 KST) and the [fragment directory](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/main/master-ops/changelog.d) holds only its README. The release folded four fragments: the `--from` sender handle on `task-create` and `dispatch`, the generic reference to a peer seat's repository, the codex prepared-prompt marker, and a public-document accuracy batch. Unit [15](units/15-changelog-fragment-gate/) covers the mechanism that folds them.
 
 ## Open issues
 
@@ -33,7 +28,7 @@ They become part of the next tag when `changelog-release` folds them; unit [15](
 
 ## Libraries with tests and no caller
 
-Three modules are tested at `v0.5.288` and imported by nothing outside their tests. Each encodes a rule the harness enforces another way today.
+Three modules are tested at `v0.5.294` and imported by nothing outside their tests. Each encodes a rule the harness enforces another way today.
 
 | Module | What it would do | Enforced today by |
 |---|---|---|
@@ -45,7 +40,7 @@ Three modules are tested at `v0.5.288` and imported by nothing outside their tes
 
 These pages say what one installation measured and what no one has measured elsewhere.
 
-- The wrapper's delivery check classified no codex pane as `agent-started` on the authoring seat; every codex dispatch ended `UNVERIFIED` and the master read the pane by hand. Whether another machine's panes match a known prepared-prompt pattern is unmeasured. [One dispatch](walkthroughs/01-one-dispatch.md).
+- The wrapper's delivery check has classified no codex pane as `agent-started` on the authoring seat; every codex dispatch ended `UNVERIFIED` and the master read the pane by hand. At `v0.5.294` the pre-injection read recognises codex's prompt (measured 2026-11-08, codex 0.167.0), and the pane still read as that prompt 30 seconds after injection, so the verdict stayed `unknown`. Whether another machine's panes read the same is unmeasured. [One dispatch](walkthroughs/01-one-dispatch.md).
 - The model probe found a new transcript file on two of eight dispatches at launch time; the other six carried `MODEL_UNVERIFIED` until the master verified by hand. [One dispatch](walkthroughs/01-one-dispatch.md), unit [03](units/03-transcript-model-identity-probe/).
 - Succession took 17 minutes from spawn to `CLOSED` on one run with the test sweep first; the ceremony alone is untimed. Whether it ever prevented a duplicate master is unmeasured. [Succession](concepts/succession.md).
 - Orca's terminal record sometimes carries no process id, and retirement then needs a pid measured by hand. [Succession](concepts/succession.md).

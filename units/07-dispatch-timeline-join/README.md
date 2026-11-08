@@ -20,11 +20,11 @@ TIMESTAMP   SOURCE   EVENT   OUTCOME   DETAIL
 missing sources: ledger, event-log, dispatch-show
 ```
 
-`--since` combined with an id exits 2. For a whole day instead of one dispatch, [`workstream-render.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/workstream-render.sh) renders the ledger into a readable workstream; it reads only.
+`--since` combined with an id exits 2. For a whole day instead of one dispatch, [`workstream-render.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/workstream-render.sh) renders the ledger into a readable workstream; it reads only.
 
 ## Verified in mogui
 
-- Implementation: [`src/master_runtime/core/dispatch_timeline.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/src/master_runtime/core/dispatch_timeline.py), [`scripts/dispatch-timeline`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/scripts/dispatch-timeline), [its runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/dispatch-timeline.md)
-- Tests: [`tests/test_dispatch_timeline.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_dispatch_timeline.py), [`master-ops/scripts/test-dispatch-timeline.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/test-dispatch-timeline.sh)
+- Implementation: [`src/master_runtime/core/dispatch_timeline.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/src/master_runtime/core/dispatch_timeline.py), [`scripts/dispatch-timeline`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/scripts/dispatch-timeline), [its runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/docs/runbooks/dispatch-timeline.md)
+- Tests: [`tests/test_dispatch_timeline.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/tests/test_dispatch_timeline.py), [`master-ops/scripts/test-dispatch-timeline.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/test-dispatch-timeline.sh)
 
 <p align="center"><img src="../../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

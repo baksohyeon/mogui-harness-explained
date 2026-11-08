@@ -21,7 +21,7 @@ exit=3
 
 ## Verified in mogui
 
-- Implementation: [`master-ops/scripts/context-budget`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/context-budget), [`master-ops/scripts/context-quality-log.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/context-quality-log.sh), [`master-ops/scripts/context-quality-sampler.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/context-quality-sampler.sh), [`master-ops/scripts/compaction-probe.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/compaction-probe.sh)
-- Tests: [`tests/test_context_quality_scripts.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_context_quality_scripts.py)
+- Implementation: [`master-ops/scripts/context-budget`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/context-budget), [`master-ops/scripts/context-quality-log.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/context-quality-log.sh), [`master-ops/scripts/context-quality-sampler.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/context-quality-sampler.sh), [`master-ops/scripts/compaction-probe.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/master-ops/scripts/compaction-probe.sh)
+- Tests: [`tests/test_context_quality_scripts.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/tests/test_context_quality_scripts.py)
 
 <p align="center"><img src="../../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

@@ -1,6 +1,6 @@
 # Concepts
 
-Eight short notes on the ideas behind the units, each written for a reader who has never run the harness, followed by the house rules for a master's chat replies and a glossary. Each note answers the same five questions: what happened, what is confirmed, what is inferred, what is unknown, and where the evidence is. The glossary defines the words the notes use without stopping to explain them. Every evidence link points at the public repository at tag `v0.5.288`.
+Eight short notes on the ideas behind the units, each written for a reader who has never run the harness, followed by the house rules for a master's chat replies and a glossary. Each note answers the same five questions: what happened, what is confirmed, what is inferred, what is unknown, and where the evidence is. The glossary defines the words the notes use without stopping to explain them. Every evidence link points at the public repository at tag `v0.5.294`.
 
 | Note | One line |
 |---|---|
