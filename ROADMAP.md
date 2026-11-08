@@ -4,7 +4,15 @@ What the public record says is unfinished or unmeasured in the mogui harness, re
 
 ## Direction
 
-The owner's stated direction, 2026-11-08: a harness an outside contributor can run from the install alone. The items below that bear on it are the install checks and the session-mode router of unit [18](units/18-progressive-onboarding-and-install-checks/), the tool probes of unit [19](units/19-adapter-layer-tool-neutral-profiles/), the instance facts that keep one machine's values out of the template in unit [24](units/24-instance-config-and-workspace-descriptor/), issue #216 on reading the seat at install instead of asking for a selector, and the unknown of how far installed seats drift. Everything else on this page is on file without a stated direction.
+The owner's stated direction, 2026-11-08: a harness an outside contributor can run from the install alone. Five items on this page bear on it:
+
+- the install checks and the session-mode router, unit [18](units/18-progressive-onboarding-and-install-checks/);
+- the tool probes, unit [19](units/19-adapter-layer-tool-neutral-profiles/);
+- the instance facts that keep one machine's values out of the template, unit [24](units/24-instance-config-and-workspace-descriptor/);
+- issue #216, reading the seat at install instead of asking for a selector;
+- the unknown of how far installed seats drift.
+
+Everything else on this page is on file without a stated direction.
 
 ## Shipped on `main`, not yet released
 
