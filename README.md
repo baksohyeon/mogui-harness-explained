@@ -2,41 +2,39 @@
 
 **One agent in charge of the others, and the evidence for every rule it follows.**
 
-You have several coding agents open in terminal panes. One of them is supposed to be in charge: it hands out the work, checks what comes back, and keeps its seat when its own context runs out. The mogui harness is the set of scripts that makes that true. It runs on Orca, a terminal program with an orchestration layer, and it answers to one human owner. These pages explain each of its mechanisms to a reader who has never run it, and every evidence link points at the tested code at tag `v0.5.288`.
+<p align="center"><img src="assets/system-motion.svg" alt="the mogui harness in one picture: you, a master pane, three worker panes, the Orca mailbox, the operations repository, the issue tracker, a pull request, and the template, with 27 numbered checks on the paths between them" width="100%"></p>
 
-Every mechanism here exists because something measurable went wrong once. A contract reached the gate and never reached the worker, so the wrapper now delivers it with a token the worker must quote back. A successor master was seated in the wrong worktree and found from two phone screenshots, so a spawn now proves its placement or closes. A worker sat on an approval prompt while the inbox and the pull request stayed quiet, so a sweep now classifies every pane. Four commands were read without their exit status in one day, so a wrapper now prints the status first. The pages name the incident behind each mechanism and what one seat measured afterwards.
+<p align="center"><sub>The ring travels the paths in the order one dispatch takes. <a href="assets/system.svg">Still version.</a></sub></p>
 
-What is here: three walkthroughs that follow a procedure from start to end, twenty-seven units that each explain one mechanism, and eight concept notes on the ideas behind them. A glossary and a [roadmap](ROADMAP.md) built from the public record sit beside them. The map below is the whole of it on one page.
+To run what the picture shows: clone [mogui-ADE-orchestrator](https://github.com/baksohyeon/mogui-ADE-orchestrator), open it in Orca, and say "Wake the master." The repository's own [quickstart](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.288#quickstart) and [Getting Started](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/docs/public/getting-started.md) take it from there. These pages explain what each part of the picture does and where its tested code lives, at release [v0.5.288](https://github.com/baksohyeon/mogui-ADE-orchestrator/releases/tag/v0.5.288).
+
+## What you are looking at
+
+Every box is a place where something runs or is stored. Every path is something that crosses between two of them. Every numbered circle is a check that fires on that path, and the number is the unit that explains it.
+
+- **You and the master.** You give one instruction to one Orca pane, the master. Before it can write into a product repository, a hook blocks the write ([09](units/09-product-path-write-guard-hook/)). The master proposes, dispatches, and verifies; it does not implement ([role lock](concepts/role-lock.md)).
+- **The contract and the token.** The master writes a contract and a wrapper carries it to a worker pane. On the way, the wrapper gates the dispatch on budget, routing, and model tier ([02](units/02-dispatch-tier-fanout-gate/)) and resolves the install's facts ([24](units/24-instance-config-and-workspace-descriptor/)). It delivers the contract byte for byte with a read token the worker must quote back ([12](units/12-contract-delivery-read-token/)). It reads Orca's JSON through one normalizer ([10](units/10-orca-json-shape-normalizer/)) and takes each runtime's flags from one profile ([19](units/19-adapter-layer-tool-neutral-profiles/)).
+- **The worker panes.** Each worker has its own checkout and, by default, a different runtime from the master ([worker territory](concepts/worker-territory.md)). While it works, the harness measures which model answered ([03](units/03-transcript-model-identity-probe/)), classifies every live pane and reports one waiting on a prompt ([20](units/20-blocked-worker-detection/)), labels idle progress logs ([26](units/26-stall-watchdog-work-ledger-digest-loop/)), and closes only settled, unoccupied panes ([06](units/06-worker-wait-and-reap/)). The worker's result is one pull request with filled body sections and no home path ([27](units/27-pull-request-stewardship/)).
+- **The mailbox and the verification.** The worker's `worker_done` goes through the Orca mailbox, and the master wakes on it. A join over the ledger, the event log, and the live record names any source with no rows ([07](units/07-dispatch-timeline-join/)). The master then verifies the pull request with a redaction scan that states its scope ([08](units/08-scope-stating-redaction-scan/)) and a fire log that records every hook firing and gate decision ([21](units/21-fire-log-event-log-exit-vocabulary/)). A change to the harness itself also needs a pass count that rises ([01](units/01-harness-change-acceptance-loop/)).
+- **The memory loop.** The master's own context runs out, so it compacts, and one day it hands the seat to a successor. The loop on its right side measures turn-0 context and recall loss ([22](units/22-context-cost-and-recall-ledger/)) and prints role, tracks, and alerts at every boot ([17](units/17-master-boot-block-and-live-hook/)). It classifies a succession signal as propose-only ([16](units/16-succession-triggers-and-duplicate-masters/)) and closes a successor that lands in the wrong worktree ([04](units/04-master-succession-placement-check/)). It runs recovery as reads ([05](units/05-read-only-recovery-flow/)) and warns on shell habits that cost a session ([23](units/23-advisory-bash-hooks/)). The idea is in [succession](concepts/succession.md).
+- **The template, the operations repository, and the tracker.** One upstream template renders many seats ([template and seat](concepts/template-and-seat.md)). An upgrade applies manifest-owned files and protects instance-owned paths ([13](units/13-template-manifest-instance-owned-paths/)) and scopes the master card while keeping its local extension ([14](units/14-workspace-card-scope-local-file/)). It runs the shell tests against a rendered install ([11](units/11-rendered-shell-test-lane/)) and requires dated changelog fragments ([15](units/15-changelog-fragment-gate/)). Approved tracker items go through bounded rounds ([25](units/25-bounded-loop-over-tracker-items/)). A first install goes one step per turn with checks before and after ([18](units/18-progressive-onboarding-and-install-checks/)). The master writes contracts, lineage, and rules into the operations repository and reads its active tracks from the issue tracker.
+- **The marks and their colors.** Blue checks fire before a dispatch leaves the master. Green checks fire while a worker runs. Orange checks fire when work comes back and is accepted. Purple checks belong to the master's own lifecycle. Grey checks belong to install and upgrade. A check that cannot decide stops the work; exit 2 is never a pass ([fail closed](concepts/fail-closed.md)).
+
+Every one of these checks exists because something measurable went wrong once. Each unit page names the incident and what one seat measured afterwards.
+
+## Read further
+
+- Three walkthroughs follow a procedure from start to end, about fifteen minutes each: [one dispatch](walkthroughs/01-one-dispatch.md), [one master generation](walkthroughs/02-one-master-generation.md), and [one template upgrade](walkthroughs/03-one-template-upgrade.md). Index at [`walkthroughs/`](walkthroughs/).
+- Eight concept notes answer the same five questions each: what happened, what is confirmed, what is inferred, what is unknown, and where the evidence is. Start with the [Orca primer](concepts/orca-primer.md) and [measured, confirmed, inferred](concepts/measured-not-assumed.md). The [charter map](concepts/charter-map.md) says which of ten numbered sections owns which decision. Index at [`concepts/`](concepts/).
+- The [chat response rules](concepts/chat-response-rules.md) are the twelve sentence rules a master follows when it writes to its owner.
+- The [glossary](concepts/glossary.md) defines the words the pages use without stopping to explain them, one line each.
+- The [roadmap](ROADMAP.md) lists what is unfinished or unmeasured, from the public record only, and the direction the owner has set.
+
+## Units, as an index
+
+Twenty-seven mechanisms, each explained in about five minutes and linked to its tested implementation. The number in front of a unit is its id, the number that starts its directory name; it carries no rank and no reading order. The map groups the units by when they act, from install to succession.
 
 <p align="center"><img src="assets/map.svg" alt="map of the three walkthroughs, the 27 units by lifecycle with an install group, and the concept notes" width="100%"></p>
-
-## How to read this
-
-Seven reading paths.
-
-- The whole shape, once: the [Orca primer](concepts/orca-primer.md), then the walkthrough [one dispatch](walkthroughs/01-one-dispatch.md).
-- New to the harness: [role lock](concepts/role-lock.md), [worker territory](concepts/worker-territory.md), [fail closed](concepts/fail-closed.md), then units 02, 09, and 12, then [one dispatch](walkthroughs/01-one-dispatch.md).
-- Running an install: [one template upgrade](walkthroughs/03-one-template-upgrade.md), then units 13, 14, 24, 11, and 15, then [template and seat](concepts/template-and-seat.md).
-- Reading the rules: [charter map](concepts/charter-map.md), then units 25 and 27.
-- Taking over a seat: [one master generation](walkthroughs/02-one-master-generation.md), then units 04, 16, 17, and 03, then [succession](concepts/succession.md).
-- Installing a workspace: unit 18, then unit 19, then [one template upgrade](walkthroughs/03-one-template-upgrade.md).
-- Debugging a stuck worker: units 20, 06, 07, 03, 21, and 10, then [measured, confirmed, inferred](concepts/measured-not-assumed.md).
-
-The [glossary](concepts/glossary.md) defines the words the pages use without stopping to explain them.
-
-## Walkthroughs
-
-Three procedures in the order they run, about fifteen minutes each, with the Orca commands and the harness output lines named where a step runs them. Index at [`walkthroughs/`](walkthroughs/).
-
-| Walkthrough | Steps | From, to |
-|---|---|---|
-| [One dispatch](walkthroughs/01-one-dispatch.md) | 15 | The owner's word, to a closed worker pane. |
-| [One master generation](walkthroughs/02-one-master-generation.md) | 11 | A promotion audit, to the owner's word to succeed. |
-| [One template upgrade](walkthroughs/03-one-template-upgrade.md) | 12 | A release tag, to a redeployed session card. |
-
-## Units
-
-Twenty-seven mechanisms, each explained in about five minutes and linked to its tested implementation. Twenty-five of them run inside a dispatch, a master's life, or an install. Unit 01 is the loop that decides whether a change to the harness itself is kept. Unit 19 is the layer that keeps vendor flags out of the core. The number in front of a unit is its id, the number that starts its directory name; it carries no rank and no reading order. The map above groups the units by when they act in the harness's life, from install to succession, which is why the numbers there are out of sequence.
 
 | Unit | Mechanism |
 |---|---|
@@ -68,26 +66,9 @@ Twenty-seven mechanisms, each explained in about five minutes and linked to its 
 | [26 stall watchdog, work ledger, digest loop](units/26-stall-watchdog-work-ledger-digest-loop/) | Label idle progress logs, replay tracks, triage changes as echo, expected, or unexplained. |
 | [27 pull request stewardship](units/27-pull-request-stewardship/) | Require filled body sections with no home path; report merge state without guessing. |
 
-## Concepts
-
-Eight short notes on the ideas behind the units. Each answers the same five questions: what happened, what is confirmed, what is inferred, what is unknown, and where the evidence is. Next to them sit the chat response rules a master follows when it writes to its owner, and the glossary. Index at [`concepts/`](concepts/).
-
-| Note | One line |
-|---|---|
-| [Orca primer](concepts/orca-primer.md) | Orca owns terminals, worktrees, and the mailbox; the harness decides what goes in and proves it arrived. |
-| [Role lock](concepts/role-lock.md) | The master proposes and verifies; workers write code; a hook enforces it. |
-| [Fail closed](concepts/fail-closed.md) | A gate that cannot decide stops the work; exit 2 is never a pass. |
-| [Measured, confirmed, inferred](concepts/measured-not-assumed.md) | Every claim says how it was obtained. |
-| [Worker territory](concepts/worker-territory.md) | One checkout, one contract, by default a different runtime, and a read token. |
-| [Template and seat](concepts/template-and-seat.md) | One upstream, many installs, upgrades against a manifest. |
-| [Succession](concepts/succession.md) | Generations of masters, placement proof, three measured disappearances. |
-| [Charter map](concepts/charter-map.md) | Ten numbered sections; which one owns which decision. |
-| [Chat response rules](concepts/chat-response-rules.md) | Twelve sentence rules for replies to the owner, most derived from ASD-STE100. |
-| [Glossary](concepts/glossary.md) | Ninety-two entries for the words the pages use, one line each, with where to read more. |
-
 ## Where the evidence is
 
-The implementation is [mogui-ADE-orchestrator](https://github.com/baksohyeon/mogui-ADE-orchestrator), with 54 Python test files in [`tests/`](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.288/tests), 26 shell tests under [`master-ops/scripts/test-*`](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.288/master-ops/scripts), measured at v0.5.288, 2026-11-07 ([release](https://github.com/baksohyeon/mogui-ADE-orchestrator/releases/tag/v0.5.288)), and CI in [`gates.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/.github/workflows/gates.yml). Its five jobs are the Python tests on three operating systems, the shell tests, the rendered shell tests, the changelog fragment gate, and the redaction scan with its informational inventory. Three more workflows label pull requests ([`labeler.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/.github/workflows/labeler.yml)) and issues ([`issue-os-labeler.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/.github/workflows/issue-os-labeler.yml)) and lock old threads ([`lock.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/.github/workflows/lock.yml)). The repository's own reference table of commands is pinned to the scripts that exist by [`tests/test_reference_command_table.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_reference_command_table.py). Measured results on these pages come from one seat, one installed copy of the harness, and say so.
+The implementation is [mogui-ADE-orchestrator](https://github.com/baksohyeon/mogui-ADE-orchestrator) at release [v0.5.288](https://github.com/baksohyeon/mogui-ADE-orchestrator/releases/tag/v0.5.288), 2026-11-07, with 54 Python test files in [`tests/`](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.288/tests), 26 shell tests under [`master-ops/scripts/test-*`](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.288/master-ops/scripts), and CI in [`gates.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/.github/workflows/gates.yml). Its five jobs are the Python tests on three operating systems, the shell tests, the rendered shell tests, the changelog fragment gate, and the redaction scan with its informational inventory. Three more workflows label pull requests ([`labeler.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/.github/workflows/labeler.yml)) and issues ([`issue-os-labeler.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/.github/workflows/issue-os-labeler.yml)) and lock old threads ([`lock.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/.github/workflows/lock.yml)). The repository's own reference table of commands is pinned to the scripts that exist by [`tests/test_reference_command_table.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_reference_command_table.py). Measured results on these pages come from one seat, one installed copy of the harness, and say so.
 
 ## What is not here
 
