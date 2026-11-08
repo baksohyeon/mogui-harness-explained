@@ -1,14 +1,18 @@
-<p align="center"><img src="assets/map.svg" alt="map of the three walkthroughs, the 27 units by lifecycle with an install group, and the concept notes" width="100%"></p>
-
 # mogui harness, explained
 
-The mogui harness is a set of scripts that let one agent, the master, run other agents as workers under a human owner. It runs on Orca, a terminal program with an orchestration layer. This repository explains the harness in three layers, each written for a reader who has never run it. Three walkthroughs follow a procedure from start to end. Twenty-seven units each explain one mechanism. Eight concept notes cover the ideas behind the mechanisms. A glossary defines the words the pages use without stopping to explain them. Every evidence link points at the public implementation at tag `v0.5.288`.
+**One agent in charge of the others, and the evidence for every rule it follows.**
 
-Every mechanism here exists because something measurable went wrong once. A contract reached the gate and never reached the worker, so the wrapper now delivers it with a token the worker must quote back. A successor master was seated in the wrong worktree and found from two phone screenshots, so a spawn now proves its placement or closes. A worker sat on an approval prompt while the inbox and the pull request stayed quiet, so a sweep now classifies every pane. Four commands were read without their exit status in one day, so a wrapper now prints the status first. The pages name the incident behind each mechanism and what one seat measured afterwards. What the record says is still open is on the [roadmap](ROADMAP.md).
+You have several coding agents open in terminal panes. One of them is supposed to be in charge: it hands out the work, checks what comes back, and keeps its seat when its own context runs out. The mogui harness is the set of scripts that makes that true. It runs on Orca, a terminal program with an orchestration layer, and it answers to one human owner. These pages explain each of its mechanisms to a reader who has never run it, and every evidence link points at the tested code at tag `v0.5.288`.
+
+Every mechanism here exists because something measurable went wrong once. A contract reached the gate and never reached the worker, so the wrapper now delivers it with a token the worker must quote back. A successor master was seated in the wrong worktree and found from two phone screenshots, so a spawn now proves its placement or closes. A worker sat on an approval prompt while the inbox and the pull request stayed quiet, so a sweep now classifies every pane. Four commands were read without their exit status in one day, so a wrapper now prints the status first. The pages name the incident behind each mechanism and what one seat measured afterwards.
+
+What is here: three walkthroughs that follow a procedure from start to end, twenty-seven units that each explain one mechanism, eight concept notes on the ideas behind them, a glossary, and a [roadmap](ROADMAP.md) built from the public record. The map below is the whole of it on one page.
+
+<p align="center"><img src="assets/map.svg" alt="map of the three walkthroughs, the 27 units by lifecycle with an install group, and the concept notes" width="100%"></p>
 
 ## How to read this
 
-Five reading paths.
+Seven reading paths.
 
 - The whole shape, once: the [Orca primer](concepts/orca-primer.md), then the walkthrough [one dispatch](walkthroughs/01-one-dispatch.md).
 - New to the harness: [role lock](concepts/role-lock.md), [worker territory](concepts/worker-territory.md), [fail closed](concepts/fail-closed.md), then units 02, 09, and 12, then [one dispatch](walkthroughs/01-one-dispatch.md).
