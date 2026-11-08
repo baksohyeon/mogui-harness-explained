@@ -6,6 +6,10 @@
 
 **Watch the 75-second walkthrough.** One owner, one master, two workers, one send-back, one succession. Concept view, not a screen recording; the [release page](https://github.com/baksohyeon/mogui-harness-explained/releases/tag/walkthrough-75s-v1) has the file and the credits.
 
+<p align="center"><a href="https://github.com/user-attachments/assets/52b4e776-8514-4b63-9f77-e04375e8a6ba"><img src="assets/walkthrough-poster.jpg" alt="a frame of the walkthrough: the master runs the test itself, the test fails, approval is withheld, and the client worker is sent back" width="100%"></a></p>
+
+<p align="center"><sub>The player below shows in a web browser. In the GitHub mobile app, tap the picture to open the film.</sub></p>
+
 https://github.com/user-attachments/assets/52b4e776-8514-4b63-9f77-e04375e8a6ba
 
 To run what the film shows, install Orca, `git`, `gh`, `python3`, Beads (`bd`), a master CLI such as `claude`, and a worker CLI (`codex` or `cursor-agent`); Getting Started lists the remaining checks. Then clone [mogui-ADE-orchestrator](https://github.com/baksohyeon/mogui-ADE-orchestrator), open it in Orca, and say "Wake the master." The repository's own [quickstart](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.288#quickstart) and [Getting Started](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/docs/public/getting-started.md) take it from there. These pages explain what each part of the film does and where its tested code lives, at release [v0.5.288](https://github.com/baksohyeon/mogui-ADE-orchestrator/releases/tag/v0.5.288).
