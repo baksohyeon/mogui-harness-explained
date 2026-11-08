@@ -15,6 +15,7 @@ A third module, `context/`, resolves a workspace manifest against the filesystem
 ## Example (synthetic)
 
 ```
+# shape only: the status word, then action, repo, and path
 $ scripts/workspace-descriptor-check ~/example-workspace/example-product direct-main-commit
 prohibited: action=direct-main-commit repo=example-product path=~/example-workspace/example-product
 exit=1

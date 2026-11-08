@@ -1,6 +1,6 @@
 # 16. Succession triggers and duplicate masters
 
-**In one breath.** Succession has one entry point, `master-succeed`, with six subcommands: classify the trigger, build the handoff, verify the successor, find duplicate masters, retire the predecessor, and spawn. The trigger classifier can only propose; the duplicate check and the empty-seat rule keep two masters from holding one seat.
+**In one breath.** Succession has one entry point, `master-succeed`, with six subcommands: classify the trigger, build the handoff (the thin file a successor boots from), verify the successor, find duplicate masters, retire the predecessor, and spawn. The trigger classifier can only propose; the duplicate check and the empty-seat rule keep two masters from holding one seat.
 
 **When it runs.** In the master lifecycle: at every boot (the duplicate check is part of the boot comparison set), and from the owner's word to succeed until the predecessor is measured gone.
 
