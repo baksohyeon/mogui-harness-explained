@@ -1,5 +1,9 @@
 # 08. Scope-stating redaction scan
 
+**In one breath.** Before a push, a scan looks for secrets and identifiers in the repository and in conversation surfaces, and says what it covered.
+
+**When it runs.** After the work, before any push, in the map's "After / accept" group.
+
 **Mechanism.** Scan tracked content, commit messages, and conversation surfaces for secrets and identifiers, state what was covered, and separate "cannot decide" from "clean".
 
 **Failure it prevents.** Identifiers leaking where the repo scan did not look, such as PR bodies. See the [conversation redaction runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/conversation-redaction.md).

@@ -25,7 +25,9 @@ Here the lighthouse is a workspace. The spawn command carries an expected placem
 ```
 $ scripts/master-succeed retire --self-handle term_new01 --target-handle term_old01 \
     --target-pid 4242 --target-tty ttys011 --execute
-# JSON report, abridged to the keys this note discusses
+# synthetic: JSON report, abridged to the keys this note discusses
 {"status":"CLOSED","closed":true,"disappearances":{"pane":"measured","process":"measured","tty":"measured"}}
 ```
 
+
+<p align="center"><img src="../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

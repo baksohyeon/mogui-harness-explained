@@ -1,6 +1,6 @@
 # Glossary
 
-Sixty-six entries for the words the unit, concept, and walkthrough pages use without stopping to explain them; an entry covers one word or a few that mean the same thing. Each line says what the word means in this harness and where to read more. Words marked (Orca) come from Orca, the terminal program the harness runs inside; Orca's own documentation is the authority on them.
+Seventy-three entries for the words the unit, concept, and walkthrough pages use without stopping to explain them; an entry covers one word or a few that mean the same thing. Each line says what the word means in this harness and where to read more. Words marked (Orca) come from Orca, the terminal program the harness runs inside; Orca's own documentation is the authority on them.
 
 ## People and roles
 
@@ -38,6 +38,7 @@ Sixty-six entries for the words the unit, concept, and walkthrough pages use wit
 - **ask**, **reply** (Orca): a worker asks a question with `ask` and ends its turn; the master answers with `reply`, which wakes the worker. See the [Orca primer](orca-primer.md).
 - **worker_done** (Orca): the message a worker sends when its task is finished, with an outcome of succeeded or failed.
 - **check**, **batch** (Orca): the master reads its mail with `check`; a batch is what one `check` returns, acknowledged as a whole by its delivery id. See the [Orca primer](orca-primer.md).
+- **settled**: a dispatch whose status is terminal: completed, accepted, failed, or abandoned. The reaper acts only on a settled dispatch. See [unit 06](../units/06-worker-wait-and-reap/).
 
 ## Gates and checks
 
@@ -50,13 +51,16 @@ Sixty-six entries for the words the unit, concept, and walkthrough pages use wit
 - **delivery verdict**: the wrapper's last line about a dispatch: what the pane and Orca's status proved, or `UNVERIFIED` with the command to run next. See [one dispatch](../walkthroughs/01-one-dispatch.md), step 10.
 - **ledger**: the append-only file where each dispatch decision is recorded. See [unit 07](../units/07-dispatch-timeline-join/).
 - **model probe**, **rollout**: reading the model name out of the worker's own transcript file (a rollout, in the codex runtime's terms) instead of trusting the declared name. See [unit 03](../units/03-transcript-model-identity-probe/).
+- **reasoning effort**: the codex runtime's setting for how long it reasons before it answers. The wrapper launches workers at `xhigh`, and the start screen shows the value after the model name. See [one dispatch](../walkthroughs/01-one-dispatch.md), step 7.
 - **reaper**: `worker-reap`, the script that closes a finished worker's pane and removes its worktree, and refuses when the pane is occupied or the worktree is dirty, unmerged, or holds ignored media. See [unit 06](../units/06-worker-wait-and-reap/).
 - **product-path guard**: the hook that blocks a master's writes into a product root. See [unit 09](../units/09-product-path-write-guard-hook/).
 - **strict mode**: the guard setting that admits only read-only commands it recognizes and blocks everything it cannot parse. See [fail closed](fail-closed.md).
 - **redaction scan**: the pre-push scan for secrets and internal identifiers. See [unit 08](../units/08-scope-stating-redaction-scan/).
-- **exit 2**: the code several gates return for "could not decide"; it is never a pass. See [fail closed](fail-closed.md).
+- **exit 2**: the code the redaction scan, the drift audit, and the self-check return for "could not decide"; it is never a pass. The same number is the bad-invocation code of several command-line tools and the block code of the product-path guard, so each script's header says what its 2 means. See [fail closed](fail-closed.md).
 - **fail closed**: when a check cannot run, treat the result as a block. See [fail closed](fail-closed.md).
 - **self-check**: the boot script that prints one measured line per harness layer. See [measured, confirmed, inferred](measured-not-assumed.md).
+- **adoption ledger**: the file in which a seat records its progress adopting the template. The self-check's first `Template:` line reads `adoption ledger missing` when the seat has none. See [one template upgrade](../walkthroughs/03-one-template-upgrade.md), step 2.
+- **surface baseline**: a stored record of the Orca commands, flags, and output shapes the harness depends on; `orca-surface-check.sh` compares the installed Orca against it. See the [Orca primer](orca-primer.md).
 - **twins**: the two workspace-card files, `CLAUDE.md` and `AGENTS.md`, which must stay byte-identical; the self-check's `Twins:` line compares them. See [unit 14](../units/14-workspace-card-scope-local-file/).
 - **hook**: a small script the runtime runs before or after a tool call; the guard and the role-state injector are hooks.
 - **measured**, **confirmed**, **inferred**: the three labels a claim carries. Measured is read from the machine by the script that reports it; confirmed is stated by a source the reader can open; inferred is reasoned by the author from the other two. See [measured, confirmed, inferred](measured-not-assumed.md).
@@ -75,10 +79,15 @@ Sixty-six entries for the words the unit, concept, and walkthrough pages use wit
 - **changelog fragment**: one dated file per change, folded into the changelog at release time. See [unit 15](../units/15-changelog-fragment-gate/).
 - **placement**: proof that a session sits where it was meant to. A master proves it with three measured facts (selector, working directory, session namespace); a worker reports it as the three-line placement verdict. See [unit 04](../units/04-master-succession-placement-check/) and [one dispatch](../walkthroughs/01-one-dispatch.md), step 11.
 - **promotion audit**: the step before a spawn in which the sitting master moves what must survive into Git, the issue tracker, and the lineage. See [one master generation](../walkthroughs/02-one-master-generation.md), step 1.
+- **handshake**: the moment a successor gives its predecessor the three things retirement needs: the successor's identity, the operations repository's `main` sha, and the Run binding. See [one master generation](../walkthroughs/02-one-master-generation.md), step 3.
 - **three disappearances**: pane, process, and tty of the predecessor, each measured gone, in that order. See [succession](succession.md).
 - **CLOSED_PARTIAL**: a retirement in which one of the three disappearances was not measured; a full close is `CLOSED`. See [succession](succession.md).
 - **compaction**: the runtime summarizing a long session and continuing with the summary. The harness's rule is continue-and-compact. See [one master generation](../walkthroughs/02-one-master-generation.md), step 9.
 - **compaction recall probe**: the hook that fires after a compaction and has the master write what it remembers before it opens any source of truth. See [one master generation](../walkthroughs/02-one-master-generation.md), step 10.
 - **charter**: the numbered documents under `master-ops/docs/charter/` that state the harness's rules: execution principles, the dispatch gate, succession, and the rest.
 - **boot card**: the succession boot card, the runbook a successor master follows at boot: placement, role state, the model, the predecessor's retirement, and the lineage entry. See [one master generation](../walkthroughs/02-one-master-generation.md).
+- **Recovery Flow**: the numbered procedure, steps 0 to 6, a master follows after an abnormal end; `master-recover` runs it as reads only. See [unit 05](../units/05-read-only-recovery-flow/).
+- **Trace Archive**: the history index of past sessions. Charter §8 has a master query it only when the handoff, the ledger, and Git together do not answer a question. See [unit 05](../units/05-read-only-recovery-flow/).
 - **lineage**: the append-only file with one entry per master generation. See [succession](succession.md).
+
+<p align="center"><img src="../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

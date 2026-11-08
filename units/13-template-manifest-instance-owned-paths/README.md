@@ -1,5 +1,9 @@
 # 13. Template manifest and instance-owned paths
 
+**In one breath.** An upgrade applies the template's files from a manifest and refuses the files the seat owns.
+
+**When it runs.** After a template release, when a seat upgrades, in the map's "After / accept" group.
+
 **Mechanism.** `template-apply` builds a manifest-based dry-run plan, refuses instance-owned and unclaimed paths, and asks for the phrase `apply` before writing. It replaces each file atomically after preflighting the planned sources and destinations.
 
 **Failure it prevents.** An upgrade can overwrite `workspace-card/LOCAL.md` or `docs/runbooks/role-state.md`, or write a path the manifest never claimed. Missing template files and unresolved placeholders stop the write before confirmation.

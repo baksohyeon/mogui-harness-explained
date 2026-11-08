@@ -1,6 +1,10 @@
 # 05. Read-only recovery flow
 
-**Mechanism.** `master-recover` runs Recovery Flow steps 0 to 6 as reads only and prints one status line per step (OK, MISS, WARN, SKIP).
+**In one breath.** A master recovering after an abnormal end re-reads its context in a fixed order and writes nothing while it does.
+
+**When it runs.** In the master lifecycle, at a boot that follows an abnormal end.
+
+**Mechanism.** `master-recover` runs the Recovery Flow, the numbered procedure a master follows after an abnormal end, steps 0 to 6, as reads only and prints one status line per step (OK, MISS, WARN, SKIP).
 
 **Failure it prevents.** A new master acting on missing context. If step 0 (charter) misses, later steps are skipped fail-closed.
 
@@ -19,7 +23,7 @@ $ scripts/master-recover --charter nope.md --handoff nope2.md
 exit=0
 ```
 
-The CLI exits 0; the verdict is in the step lines (or `--json`).
+The command is a reporter, so it exits 0 whenever it ran; the verdict is in the step lines (or `--json`), and the fail-closed behavior is the `SKIP` after a `MISS`. `--handoff` names the predecessor's handoff note. Step 4 reports that the search of the Trace Archive, the history index of past sessions, is manual.
 
 ## Verified in mogui
 

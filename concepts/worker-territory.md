@@ -23,7 +23,10 @@ The corner is a Git worktree. The list of boards is the contract: branch, allowe
 **Evidence.** Sections "1.5 deliver the contract" and "1.6 append standing rules" in [`dispatch`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/dispatch); [worker host diversity runbook](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/worker-host-diversity.md); [`worker_reap.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/src/master_runtime/core/worker_reap.py); [contract conventions](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/contract-conventions.md).
 
 ```
+# synthetic: two lines of the wrapper's output
 📄 contract delivered · /tmp/example/dispatch-contracts/1a2b3c4d-fix-reader.md · read-token required
-📎 standing rules · headless ack-token placement
+📎 standing rules · headless ack-token placement voice pr-house
 ```
 
+
+<p align="center"><img src="../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

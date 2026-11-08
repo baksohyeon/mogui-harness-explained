@@ -1,8 +1,12 @@
 # 12. Contract delivery and read token
 
+**In one breath.** The worker gets its contract as a verified copy with a token it must quote back, so the master knows the contract was read.
+
+**When it runs.** Before dispatch, in the wrapper, after the gate.
+
 **Mechanism.** With `--contract`, dispatch copies the contract to a delivery directory, compares the copy byte for byte, appends `ack-${SHA:8:12}`, and writes the delivered path into the spec. It then appends each standing-rule block the contract's front matter names.
 
-**Failure it prevents.** The token gives the worker a value that proves the delivered copy was opened. A missing standing-rules file exits 10 before dispatch, and a missing named block exits 3 during append.
+**Failure it prevents.** A worker that never saw its contract and worked from the one-line spec. The token is a value only a worker that opened the delivered copy can produce. A missing standing-rules file exits 10 before dispatch, and a missing named block exits 3 during append.
 
 <p align="center"><img src="../../assets/units/12-contract-delivery-read-token.svg" alt="contract delivery verifies the copy, adds a token, and appends standing rules" width="100%"></p>
 

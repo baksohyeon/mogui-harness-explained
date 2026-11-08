@@ -1,6 +1,10 @@
 # 06. Worker wait and reap
 
-**Mechanism.** `worker-wait` waits on a Run's live dispatches and labels dead or stalled workers; `worker-reap` closes a settled dispatch's terminal and cleans its worktree.
+**In one breath.** The master waits on its workers from measured state and closes a pane only when the worker is gone.
+
+**When it runs.** During a dispatch, from the worker's launch to its pane being closed.
+
+**Mechanism.** `worker-wait` waits on a Run's live dispatches and labels dead or stalled workers; `worker-reap` closes the terminal of a settled dispatch, one whose status is completed, accepted, failed, or abandoned, and cleans its worktree.
 
 **Failure it prevents.** Closing a pane where a worker is still working, or treating a failed listing as an empty Run. A pane is closed only when it is listed, not claimed by a dispatched worker, and no agent CLI process has its cwd in the worktree.
 

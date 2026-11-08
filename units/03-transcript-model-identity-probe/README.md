@@ -1,8 +1,12 @@
 # 03. Transcript model identity probe
 
+**In one breath.** The model that answered is read from the session's own transcript, so a declared model name is never taken on faith.
+
+**When it runs.** During a dispatch, right after the worker is registered; and at a master's boot and succession audit.
+
 **Mechanism.** Read the session transcript to measure which model answered, and report any model change across the whole session.
 
-**Failure it prevents.** `model-identity-probe` samples the last turns, so a switch earlier in a session stays hidden. `model-drift-audit` walks every assistant turn. See the [succession boot card](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/succession-boot-card.md).
+**Failure it prevents.** A model switched in the middle of a session and reported under the name it started with. `model-identity-probe` samples the last turns, so a switch earlier in a session stays hidden from it; `model-drift-audit` walks every assistant turn. See the [succession boot card](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/succession-boot-card.md).
 
 <p align="center"><img src="../../assets/units/03-transcript-model-identity-probe.svg" alt="a transcript feeds recent identity and full-session drift checks" width="100%"></p>
 

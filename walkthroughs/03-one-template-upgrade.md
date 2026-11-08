@@ -14,7 +14,7 @@ A release folds the dated fragments under `master-ops/changelog.d/` into the cha
 
 ## Step 2. Template-check line (seat)
 
-The seat's self-check ends with a `Template:` line produced by [`template-check`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/template-check). It compares the install against the manifest's required files and reports three lists: `absent_required`, `unknown_present`, and `retired`. Files the seat added never fail the check; installs accumulate contracts and lineage by design. Files the seat retired on purpose are listed in an install-owned retirements file with a date and a reason, and a listed path counts as retired, not absent. The self-check prints two `Template:` lines. The first comes from the manifest and reads, in shape, `v0.5.265 stamped, adoption ledger missing`; the second comes from `template-check` and compares the install with a template checkout. Before the upgrade the second line read, in shape, `Template: v0.5.265 (matches template v0.5.265)`; the new tag is what makes it stale.
+The seat's self-check prints two `Template:` lines. The first comes from the seat's adoption probe and reads, in shape, `v0.5.265 stamped, adoption ledger missing`. The second is produced by [`template-check`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/template-check), which compares the install against the manifest's required files and reports three lists: `absent_required`, `unknown_present`, and `retired`. Files the seat added never fail the check; installs accumulate contracts and lineage by design. Files the seat retired on purpose are listed in an install-owned retirements file with a date and a reason, and a listed path counts as retired, not absent. Before the upgrade the second line read, in shape, `Template: v0.5.265 (matches template v0.5.265)`; the new tag is what makes it stale.
 
 ## Step 3. Render, eight placeholders (seat)
 
@@ -28,12 +28,12 @@ The seat renders two versions of the template, the one it is on and the one it i
 |---|---|
 | seat equal to the new render already | 48 |
 | seat unchanged, template changed | 19 |
-| new in the template | 5, plus `TEMPLATE-VERSION` |
+| new in the template | 5 |
 | seat changed, template unchanged | 52 |
 | seat changed and template changed | 10 |
 | retired on the seat | 1 |
 
-Measured on one seat, 2026-11-07, template `v0.5.265` to `v0.5.288`, 135 manifest paths. The second and third classes are taken whole. The fourth is left as the seat has it. The fifth is a three-way merge. The sixth stays retired.
+Measured on one seat, 2026-11-07, template `v0.5.265` to `v0.5.288`, 135 manifest paths. The six rows sum to the 135; `TEMPLATE-VERSION` is written alongside them and is not a manifest path. The second and third classes are taken whole. The fourth is left as the seat has it. The fifth is a three-way merge. The sixth stays retired.
 
 ## Steps 5 to 7. The apply tool (template-apply)
 
@@ -41,7 +41,7 @@ Measured on one seat, 2026-11-07, template `v0.5.265` to `v0.5.288`, 135 manifes
 
 **Step 6, instance-owned paths skipped.** A fixed list is refused by name. It holds the lineage directory, both session-card files, the operations index, the closed-decisions record, the boot comparison set, and role state. It also holds the succession boot card, the compaction probe, the self-check script, the local card extension, the tracker directory, `config/`, and `contracts/`. Anything the manifest does not claim is refused too. Unit [13](../units/13-template-manifest-instance-owned-paths/) has the test that proves a refusal.
 
-**Step 7, confirmation phrase, write.** A write pass asks for an interactive confirmation phrase. There is no `--yes`. The batch is preflighted, then written file by file with a per-file atomic replace; a mid-batch OS error can leave earlier files written, and the docstring says to re-run after the fix. On this upgrade the dry run listed 126 planned paths and 9 skipped as instance-owned. A planned path means the tool would overwrite the whole file. 62 of those paths, the fourth and fifth classes of the table, carried seat adaptations, so the seat did not run the write pass. A short script of the seat's own wrote the 19 changed files, the 5 new files, and the version file from the same render. The dry run stayed as the record of what the tool would have done.
+**Step 7, confirmation phrase, write.** A write pass asks for an interactive confirmation phrase. There is no `--yes`. The batch is preflighted, then written file by file with a per-file atomic replace; a mid-batch OS error can leave earlier files written, and the docstring says to re-run after the fix. On this upgrade the dry run listed 126 planned paths and 9 skipped as instance-owned, the 135 manifest paths together. A planned path means the tool would overwrite the whole file. 62 of those paths, the fourth and fifth classes of the table, carried seat adaptations, so the seat did not run the write pass. A short script of the seat's own wrote the 19 changed files, the 5 new files, and the version file from the same render. The dry run stayed as the record of what the tool would have done.
 
 ## Step 8. Three-way merge by hand (seat)
 
@@ -59,7 +59,7 @@ The template's CI renders a scratch install and runs its shell tests against it;
 | failing on `main` before the change, the same way | 2 |
 | failing identically when the untouched template test runs on this machine | 1 |
 
-The last one, the product-path guard test, was recorded as template-side on that machine and filed as a tracker card; it was not a merge regression. Unit [11](../units/11-rendered-shell-test-lane/) covers the lane.
+The last one, the product-path guard test, was recorded as template-side on that machine and filed as a card in the seat's issue tracker; it was not a merge regression. Unit [11](../units/11-rendered-shell-test-lane/) covers the lane.
 
 ## Step 10. Self-check: stamped (tests and PR)
 

@@ -1,5 +1,9 @@
 # 02. Dispatch tier and fan-out gate
 
+**In one breath.** Before a worker starts, a gate checks that the dispatch fits the budget and the routing, and that the model's tier allows it.
+
+**When it runs.** Before dispatch, as the first thing the dispatch wrapper does.
+
 **Mechanism.** Every worker dispatch request passes a gate that checks budget, routing, model tier, and per-tier fan-out before it runs.
 
 **Failure it prevents.** A top-tier model multiplied across many workers. The gate reads the tier table from `model-tier-policy.json` and fails closed when the policy is missing.

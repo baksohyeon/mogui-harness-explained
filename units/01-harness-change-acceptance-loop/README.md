@@ -1,5 +1,9 @@
 # 01. Harness change acceptance loop
 
+**In one breath.** A change to the harness itself is kept only when it passes more test cases than before, counting cases the proposer could not see.
+
+**When it runs.** After a change to the harness is proposed, in the map's "After / accept" group. It judges harness changes, not dispatches; the other fourteen units run inside a dispatch or a master's life.
+
 **Mechanism.** A candidate change is kept only when the combined pass count over the visible (train) and private (holdout) cases strictly rises.
 
 **Failure it prevents.** A proposer that tunes against the cases it can see can raise the train score while losing holdout cases. The holdout split is never written into the proposer workspace.
@@ -32,7 +36,7 @@ Before a harness change runs, it names what it should fix and what it might brea
 }
 ```
 
-Each eval under [`evals/behavioral/`](evals/behavioral/) is a pair: one case where the rule should fire and one where it should not. Testing only the firing side hides rules that trigger everywhere.
+Each eval is a pair: one case where the rule should fire and one where it should not. They go under [`evals/behavioral/`](evals/behavioral/), which ships empty here. Testing only the firing side hides rules that trigger everywhere.
 
 Background: [Agentic Harness Engineering (arXiv 2604.25850)](https://arxiv.org/abs/2604.25850).
 

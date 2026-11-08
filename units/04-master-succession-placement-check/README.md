@@ -1,8 +1,12 @@
 # 04. Master succession placement check
 
+**In one breath.** A newly spawned master must land in the worktree it was meant for, or its terminal is closed.
+
+**When it runs.** In the master lifecycle, at the moment a successor is spawned.
+
 **Mechanism.** When a successor master is spawned, the terminal's reported worktree must match the requested and expected placement, or the new terminal is closed.
 
-**Failure it prevents.** A successor that lands in the wrong worktree would run with the wrong cwd. The [succession boot card](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/succession-boot-card.md) requires the cwd to be the workspace root or an approved orchestrator root.
+**Failure it prevents.** A successor that lands in the wrong worktree would run with the wrong cwd. The [succession boot card](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/succession-boot-card.md) requires the cwd to be the workspace root or a root the boot card explicitly approves.
 
 <p align="center"><img src="../../assets/units/04-master-succession-placement-check.svg" alt="successor spawning flows through worktree placement verification" width="100%"></p>
 

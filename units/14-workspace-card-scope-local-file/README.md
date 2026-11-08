@@ -1,8 +1,12 @@
 # 14. Workspace card scope and LOCAL.md
 
-**Mechanism.** The session card opens with a sentence for the owner-appointed master and dispatched workers. It keeps the two card files byte-identical and reads optional instance-owned `LOCAL.md` after the card without overriding its rules.
+**In one breath.** The session card says who it is for, keeps its two files identical, and lets a seat add local rules in a separate file.
 
-**Failure it prevents.** A dispatched worker or another workspace session can read a master card as its own role when the scope is unclear. The card keeps instance additions beside the installation while the template leaves them untouched.
+**When it runs.** In the master lifecycle, at every session start that reads the card.
+
+**Mechanism.** The session card, the `CLAUDE.md` and `AGENTS.md` at the workspace root, opens with a sentence naming whom it applies to: the owner-appointed master and the workers it dispatches. It keeps the two card files byte-identical and reads optional instance-owned `LOCAL.md` after the card without overriding its rules.
+
+**Failure it prevents.** A dispatched worker, or a session from another workspace, claiming the master role because the card did not say whom it addresses. The card keeps a seat's additions in `LOCAL.md` beside it, and the template never overwrites that file.
 
 <p align="center"><img src="../../assets/units/14-workspace-card-scope-local-file.svg" alt="the workspace card states scope and reads an optional local extension" width="100%"></p>
 

@@ -1,6 +1,10 @@
 # 11. Rendered shell-test lane
 
-**Mechanism.** The `rendered-shell-tests` job renders `master-ops` into a scratch install with `template-apply --write`. It runs every rendered `scripts/test-*.sh` file and reports each exit code and `SKIP` line.
+**In one breath.** The template's shell tests run against a rendered copy, so a placeholder token cannot hide a failure.
+
+**When it runs.** After a template change, in CI, in the map's "After / accept" group.
+
+**Mechanism.** The `rendered-shell-tests` job renders `master-ops` into a scratch install with `template-apply --write`, the confirmation phrase piped in. It runs every rendered `scripts/test-*.sh` file and reports each exit code and `SKIP` line.
 
 **Failure it prevents.** A shell test can pass while `{{...}}` tokens remain and fail after rendering. The lane also records when an instance-owned file is absent from a template-only checkout.
 

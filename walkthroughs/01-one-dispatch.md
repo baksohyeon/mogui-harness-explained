@@ -6,11 +6,11 @@ Fifteen steps. The diagram below moves a ring from step to step; every label is 
 
 <p align="center"><img src="../assets/walkthroughs/01-one-dispatch.svg" alt="fifteen steps of one dispatch, colored by master, wrapper, Orca, and worker" width="100%"></p>
 
-Two programs share this page. Orca is the program the harness runs inside: it owns terminals, worktrees, and the mailbox between the master and its workers (Orca's own word for the master is coordinator). The harness is a set of scripts that run on top of it. The [Orca primer](../concepts/orca-primer.md) draws the line between the two. This page follows one dispatch across it.
+Two programs share this page. Orca is the program the harness runs inside: it owns terminals, worktrees, and the mailbox between the master and its workers (Orca's own word for the master is coordinator). The harness is a set of scripts that run on top of it. The [Orca primer](../concepts/orca-primer.md) draws the line between the two. This page follows one dispatch across it. The steps are this page's numbering; the section numbers quoted along the way are the numbered comments in the wrapper's source, so each step can be found in the file.
 
 ## Step 1. Contract written (master)
 
-The master never edits a product repository. It writes a contract file. The front matter names the tier, the runtime, the repository, a budget, the paths the worker may write, and the standing rule blocks to append. The body holds the task in prose, a "done means" list, and a FIRST ACTION block, the three-line placement report of step 11. The clauses come from [contract conventions](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/contract-conventions.md), and each clause there names the incident that made it necessary. The contract is committed to the operations repository before it is dispatched, so its hash is a fact of record.
+The master never edits a product repository. It writes a contract file. The front matter names the tier, the runtime, the repository, a budget, the paths the worker may write, and the standing rule blocks to append. The body holds the task in prose, a "done means" list, and a FIRST ACTION block, three lines in which the worker reports where it landed before it works (step 11 shows them). The clauses come from [contract conventions](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/contract-conventions.md), and each clause there names the incident that made it necessary. The contract is committed to the operations repository before it is dispatched, so its hash is a fact of record.
 
 ## Steps 2 to 4. The wrapper, before Orca is asked for anything
 
@@ -22,7 +22,7 @@ scripts/dispatch --contract contracts/2026-11-07-example-task.md \
   --worktree path:<absolute path of the worker's worktree>
 ```
 
-The wrapper is [`master-ops/scripts/dispatch`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/dispatch). Its first three sections run before any Orca call. The lines below are what it printed on one seat on 2026-11-07; a seat is one installed copy of the harness, with its own values filled in. Identifiers are replaced by synthetic ones and the model name by `model-a`. The section numbers on this page are the numbered comments in the wrapper's source, so each step can be found in the file. The wrapper prints four Korean words; this table gives them before the output does.
+The wrapper is [`master-ops/scripts/dispatch`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/dispatch). Its first three sections run before any Orca call. The lines below are what it printed on one seat on 2026-11-07; a seat is one installed copy of the harness, with its own values filled in. Identifiers are replaced by synthetic ones and the model name by `model-a`. The wrapper prints Korean words on four of its lines; this table gives them before the output does.
 
 | printed | meaning |
 |---|---|
@@ -39,7 +39,7 @@ pre-trust ✓ codex · Summary: 3 added, 0 updated, 1 already trusted
 📎 standing rules · headless ack-token placement voice pr-house
 ```
 
-**Step 2, the gate.** Section 1 of the script does three things. It derives the model from the tier policy when the caller named none. It pre-trusts the worktree for the runtime, so the worker does not stop on a trust prompt that reads as idle. It evaluates the dispatch gate: tier, budget, routing, and an estimate of the spec size. `efficient` is the tier the policy put the model in; the shipped policy has two tiers, `top` and `efficient`. The wrapper refuses a top-tier model until the master passes the owner's answer with `--top-approved "<reason>"`. Unit [02](../units/02-dispatch-tier-fanout-gate/) covers the gate on its own.
+**Step 2, the gate.** Section 1 of the script does three things. It derives the model from the tier policy when the caller named none. It pre-trusts the worktree for the runtime, so the worker does not stop on a trust prompt that reads as idle. The counts on the `pre-trust` line are the trust entries it added, updated, and found already present. It evaluates the dispatch gate: tier, budget, routing, and an estimate of the spec size. `efficient` is the tier the policy put the model in; the shipped policy has two tiers, `top` and `efficient`. The wrapper refuses a top-tier model until the master passes the owner's answer with `--top-approved "<reason>"`. Unit [02](../units/02-dispatch-tier-fanout-gate/) covers the gate on its own.
 
 **Step 3, delivery and the read token.** Section 1.5 copies the contract to a delivery directory outside every repository and compares the copy with the original byte for byte. It then appends a read token, built from characters of the hash that the output never shows; the standing rule that governs it is named `ack-token`. The worker must type that token bare in its completion message. A worker that only saw the path cannot produce it. Unit [12](../units/12-contract-delivery-read-token/) has the mechanism and the exit codes.
 
@@ -52,13 +52,13 @@ pre-trust ✓ codex · Summary: 3 added, 0 updated, 1 already trusted
 start screen ✓ codex · model-a xhigh
 ```
 
-**Step 5, `orca orchestration task-create --spec "$SPEC" --json`.** Orca records a task under the master's Run and returns a task id. The wrapper reads the id through a small normalizer, because Orca's JSON shape has changed between releases; unit [10](../units/10-orca-json-shape-normalizer/) explains that module.
+**Step 5, `orca orchestration task-create --spec "$SPEC" --json`.** Orca records a task under the master's Run, the orchestration session the master owns, and returns a task id. The wrapper reads the id through a small normalizer, because Orca's JSON shape has changed between releases; unit [10](../units/10-orca-json-shape-normalizer/) explains that module.
 
 **Step 6, `orca terminal create --worktree "$WORKTREE" --command "<agent cli>" --json`.** Orca opens a pane in the worker's worktree and starts the agent CLI there. The wrapper then runs `orca terminal wait --terminal "$TERMINAL" --for tui-idle --timeout-ms 60000`, and goes on when the pane reports idle or the limit passes.
 
-**Step 7, the start screen.** A pane that reads idle may be sitting on a menu. A codex pane sitting on a selection menu, a provider limit notice, or an update notice is also idle. Section 3b reads the pane and classifies it; a pane that is not at a prompt with the expected model footer stops the dispatch with exit 3, before anything is injected.
+**Step 7, the start screen.** A pane that reads idle may be sitting on a menu. A codex pane sitting on a selection menu, a provider limit notice, or an update notice is also idle. Section 3b reads the pane and classifies it; a pane that is not at a prompt with the expected model footer stops the dispatch with exit 3, before anything is injected. The `start screen ✓` line above names the runtime, the model, and for codex the reasoning effort the wrapper set, `xhigh`.
 
-**Step 8, `orca orchestration dispatch --task "$TASK" --to "$TERMINAL" --inject --json`.** Orca binds the task to the pane, writes a preamble and the task text into the agent's prompt, and returns a dispatch id. From this point the worker exists as far as Orca is concerned.
+**Step 8, `orca orchestration dispatch --task "$TASK" --to "$TERMINAL" --inject --json`.** Orca binds the task to the pane and writes a preamble and the task text into the agent's prompt. It returns a dispatch id, the `ctx_` value. From this point the worker exists as far as Orca is concerned.
 
 ## Steps 9 and 10. What the wrapper refuses to assume
 
@@ -69,7 +69,7 @@ delivery pre=unknown post=unknown status=dispatched class=unknown
   Verify before trusting the dispatch: orca terminal read --terminal term_7f3e2d1c-0000-4000-8000-000000000001 --limit 40
 ```
 
-**Step 9, register and the model probe.** The wrapper writes a ledger row with the dispatch id, the task id, the pane, and the model. It then tries to measure the model from the worker's own transcript. On the dispatch above, a new transcript file appeared for this worker, and the probe reports `transcript실측`. On six of eight dispatches measured on the same seat that day, no new file had appeared yet, and the same line carried `warn:MODEL_UNVERIFIED` followed by three lines telling the master to verify by hand. The declared model is never promoted to a measured one by the passage of time. Unit [03](../units/03-transcript-model-identity-probe/) covers the probe.
+**Step 9, register and the model probe.** The wrapper writes a row to the ledger, the append-only file of dispatch decisions: the dispatch id, the task id, the pane, and the model. It then tries to measure the model from the worker's own transcript. On the dispatch above, a new transcript file appeared for this worker, and the probe reports `transcript실측`. The parenthesis after it names the method: a codex transcript file (a rollout) scoped to this worker, found because it did not exist before the launch. On six of eight dispatches measured on the same seat that day, no new file had appeared yet. The same line then carried `warn:MODEL_UNVERIFIED`, the gate's reason code for a model the probe could not read. Three lines followed, telling the master to verify by hand. The declared model is never promoted to a measured one by the passage of time. Unit [03](../units/03-transcript-model-identity-probe/) covers the probe.
 
 **Step 10, a delivery verdict.** Section 6 reads the pane before and after the inject, polls it for thirty seconds, and asks Orca for the dispatch status with `orca orchestration dispatch-show --task "$TASK" --json`. A pane that returns to the same prepared prompt carries no signal at all, so the wrapper folds Orca's own status into the verdict. On all eight dispatches measured on this seat on 2026-11-07, the pane matched no known prepared-prompt pattern, the verdict was `UNVERIFIED`, and the wrapper printed the exact command to run next. The master ran it, saw the preamble and the task text in the pane, and trusted the dispatch from that reading, with the reading recorded.
 

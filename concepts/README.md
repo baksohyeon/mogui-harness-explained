@@ -1,6 +1,6 @@
 # Concepts
 
-Seven short notes on the ideas behind the units, each written for a reader who has never run the harness, followed by the house rules for a master's chat replies and a glossary. Each note answers the same five questions: what happened, what is confirmed, what is inferred, what is unknown, and where the evidence is. The words the notes lean on are in the glossary. Every evidence link points at the public repository at tag `v0.5.288`.
+Seven short notes on the ideas behind the units, each written for a reader who has never run the harness, followed by the house rules for a master's chat replies and a glossary. Each note answers the same five questions: what happened, what is confirmed, what is inferred, what is unknown, and where the evidence is. The glossary defines the words the notes use without stopping to explain them. Every evidence link points at the public repository at tag `v0.5.288`.
 
 | Note | One line |
 |---|---|
@@ -12,4 +12,6 @@ Seven short notes on the ideas behind the units, each written for a reader who h
 | [Template and seat](template-and-seat.md) | One upstream, many installs, upgrades against a manifest. |
 | [Succession](succession.md) | Generations of masters, placement proof, three measured disappearances. |
 | [Chat response rules](chat-response-rules.md) | Twelve sentence rules for replies to the owner, most derived from ASD-STE100. |
-| [Glossary](glossary.md) | Sixty-six entries for the words the unit, concept, and walkthrough pages use, one line each, with where to read more. |
+| [Glossary](glossary.md) | Seventy-three entries for the words the unit, concept, and walkthrough pages use, one line each, with where to read more. |
+
+<p align="center"><img src="../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

@@ -1,5 +1,9 @@
 # 10. Orca JSON shape normalizer
 
+**In one breath.** One module reads Orca's JSON in its old shape and its new one, so a renamed key cannot silently empty a value.
+
+**When it runs.** Before dispatch and during, wherever a harness script reads Orca's JSON.
+
 **Mechanism.** The `orca_json` module reads old nested keys first and newer top-level keys second. It normalizes worker statuses so old `dispatched` and new `in_progress` both report `in_progress`.
 
 **Failure it prevents.** A shape change can leave one-off readers with an empty string or `None`. The module and its test keep each new path in one place.

@@ -2,11 +2,11 @@
 
 # mogui harness, explained
 
-The mogui harness is a set of scripts that let one agent, the master, run other agents as workers under a human owner. It runs on Orca, a terminal program with an orchestration layer. This repository explains the harness in three layers, each written for a reader who has never run it. Three walkthroughs follow a procedure from start to end. Fifteen units each explain one mechanism. Seven concept notes cover the ideas behind the mechanisms. A glossary defines every word the pages lean on. Every evidence link points at the public implementation at tag `v0.5.288`.
+The mogui harness is a set of scripts that let one agent, the master, run other agents as workers under a human owner. It runs on Orca, a terminal program with an orchestration layer. This repository explains the harness in three layers, each written for a reader who has never run it. Three walkthroughs follow a procedure from start to end. Fifteen units each explain one mechanism. Seven concept notes cover the ideas behind the mechanisms. A glossary defines the words the pages use without stopping to explain them. Every evidence link points at the public implementation at tag `v0.5.288`.
 
 ## How to read this
 
-Five reading paths. The first takes twenty minutes; the others about half an hour each.
+Five reading paths.
 
 - The whole shape, once: the [Orca primer](concepts/orca-primer.md), then the walkthrough [one dispatch](walkthroughs/01-one-dispatch.md).
 - New to the harness: [role lock](concepts/role-lock.md), [worker territory](concepts/worker-territory.md), [fail closed](concepts/fail-closed.md), then units 02, 09, and 12, then [one dispatch](walkthroughs/01-one-dispatch.md).
@@ -14,7 +14,7 @@ Five reading paths. The first takes twenty minutes; the others about half an hou
 - Taking over a seat: [one master generation](walkthroughs/02-one-master-generation.md), then units 04 and 03, then [succession](concepts/succession.md).
 - Debugging a stuck worker: units 06, 07, 03, and 10, then [measured, confirmed, inferred](concepts/measured-not-assumed.md).
 
-A word you do not know is in the [glossary](concepts/glossary.md).
+The [glossary](concepts/glossary.md) defines the words the pages use without stopping to explain them.
 
 ## Walkthroughs
 
@@ -28,11 +28,11 @@ Three procedures in the order they run, about fifteen minutes each, with the Orc
 
 ## Units
 
-Fifteen mechanisms, each explained in about five minutes and linked to its tested implementation. The number in front of a unit is its id, the number that starts its directory name; it carries no rank and no reading order. The map above groups the units by when they act in a dispatch's life, which is why the numbers there are out of sequence.
+Fifteen mechanisms, each explained in about five minutes and linked to its tested implementation. Fourteen of them run inside a dispatch or a master's life; unit 01 is the loop that decides whether a change to the harness itself is kept. The number in front of a unit is its id, the number that starts its directory name; it carries no rank and no reading order. The map above groups the units by when they act in a dispatch's life, which is why the numbers there are out of sequence.
 
 | Unit | Mechanism |
 |---|---|
-| [01 harness change acceptance loop](units/01-harness-change-acceptance-loop/) | Keep a change only when combined visible+holdout passes strictly rise. |
+| [01 harness change acceptance loop](units/01-harness-change-acceptance-loop/) | Keep a harness change only when its pass count over visible and held-out cases rises. |
 | [02 dispatch tier fan-out gate](units/02-dispatch-tier-fanout-gate/) | Gate each dispatch on budget, routing, model tier, and per-tier fan-out. |
 | [03 transcript model identity probe](units/03-transcript-model-identity-probe/) | Measure the model that answered and find mid-session switches. |
 | [04 master succession placement check](units/04-master-succession-placement-check/) | Close a successor terminal that lands in the wrong worktree. |
@@ -62,7 +62,7 @@ Seven short notes on the ideas behind the units. Each answers the same five ques
 | [Template and seat](concepts/template-and-seat.md) | One upstream, many installs, upgrades against a manifest. |
 | [Succession](concepts/succession.md) | Generations of masters, placement proof, three measured disappearances. |
 | [Chat response rules](concepts/chat-response-rules.md) | Twelve sentence rules for replies to the owner, most derived from ASD-STE100. |
-| [Glossary](concepts/glossary.md) | Sixty-six entries for the words the pages use, one line each, with where to read more. |
+| [Glossary](concepts/glossary.md) | Seventy-three entries for the words the pages use, one line each, with where to read more. |
 
 ## Where the evidence is
 

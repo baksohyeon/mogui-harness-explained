@@ -26,7 +26,11 @@ The harness writes like the second kid. The self-check prints what it measured a
 # synthetic: the shape of `bash master-ops/scripts/harness-selfcheck.sh` output
 Orca: 1.4.249 (last install 2026-11-04T23:41:48), changed since 1.4.247
 Template: v0.5.288 stamped, adoption ledger missing
+Template: v0.5.288 (matches template v0.5.288)
 Hooks: 16 wired
 Card: deployed copy matches canonical
+Twins: canonical, deployed, and ops entry pairs all byte-identical
 ```
 
+
+<p align="center"><img src="../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

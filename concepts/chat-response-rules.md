@@ -41,3 +41,5 @@ Twelve rules for the sentences a master writes to its owner. They come from ASD-
 ## Why these twelve
 
 Each rule removes one way a reader has to ask again. Rules 1 to 3 put the answer where the eye lands first. Rules 4 and 5 stop a reader from wondering whether two names are two things. Rules 6 to 8 make instructions executable without a second reading. Rules 9 and 10 keep measurements and guesses apart. Rules 11 and 12 keep the reply in one language with its logic intact.
+
+<p align="center"><img src="../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

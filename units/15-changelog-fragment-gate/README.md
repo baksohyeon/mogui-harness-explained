@@ -1,8 +1,12 @@
 # 15. Changelog fragment gate
 
+**In one breath.** A change to the template is not merged without a dated changelog fragment, and a release folds the fragments into the changelog.
+
+**When it runs.** After a template change, in CI, and again at release time.
+
 **Mechanism.** The fragment gate requires a dated root file under `master-ops/changelog.d/` for a `master-ops/` change outside that directory. The release script folds fragments into `CHANGELOG.md` when a release is cut.
 
-**Failure it prevents.** A pull request with an operations change can fail when its fragment is absent, empty, or badly named. A release-shaped diff has its documented exemption, and merged fragments remain until release folding.
+**Failure it prevents.** An operations change shipped with no changelog line. The gate fails a pull request whose fragment is absent, empty, or badly named; a release-shaped diff has its documented exemption, and merged fragments remain until release folding.
 
 <p align="center"><img src="../../assets/units/15-changelog-fragment-gate.svg" alt="the changelog gate checks fragments before release folding" width="100%"></p>
 
