@@ -2,7 +2,7 @@
 
 **In one breath.** The harness ships as a template with placeholder tokens. Each install (a seat) renders it, owns a short list of files the template never touches, and upgrades by re-applying the template file by file against a manifest.
 
-The harness's own words on this page are in the [glossary](glossary.md).
+The [glossary](glossary.md) defines the harness's recurring words.
 
 ## For a ten-year-old
 

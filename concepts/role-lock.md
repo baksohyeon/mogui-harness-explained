@@ -2,7 +2,7 @@
 
 **In one breath.** The master agent plans and checks. Workers write code. A hook and a dispatch gate keep it that way even when the master is sure it knows the fix.
 
-The harness's own words on this page are in the [glossary](glossary.md).
+The [glossary](glossary.md) defines the harness's recurring words.
 
 ## For a ten-year-old
 

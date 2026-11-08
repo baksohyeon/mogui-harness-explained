@@ -2,7 +2,7 @@
 
 **In one breath.** Orca is the program the harness runs inside. It owns terminals, worktrees, and a mailbox between one master and many workers. Orca's own word for the master is coordinator. The harness is a set of scripts that decide what goes into that mailbox, prove that it arrived, and record what happened.
 
-The harness's own words on this page are in the [glossary](glossary.md).
+The [glossary](glossary.md) defines the harness's recurring words.
 
 ## For a ten-year-old
 

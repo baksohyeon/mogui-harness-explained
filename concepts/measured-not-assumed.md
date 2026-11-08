@@ -2,7 +2,7 @@
 
 **In one breath.** Every report in this harness marks each claim as something it measured, something a source confirmed, or something it inferred. A number without its instrument and date is a guess with good posture.
 
-The harness's own words on this page are in the [glossary](glossary.md).
+The [glossary](glossary.md) defines the harness's recurring words.
 
 ## For a ten-year-old
 

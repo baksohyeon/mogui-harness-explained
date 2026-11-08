@@ -2,7 +2,7 @@
 
 **In one breath.** A worker gets its own checkout, one contract that names what it may write, and by default a runtime (the agent CLI that runs its model) different from the master's. The master keeps the verification and the merge.
 
-The harness's own words on this page are in the [glossary](glossary.md).
+The [glossary](glossary.md) defines the harness's recurring words.
 
 ## For a ten-year-old
 

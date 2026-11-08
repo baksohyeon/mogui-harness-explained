@@ -62,7 +62,7 @@ Seven short notes on the ideas behind the units. Each answers the same five ques
 | [Template and seat](concepts/template-and-seat.md) | One upstream, many installs, upgrades against a manifest. |
 | [Succession](concepts/succession.md) | Generations of masters, placement proof, three measured disappearances. |
 | [Chat response rules](concepts/chat-response-rules.md) | Twelve sentence rules for replies to the owner, most derived from ASD-STE100. |
-| [Glossary](concepts/glossary.md) | Sixty-three entries for the words the pages use, one line each, with where to read more. |
+| [Glossary](concepts/glossary.md) | Sixty-six entries for the words the pages use, one line each, with where to read more. |
 
 ## Where the evidence is
 

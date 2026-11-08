@@ -1,6 +1,6 @@
 # Glossary
 
-Sixty-three entries for the words the unit, concept, and walkthrough pages use without stopping to explain them; an entry covers one word or a few that mean the same thing. Each line says what the word means in this harness and where to read more. Words marked (Orca) come from Orca, the terminal program the harness runs inside; Orca's own documentation is the authority on them.
+Sixty-six entries for the words the unit, concept, and walkthrough pages use without stopping to explain them; an entry covers one word or a few that mean the same thing. Each line says what the word means in this harness and where to read more. Words marked (Orca) come from Orca, the terminal program the harness runs inside; Orca's own documentation is the authority on them.
 
 ## People and roles
 
@@ -50,6 +50,7 @@ Sixty-three entries for the words the unit, concept, and walkthrough pages use w
 - **delivery verdict**: the wrapper's last line about a dispatch: what the pane and Orca's status proved, or `UNVERIFIED` with the command to run next. See [one dispatch](../walkthroughs/01-one-dispatch.md), step 10.
 - **ledger**: the append-only file where each dispatch decision is recorded. See [unit 07](../units/07-dispatch-timeline-join/).
 - **model probe**, **rollout**: reading the model name out of the worker's own transcript file (a rollout, in the codex runtime's terms) instead of trusting the declared name. See [unit 03](../units/03-transcript-model-identity-probe/).
+- **reaper**: `worker-reap`, the script that closes a finished worker's pane and removes its worktree, and refuses when the pane is occupied or the worktree is dirty, unmerged, or holds ignored media. See [unit 06](../units/06-worker-wait-and-reap/).
 - **product-path guard**: the hook that blocks a master's writes into a product root. See [unit 09](../units/09-product-path-write-guard-hook/).
 - **strict mode**: the guard setting that admits only read-only commands it recognizes and blocks everything it cannot parse. See [fail closed](fail-closed.md).
 - **redaction scan**: the pre-push scan for secrets and internal identifiers. See [unit 08](../units/08-scope-stating-redaction-scan/).
@@ -67,10 +68,10 @@ Sixty-three entries for the words the unit, concept, and walkthrough pages use w
 - **placeholder**: a `{{TOKEN}}` the render fills in, such as the workspace root.
 - **manifest**: the list of files the template owns, with the template version. See [unit 13](../units/13-template-manifest-instance-owned-paths/).
 - **instance-owned path**: a file the template never overwrites: role state, lineage, local config, contracts, `LOCAL.md`. See [unit 13](../units/13-template-manifest-instance-owned-paths/).
-- **drift**: the difference between a seat's copy of a template file and the template's current one, measured file by file; the only instrument for it is the apply tool's dry run. See [template and seat](template-and-seat.md).
+- **drift**: the difference between a seat's copy of a template file and the template's current one. The apply tool's dry run lists the files it would overwrite, and the self-check's `Card:` line checks the one deployed card; no check publishes whole-seat drift. See [template and seat](template-and-seat.md).
 - **dry run**: the plan pass of `template-apply`: it prints every file it would write, with a reason, and writes nothing. See [one template upgrade](../walkthroughs/03-one-template-upgrade.md).
 - **re-stamp**: applying a newer template onto a seat, file by file. See [one template upgrade](../walkthroughs/03-one-template-upgrade.md).
-- **workspace card**: the two identical files at the workspace root that tell a session what role it holds. See [unit 14](../units/14-workspace-card-scope-local-file/).
+- **workspace card**, **session card**: the two identical files at the workspace root that tell a session what role it holds. See [unit 14](../units/14-workspace-card-scope-local-file/).
 - **changelog fragment**: one dated file per change, folded into the changelog at release time. See [unit 15](../units/15-changelog-fragment-gate/).
 - **placement**: proof that a session sits where it was meant to. A master proves it with three measured facts (selector, working directory, session namespace); a worker reports it as the three-line placement verdict. See [unit 04](../units/04-master-succession-placement-check/) and [one dispatch](../walkthroughs/01-one-dispatch.md), step 11.
 - **promotion audit**: the step before a spawn in which the sitting master moves what must survive into Git, the issue tracker, and the lineage. See [one master generation](../walkthroughs/02-one-master-generation.md), step 1.
@@ -78,4 +79,6 @@ Sixty-three entries for the words the unit, concept, and walkthrough pages use w
 - **CLOSED_PARTIAL**: a retirement in which one of the three disappearances was not measured; a full close is `CLOSED`. See [succession](succession.md).
 - **compaction**: the runtime summarizing a long session and continuing with the summary. The harness's rule is continue-and-compact. See [one master generation](../walkthroughs/02-one-master-generation.md), step 9.
 - **compaction recall probe**: the hook that fires after a compaction and has the master write what it remembers before it opens any source of truth. See [one master generation](../walkthroughs/02-one-master-generation.md), step 10.
+- **charter**: the numbered documents under `master-ops/docs/charter/` that state the harness's rules: execution principles, the dispatch gate, succession, and the rest.
+- **boot card**: the succession boot card, the runbook a successor master follows at boot: placement, role state, the model, the predecessor's retirement, and the lineage entry. See [one master generation](../walkthroughs/02-one-master-generation.md).
 - **lineage**: the append-only file with one entry per master generation. See [succession](succession.md).
