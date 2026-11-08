@@ -6,7 +6,9 @@
 
 <p align="center"><sub>The ring travels the paths in the order one dispatch takes. <a href="assets/system.svg">Still version.</a></sub></p>
 
-<p align="center"><a href="https://github.com/baksohyeon/mogui-harness-explained/releases/download/walkthrough-75s-v1/harness-walkthrough-75s.mp4"><b>Watch the 75-second walkthrough</b></a></p>
+**Watch the 75-second walkthrough.** One owner, one master, two workers, one send-back, one succession. Concept view, not a screen recording; the [release page](https://github.com/baksohyeon/mogui-harness-explained/releases/tag/walkthrough-75s-v1) has the file and the credits.
+
+https://github.com/user-attachments/assets/52b4e776-8514-4b63-9f77-e04375e8a6ba
 
 To run what the picture shows: clone [mogui-ADE-orchestrator](https://github.com/baksohyeon/mogui-ADE-orchestrator), open it in Orca, and say "Wake the master." The repository's own [quickstart](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.288#quickstart) and [Getting Started](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/docs/public/getting-started.md) take it from there. These pages explain what each part of the picture does and where its tested code lives, at release [v0.5.288](https://github.com/baksohyeon/mogui-ADE-orchestrator/releases/tag/v0.5.288).
 
