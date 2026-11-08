@@ -2,6 +2,14 @@
 
 **In one breath.** The owner says go. The master writes a contract and hands it to a wrapper script. The wrapper checks a gate, delivers the contract with a read token, asks Orca for a task, a terminal, and a dispatch, then reports what it could and could not verify. The worker proves where it stands, does the work, opens a pull request, and sends `worker_done`. The master verifies on its own and closes the pane.
 
+**Watch the 30-second film.** Concept view, not a screen recording; every claim on screen is a step on this page. The [release page](https://github.com/baksohyeon/mogui-harness-explained/releases/tag/walkthrough-films-20261109) has the file, the scene-to-step table, and the credits.
+
+<p align="center"><a href="https://github.com/user-attachments/assets/afbb6bf0-8bc8-4366-bded-4bd76df61685"><img src="../assets/walkthroughs/01-one-dispatch-poster.jpg" alt="a frame of the film: one ledger row appended, and the delivery verdict reads class unknown, UNVERIFIED, until the master reads the pane" width="100%"></a></p>
+
+<p align="center"><sub>The player below shows in a web browser. In the GitHub mobile app, tap the picture to open the film.</sub></p>
+
+https://github.com/user-attachments/assets/afbb6bf0-8bc8-4366-bded-4bd76df61685
+
 Fifteen steps. The diagram below moves a ring from step to step; every label is readable with the animation off.
 
 <p align="center"><img src="../assets/walkthroughs/01-one-dispatch.svg" alt="fifteen steps of one dispatch, colored by master, wrapper, Orca, and worker" width="100%"></p>

@@ -2,6 +2,14 @@
 
 **In one breath.** A master is a long session with a declared role. It is spawned on purpose into an expected place and proves it landed there. It measures its own model and its harness, retires the session before it by three measured disappearances, and writes one entry in the lineage, the file with one entry per generation. Then it works by continuing and compacting (summarizing its own context and going on) until the owner says to hand over.
 
+**Watch the 30-second film.** Concept view, not a screen recording; every claim on screen is a step on this page. The [release page](https://github.com/baksohyeon/mogui-harness-explained/releases/tag/walkthrough-films-20261109) has the file, the scene-to-step table, and the credits.
+
+<p align="center"><a href="https://github.com/user-attachments/assets/88734d68-7beb-48f4-a0ab-464b8221fe4c"><img src="../assets/walkthroughs/02-one-master-generation-poster.jpg" alt="a frame of the film: pane, process, and tty each measured gone, and the predecessor reads CLOSED" width="100%"></a></p>
+
+<p align="center"><sub>The player below shows in a web browser. In the GitHub mobile app, tap the picture to open the film.</sub></p>
+
+https://github.com/user-attachments/assets/88734d68-7beb-48f4-a0ab-464b8221fe4c
+
 Eleven steps, and the last one points back at the first.
 
 <p align="center"><img src="../assets/walkthroughs/02-one-master-generation.svg" alt="eleven steps of one master generation, from promotion audit to the owner's word to succeed, with an arrow back to the start" width="100%"></p>
