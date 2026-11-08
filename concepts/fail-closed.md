@@ -2,6 +2,8 @@
 
 **In one breath.** Several gates in this harness have a third output, "I could not tell". A gate that reaches it stops the work. It never rounds up to "fine".
 
+The [glossary](glossary.md) defines the harness's recurring words.
+
 ## For a ten-year-old
 
 A lifeguard watches a pool. Green flag means swim, red flag means out of the water. One day the fog rolls in and the lifeguard cannot see the deep end. A lazy lifeguard leaves the green flag up, because nobody has drowned yet. This lifeguard raises a third flag that means "I cannot see", and everyone gets out until the fog lifts.
@@ -26,9 +28,3 @@ redaction-scan: --range requires A..B
 exit=2
 ```
 
-## Glossary
-
-- **fail closed**: when a check cannot run, treat the result as a block.
-- **exit 2**: the scanner's code for "could not decide"; it is never a pass.
-- **strict mode**: the guard setting that admits only read-only commands it recognizes.
-- **CLOSED_PARTIAL**: a retirement where one of the three disappearance checks was skipped.

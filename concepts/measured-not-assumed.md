@@ -2,6 +2,8 @@
 
 **In one breath.** Every report in this harness marks each claim as something it measured, something a source confirmed, or something it inferred. A number without its instrument and date is a guess with good posture.
 
+The [glossary](glossary.md) defines the harness's recurring words.
+
 ## For a ten-year-old
 
 Two kids report the temperature outside. One says "it is cold". The other says "the thermometer by the door read 4 degrees at eight this morning". If you need a coat, the second kid helped you. If the thermometer was broken, you can find out.
@@ -28,9 +30,3 @@ Hooks: 16 wired
 Card: deployed copy matches canonical
 ```
 
-## Glossary
-
-- **measured**: read from the machine by the script that reports it, with the date.
-- **confirmed**: stated by a source the reader can open.
-- **inferred**: the author's reasoning from measured or confirmed facts, marked as such.
-- **self-check**: the boot script that prints one line per harness layer.

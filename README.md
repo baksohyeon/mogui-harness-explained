@@ -1,10 +1,12 @@
-<p align="center"><img src="assets/map.svg" alt="map of the 15 units by lifecycle" width="100%"></p>
+<p align="center"><img src="assets/map.svg" alt="map of the three walkthroughs, the 15 units by lifecycle, and the concept notes" width="100%"></p>
 
 # mogui harness, explained
 
-This repo splits the mogui-ADE-orchestrator harness into 15 small units, each explaining one mechanism in about 5 minutes and linking to its tested implementation.
+The mogui harness is a set of scripts that let one agent, the master, run other agents as workers under a human owner. It runs on Orca, a terminal program with an orchestration layer. This repository explains the harness in three layers, each written for a reader who has never run it. Three walkthroughs follow a procedure from start to end. Fifteen units each explain one mechanism. Seven concept notes cover the ideas behind the mechanisms. A glossary defines every word the pages lean on. Every evidence link points at the public implementation at tag `v0.5.288`.
 
-**Start here.** Five reading paths. The first takes twenty minutes; the others about half an hour each.
+## How to read this
+
+Five reading paths. The first takes twenty minutes; the others about half an hour each.
 
 - The whole shape, once: the [Orca primer](concepts/orca-primer.md), then the walkthrough [one dispatch](walkthroughs/01-one-dispatch.md).
 - New to the harness: [role lock](concepts/role-lock.md), [worker territory](concepts/worker-territory.md), [fail closed](concepts/fail-closed.md), then units 02, 09, and 12, then [one dispatch](walkthroughs/01-one-dispatch.md).
@@ -13,6 +15,20 @@ This repo splits the mogui-ADE-orchestrator harness into 15 small units, each ex
 - Debugging a stuck worker: units 06, 07, 03, and 10, then [measured, confirmed, inferred](concepts/measured-not-assumed.md).
 
 A word you do not know is in the [glossary](concepts/glossary.md).
+
+## Walkthroughs
+
+Three procedures in the order they run, about fifteen minutes each, with the Orca commands and the harness output lines named where a step runs them. Index at [`walkthroughs/`](walkthroughs/).
+
+| Walkthrough | Steps | From, to |
+|---|---|---|
+| [One dispatch](walkthroughs/01-one-dispatch.md) | 15 | The owner's word, to a closed worker pane. |
+| [One master generation](walkthroughs/02-one-master-generation.md) | 11 | A promotion audit, to the owner's word to succeed. |
+| [One template upgrade](walkthroughs/03-one-template-upgrade.md) | 12 | A release tag, to a redeployed session card. |
+
+## Units
+
+Fifteen mechanisms, each explained in about five minutes and linked to its tested implementation. The number in front of a unit is its id, the number that starts its directory name; it carries no rank and no reading order. The map above groups the units by when they act in a dispatch's life, which is why the numbers there are out of sequence.
 
 | Unit | Mechanism |
 |---|---|
@@ -32,12 +48,28 @@ A word you do not know is in the [glossary](concepts/glossary.md).
 | [14 workspace card scope and LOCAL.md](units/14-workspace-card-scope-local-file/) | Scope the master card and preserve its local extension. |
 | [15 changelog fragment gate](units/15-changelog-fragment-gate/) | Require dated fragments before release-time changelog folding. |
 
-**Verified implementation:** [mogui-ADE-orchestrator](https://github.com/baksohyeon/mogui-ADE-orchestrator), with 54 Python test files in [`tests/`](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.288/tests), 26 shell tests under [`master-ops/scripts/test-*`](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.288/master-ops/scripts), measured at v0.5.288, 2026-11-07 ([release](https://github.com/baksohyeon/mogui-ADE-orchestrator/releases/tag/v0.5.288)), and CI in [`gates.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/.github/workflows/gates.yml).
+## Concepts
 
-**Walkthroughs:** three procedures followed end to end, with the Orca commands and the harness output lines named where a step runs them: [one dispatch](walkthroughs/01-one-dispatch.md), [one master generation](walkthroughs/02-one-master-generation.md), [one template upgrade](walkthroughs/03-one-template-upgrade.md). Index at [`walkthroughs/`](walkthroughs/).
+Seven short notes on the ideas behind the units. Each answers the same five questions: what happened, what is confirmed, what is inferred, what is unknown, and where the evidence is. Next to them sit the chat response rules a master follows when it writes to its owner, and the glossary. Index at [`concepts/`](concepts/).
 
-**Concepts:** seven short notes on the ideas behind the units (an Orca primer, role lock, fail closed, measured versus inferred, worker territory, template and seat, succession), each answering the same five questions with evidence links at `v0.5.288`, plus the twelve chat response rules a master follows when it writes to its owner. Start at [`concepts/`](concepts/).
+| Note | One line |
+|---|---|
+| [Orca primer](concepts/orca-primer.md) | Orca owns terminals, worktrees, and the mailbox; the harness decides what goes in and proves it arrived. |
+| [Role lock](concepts/role-lock.md) | The master proposes and verifies; workers write code; a hook enforces it. |
+| [Fail closed](concepts/fail-closed.md) | A gate that cannot decide stops the work; exit 2 is never a pass. |
+| [Measured, confirmed, inferred](concepts/measured-not-assumed.md) | Every claim says how it was obtained. |
+| [Worker territory](concepts/worker-territory.md) | One checkout, one contract, by default a different runtime, and a read token. |
+| [Template and seat](concepts/template-and-seat.md) | One upstream, many installs, upgrades against a manifest. |
+| [Succession](concepts/succession.md) | Generations of masters, placement proof, three measured disappearances. |
+| [Chat response rules](concepts/chat-response-rules.md) | Twelve sentence rules for replies to the owner, most derived from ASD-STE100. |
+| [Glossary](concepts/glossary.md) | Sixty-six entries for the words the pages use, one line each, with where to read more. |
 
-**What is not here:** no transcripts, work data, internal paths, or organization redaction rules. Examples are synthetic.
+## Where the evidence is
+
+The implementation is [mogui-ADE-orchestrator](https://github.com/baksohyeon/mogui-ADE-orchestrator), with 54 Python test files in [`tests/`](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.288/tests), 26 shell tests under [`master-ops/scripts/test-*`](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.288/master-ops/scripts), measured at v0.5.288, 2026-11-07 ([release](https://github.com/baksohyeon/mogui-ADE-orchestrator/releases/tag/v0.5.288)), and CI in [`gates.yml`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/.github/workflows/gates.yml). Measured results on these pages come from one seat, one installed copy of the harness, and say so.
+
+## What is not here
+
+No transcripts, work data, internal paths, or organization redaction rules. Identifiers in the examples are synthetic.
 
 <p align="center"><img src="assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

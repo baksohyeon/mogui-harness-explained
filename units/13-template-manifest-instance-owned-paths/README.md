@@ -15,7 +15,7 @@ python3 /tmp/ops/scripts/template-apply --ops /tmp/instance --template /tmp/temp
 
 ## Verified in mogui
 
-- Implementation: [`scripts/template-apply`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/template-apply), [`scripts/template_common.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/template_common.py), [`MANIFEST.json`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/MANIFEST.json), [`TEMPLATE-VERSION`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/TEMPLATE-VERSION)
+- Implementation: [`master-ops/scripts/template-apply`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/template-apply), [`master-ops/scripts/template_common.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/template_common.py), [`master-ops/MANIFEST.json`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/MANIFEST.json), [`master-ops/TEMPLATE-VERSION`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/TEMPLATE-VERSION)
 - Tests: [`tests/test_template_check_apply.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_template_check_apply.py), [`tests/test_template_apply_card_extension.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_template_apply_card_extension.py)
 
 <p align="center"><img src="../../assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>

@@ -2,6 +2,8 @@
 
 **In one breath.** The harness ships as a template with placeholder tokens. Each install (a seat) renders it, owns a short list of files the template never touches, and upgrades by re-applying the template file by file against a manifest.
 
+The [glossary](glossary.md) defines the harness's recurring words.
+
 ## For a ten-year-old
 
 A school hands every class the same workbook with blanks for the class name and the teacher. Each class fills in the blanks and keeps its own notes in the margins. When the school prints a new edition, each class gets the new pages, keeps its margin notes, and can see exactly which pages changed.
@@ -30,9 +32,3 @@ entries: 2
 Type 'apply' to write template-layer files
 ```
 
-## Glossary
-
-- **template**: the `master-ops/` tree in the public repository, with placeholder tokens.
-- **seat**: one rendered install of the template, with its own instance-owned files.
-- **manifest**: the file list and version the template claims to own.
-- **re-stamp**: applying a newer template onto a seat, file by file.
