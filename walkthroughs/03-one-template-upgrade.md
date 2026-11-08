@@ -4,9 +4,9 @@
 
 **Watch the 30-second film.** Concept view, not a screen recording; every claim on screen is a step on this page. The [release page](https://github.com/baksohyeon/mogui-harness-explained/releases/tag/walkthrough-films-20261109) has the file, the scene-to-step table, and the credits.
 
-<p align="center"><a href="https://github.com/user-attachments/assets/abcde7ab-db47-46eb-8fa5-ab0831cfa1e0"><img src="../assets/walkthroughs/03-one-template-upgrade-poster.jpg" alt="a frame of the film: every manifest path falls into one of six classes, 48, 19, 5, 52, 10, 1, on one seat on 2026-11-07" width="100%"></a></p>
+<p align="center"><a href="https://github.com/baksohyeon/mogui-harness-explained/releases/tag/walkthrough-films-20261109"><img src="../assets/walkthroughs/03-one-template-upgrade-poster.jpg" alt="a frame of the film: every manifest path falls into one of six classes, 48, 19, 5, 52, 10, 1, on one seat on 2026-11-07" width="100%"></a></p>
 
-<p align="center"><sub>The player below shows in a web browser. In the GitHub mobile app, tap the picture to open the film.</sub></p>
+<p align="center"><sub>The player below shows in a web browser. In the GitHub mobile app, tap the picture; the release page has the film.</sub></p>
 
 https://github.com/user-attachments/assets/abcde7ab-db47-46eb-8fa5-ab0831cfa1e0
 

@@ -6,9 +6,9 @@
 
 **Watch the 75-second walkthrough.** One owner, one master, two workers, one send-back, one succession. Concept view, not a screen recording; the [release page](https://github.com/baksohyeon/mogui-harness-explained/releases/tag/walkthrough-75s-v1) has the file and the credits.
 
-<p align="center"><a href="https://github.com/user-attachments/assets/52b4e776-8514-4b63-9f77-e04375e8a6ba"><img src="assets/walkthrough-poster.jpg" alt="a frame of the walkthrough: the master runs the test itself, the test fails, approval is withheld, and the client worker is sent back" width="100%"></a></p>
+<p align="center"><a href="https://github.com/baksohyeon/mogui-harness-explained/releases/tag/walkthrough-75s-v1"><img src="assets/walkthrough-poster.jpg" alt="a frame of the walkthrough: the master runs the test itself, the test fails, approval is withheld, and the client worker is sent back" width="100%"></a></p>
 
-<p align="center"><sub>The player below shows in a web browser. In the GitHub mobile app, tap the picture to open the film.</sub></p>
+<p align="center"><sub>The player below shows in a web browser. In the GitHub mobile app, tap the picture; the release page has the film.</sub></p>
 
 https://github.com/user-attachments/assets/52b4e776-8514-4b63-9f77-e04375e8a6ba
 
