@@ -2,7 +2,7 @@
 <defs><marker id="system-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1a202c"/></marker></defs>
 <rect width="640" height="1120" fill="#ffffff"/>
 <text x="320" y="30" text-anchor="middle" font-size="24" font-weight="bold" fill="#1a202c">the mogui harness in one picture</text>
-<text x="320" y="55" text-anchor="middle" font-size="18" fill="#718096"><tspan x="320" dy="0">numbers are unit ids;</tspan><tspan x="320" dy="18">color is when a check</tspan><tspan x="320" dy="17">fires</tspan></text>
+<text x="320" y="55" text-anchor="middle" font-size="18" fill="#718096"><tspan x="320" dy="0">numbers are unit ids;</tspan><tspan x="295" dy="18">color is when a check</tspan><tspan dy="0"> fires</tspan></text>
 <text class="cue" x="320" y="98" text-anchor="middle" font-size="18" fill="#1a202c" opacity="0">one dispatch<animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.01;0.015;0.52;1" dur="48s" repeatCount="indefinite"/></text>
 <text class="cue" x="320" y="98" text-anchor="middle" font-size="18" fill="#1a202c" opacity="0">when context runs out<animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.56;0.565;0.65;1" dur="48s" repeatCount="indefinite"/></text>
 <text class="cue" x="320" y="98" text-anchor="middle" font-size="18" fill="#1a202c" opacity="0">when a release ships<animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.69;0.695;0.98;1" dur="48s" repeatCount="indefinite"/></text>
@@ -41,7 +41,7 @@
 <text x="580" y="117" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">19</text>
 
 <path id="P7" d="M300 170 H330 V525 H290 V505" fill="none" stroke="#1a202c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#system-arrow)"><animate attributeName="stroke-width" values="2;2;4;2" keyTimes="0;0.56;0.65;1" dur="48s" repeatCount="indefinite"/></path>
-<text x="160" y="482" text-anchor="end" font-size="18" fill="#1a202c"><tspan x="160" dy="0">P7 compact,</tspan><tspan x="160" dy="22">then succeed</tspan></text>
+<text x="355" y="500" text-anchor="start" font-size="18" fill="#1a202c">P7 compact, then succeed</text>
 <text class="cue" x="160" y="550" text-anchor="end" font-size="18" fill="#1a202c" opacity="0">compacts context<animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.56;0.565;0.65;1" dur="48s" repeatCount="indefinite"/></text>
 <circle id="check-22" cx="330" cy="200" r="18" fill="#6b46c1" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.56;0.570417;0.580833;1" dur="48s" repeatCount="indefinite"/></circle>
 <text x="330" y="207" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">22</text>
@@ -72,13 +72,13 @@
 <text x="495" y="535" text-anchor="middle" font-size="18" fill="#1a202c"><tspan x="495" dy="0">Orca mailbox</tspan><tspan x="495" dy="25">ask, reply,</tspan><tspan x="495" dy="22">worker_done</tspan></text>
 
 <path id="P4" d="M410 550 H280 V505" fill="none" stroke="#1a202c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#system-arrow)"><animate attributeName="stroke-width" values="2;2;4;2" keyTimes="0;0.28;0.33;1" dur="48s" repeatCount="indefinite"/></path>
-<text x="350" y="575" text-anchor="middle" font-size="18" fill="#1a202c"><tspan x="350" dy="0">P4 wakes</tspan><tspan x="350" dy="22">the master</tspan></text>
+<text x="10" y="515" text-anchor="start" font-size="18" fill="#1a202c"><tspan x="10" dy="0">P4 wakes</tspan><tspan x="10" dy="22">the master</tspan></text>
 <text class="cue" x="350" y="615" text-anchor="middle" font-size="18" fill="#1a202c" opacity="0">wakes master<animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.28;0.285;0.33;1" dur="48s" repeatCount="indefinite"/></text>
 <circle id="check-07" cx="350" cy="550" r="18" fill="#2f855a" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.3;0.310417;0.320833;1" dur="48s" repeatCount="indefinite"/></circle>
 <text x="350" y="557" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">07</text>
 
 <path id="P5" d="M605 425 H610 V665 H560 V700" fill="none" stroke="#1a202c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#system-arrow)"><animate attributeName="stroke-width" values="2;2;4;2" keyTimes="0;0.33;0.42;1" dur="48s" repeatCount="indefinite"/></path>
-<text x="500" y="635" text-anchor="middle" font-size="18" fill="#1a202c">P5 one PR</text>
+<text x="600" y="630" text-anchor="end" font-size="18" fill="#1a202c">P5 one PR</text>
 <text class="cue" x="500" y="675" text-anchor="middle" font-size="18" fill="#1a202c" opacity="0">opens one PR<animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.33;0.335;0.42;1" dur="48s" repeatCount="indefinite"/></text>
 <circle id="check-27" cx="610" cy="560" r="18" fill="#c05621" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.37;0.380417;0.390833;1" dur="48s" repeatCount="indefinite"/></circle>
 <text x="610" y="567" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">27</text>
@@ -96,7 +96,7 @@
 <rect x="20" y="565" width="145" height="95" rx="8" fill="#ffffff" stroke="#1a202c" stroke-width="1.5"/>
 <text x="92" y="590" text-anchor="middle" font-size="18" fill="#1a202c"><tspan x="92" dy="0">operations repo</tspan><tspan x="92" dy="23">contracts,</tspan><tspan x="92" dy="21">lineage, rules</tspan></text>
 <path id="P9" d="M190 505 V535 H140 V565" fill="none" stroke="#1a202c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#system-arrow)"><animate attributeName="stroke-width" values="2;2;4;2" keyTimes="0;0.91;0.98;1" dur="48s" repeatCount="indefinite"/></path>
-<text x="60" y="520" text-anchor="middle" font-size="18" fill="#1a202c">P9 writes</text>
+<text x="60" y="490" text-anchor="middle" font-size="18" fill="#1a202c">P9 writes</text>
 <text class="cue" x="90" y="558" text-anchor="middle" font-size="18" fill="#1a202c" opacity="0">writes repo<animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.91;0.915;0.98;1" dur="48s" repeatCount="indefinite"/></text>
 <circle id="check-18" cx="140" cy="535" r="18" fill="#718096" stroke="#1a202c" stroke-width="0"><animate attributeName="stroke-width" values="0;0;6;0;0" keyTimes="0;0.95;0.960417;0.970833;1" dur="48s" repeatCount="indefinite"/></circle>
 <text x="140" y="542" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">18</text>
