@@ -8,6 +8,8 @@
 
 **Failure it prevents.** A session that fills its own context with unread command output, and a master that polls in a script and takes the mail that was meant to wake it.
 
+<p align="center"><img src="../../assets/units/23-advisory-bash-hooks.svg" alt="advisory Bash warnings before and after commands" width="100%"></p>
+
 ## Example (synthetic)
 
 ```

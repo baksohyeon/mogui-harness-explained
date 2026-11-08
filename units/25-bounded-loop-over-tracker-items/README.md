@@ -8,6 +8,8 @@
 
 **Failure it prevents.** A master that spends its context on being prompted once per item instead of on verification. A loop that runs past its budget, past a compaction, or through a worker's question because nothing was counting.
 
+<p align="center"><img src="../../assets/units/25-bounded-loop-over-tracker-items.svg" alt="bounded loop continues or stops by reason" width="100%"></p>
+
 ## Example (synthetic)
 
 ```

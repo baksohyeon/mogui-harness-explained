@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/map.svg" alt="map of the three walkthroughs, the 15 units by lifecycle, and the concept notes" width="100%"></p>
+<p align="center"><img src="assets/map.svg" alt="map of the three walkthroughs, the 27 units by lifecycle with an install group, and the concept notes" width="100%"></p>
 
 # mogui harness, explained
 
@@ -32,7 +32,7 @@ Three procedures in the order they run, about fifteen minutes each, with the Orc
 
 ## Units
 
-Twenty-seven mechanisms, each explained in about five minutes and linked to its tested implementation. Twenty-five of them run inside a dispatch, a master's life, or an install. Unit 01 is the loop that decides whether a change to the harness itself is kept. Unit 19 is the layer that keeps vendor flags out of the core. The map shows the first fifteen; the four newest join it in the next diagram round. The number in front of a unit is its id, the number that starts its directory name; it carries no rank and no reading order. The map above groups the units by when they act in a dispatch's life, which is why the numbers there are out of sequence.
+Twenty-seven mechanisms, each explained in about five minutes and linked to its tested implementation. Twenty-five of them run inside a dispatch, a master's life, or an install. Unit 01 is the loop that decides whether a change to the harness itself is kept. Unit 19 is the layer that keeps vendor flags out of the core. The number in front of a unit is its id, the number that starts its directory name; it carries no rank and no reading order. The map above groups the units by when they act in the harness's life, from install to succession, which is why the numbers there are out of sequence.
 
 | Unit | Mechanism |
 |---|---|

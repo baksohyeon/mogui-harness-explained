@@ -10,6 +10,8 @@
 
 **Failure it prevents.** Four commands read without their exit status in one day, 2026-08-04: an empty listing reported as zero branches, a scan that matched nothing reported as nine dead workers. A wired hook that never fires and a hook that is not wired look the same until something records the firing.
 
+<p align="center"><img src="../../assets/units/21-fire-log-event-log-exit-vocabulary.svg" alt="logs and measurements share exit vocabulary" width="100%"></p>
+
 ## Example (synthetic)
 
 ```

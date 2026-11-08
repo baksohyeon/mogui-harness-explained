@@ -8,6 +8,8 @@
 
 **Failure it prevents.** A worker stuck on an approval prompt for hours while the master polls the inbox and the pull request, both of which stay quiet, until the owner clears it by hand. Measured on 2026-08-06, twice in one day.
 
+<p align="center"><img src="../../assets/units/20-blocked-worker-detection.svg" alt="pane sweep classifies workers and prompts" width="100%"></p>
+
 ## Example (synthetic)
 
 ```

@@ -10,6 +10,8 @@
 
 **Failure it prevents.** An installer that reads every step at once and either drowns or improvises, both measured on 2026-08-03. An install declared healthy because nothing complained, when nothing had been measured. A second master spawned into a seat that already had one.
 
+<p align="center"><img src="../../assets/units/18-progressive-onboarding-and-install-checks.svg" alt="onboarding modes and verified install steps" width="100%"></p>
+
 ## Example (synthetic)
 
 ```

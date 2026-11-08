@@ -10,6 +10,8 @@ The lineage module, `lineage.py`, validates the 13 required fields of an entry a
 
 **Failure it prevents.** Two masters in one seat, each believing it is the only one. A successor that reports a clean boot while a recovery step missed. Context pressure turning into an automatic succession the owner never asked for.
 
+<p align="center"><img src="../../assets/units/16-succession-triggers-and-duplicate-masters.svg" alt="succession signal and duplicate session checks" width="100%"></p>
+
 ## Example (synthetic)
 
 ```

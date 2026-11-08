@@ -10,6 +10,8 @@ A third module, `context/`, resolves a workspace manifest against the filesystem
 
 **Failure it prevents.** A template that bakes one machine's username, CLI, or repository list into every install. A wrapper that guesses a transcript path and probes the wrong worker's model. A direct commit to a repository's `main` that the workspace had declared off limits.
 
+<p align="center"><img src="../../assets/units/24-instance-config-and-workspace-descriptor.svg" alt="instance values and workspace action checks" width="100%"></p>
+
 ## Example (synthetic)
 
 ```

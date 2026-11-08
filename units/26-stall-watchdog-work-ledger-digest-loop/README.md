@@ -8,6 +8,8 @@
 
 **Failure it prevents.** A worker that stopped writing an hour ago and still counts as running. A master that recovers with no record of which tracks were open. A change in a repository or a process nobody asked for, noticed only by chance.
 
+<p align="center"><img src="../../assets/units/26-stall-watchdog-work-ledger-digest-loop.svg" alt="watchdog ledger and digest classify work changes" width="100%"></p>
+
 ## Example (synthetic)
 
 ```
