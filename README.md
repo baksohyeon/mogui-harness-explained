@@ -6,7 +6,7 @@ You have several coding agents open in terminal panes. One of them is supposed t
 
 Every mechanism here exists because something measurable went wrong once. A contract reached the gate and never reached the worker, so the wrapper now delivers it with a token the worker must quote back. A successor master was seated in the wrong worktree and found from two phone screenshots, so a spawn now proves its placement or closes. A worker sat on an approval prompt while the inbox and the pull request stayed quiet, so a sweep now classifies every pane. Four commands were read without their exit status in one day, so a wrapper now prints the status first. The pages name the incident behind each mechanism and what one seat measured afterwards.
 
-What is here: three walkthroughs that follow a procedure from start to end, twenty-seven units that each explain one mechanism, eight concept notes on the ideas behind them, a glossary, and a [roadmap](ROADMAP.md) built from the public record. The map below is the whole of it on one page.
+What is here: three walkthroughs that follow a procedure from start to end, twenty-seven units that each explain one mechanism, and eight concept notes on the ideas behind them. A glossary and a [roadmap](ROADMAP.md) built from the public record sit beside them. The map below is the whole of it on one page.
 
 <p align="center"><img src="assets/map.svg" alt="map of the three walkthroughs, the 27 units by lifecycle with an install group, and the concept notes" width="100%"></p>
 
