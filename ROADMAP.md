@@ -46,7 +46,7 @@ These pages say what one installation measured and what no one has measured else
 
 - The adapter layer has no test file of its own. Unit [19](units/19-adapter-layer-tool-neutral-profiles/).
 - Three of the four advisory Bash hooks have no test file of their own. Unit [23](units/23-advisory-bash-hooks/).
-- These pages link 21 of the 26 shell tests and 42 of the 54 Python test files at the tag. The rest sit in the repository's test directories and are not yet placed under a unit here.
+- Every shell test and every Python test file at the tag is linked from the unit, note, or README section it belongs to; the README counts them.
 
 ## This repository
 

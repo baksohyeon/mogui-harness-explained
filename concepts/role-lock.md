@@ -20,7 +20,7 @@ In this harness the master is the head chef. It writes a short order (a contract
 
 **What is unknown.** Whether the rule holds when a worker is itself the master of another workspace. The hook checks paths, not roles.
 
-**Evidence.** [`product-path-guard.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/hooks/product-path-guard.sh) and [its test](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/test-product-path-guard.sh); the execution rule in [§3 execution principles](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/charter/03-execution-principles.md); the gate in [§5 dispatch gate](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/charter/05-dispatch-gate.md); the synthetic session below.
+**Evidence.** [`product-path-guard.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/hooks/product-path-guard.sh) and [its test](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/test-product-path-guard.sh); the execution rule in [§3 execution principles](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/charter/03-execution-principles.md); the gate in [§5 dispatch gate](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/charter/05-dispatch-gate.md); [`tests/test_approval.py`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/tests/test_approval.py) for the approval library; the synthetic session below.
 
 ```
 # synthetic: the guard's reply to a master's edit
