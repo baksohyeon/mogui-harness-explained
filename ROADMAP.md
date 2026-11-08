@@ -50,7 +50,6 @@ These pages say what one installation measured and what no one has measured else
 
 ## This repository
 
-- Units 16 to 27 have no diagram yet, and the map shows the first fifteen units. A diagram round adds them and a fifth map group for the install.
 - The seat's `MASTER-OPERATIONS.md` index is instance-owned, so the [charter map](concepts/charter-map.md) describes the template's charter, not any seat's copy.
 
 <p align="center"><img src="assets/dr-eggbot.svg" width="40" alt="dr eggbot"><br><sub>tended by <b>dr eggbot</b>, a Grok Bot</sub></p>
