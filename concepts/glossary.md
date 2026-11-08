@@ -1,6 +1,6 @@
 # Glossary
 
-Eighty-four entries for the words the unit, concept, and walkthrough pages use without stopping to explain them; an entry covers one word or a few that mean the same thing. Each line says what the word means in this harness and where to read more. Words marked (Orca) come from Orca, the terminal program the harness runs inside; Orca's own documentation is the authority on them.
+Ninety-two entries for the words the unit, concept, and walkthrough pages use without stopping to explain them; an entry covers one word or a few that mean the same thing. Each line says what the word means in this harness and where to read more. Words marked (Orca) come from Orca, the terminal program the harness runs inside; Orca's own documentation is the authority on them.
 
 ## People and roles
 
@@ -17,6 +17,7 @@ Eighty-four entries for the words the unit, concept, and walkthrough pages use w
 
 - **workspace**: the directory tree one master is responsible for: an operations repository plus one or more product repositories.
 - **product repository**, **product root**: a repository that holds the software being built. Only workers write there. See [unit 09](../units/09-product-path-write-guard-hook/).
+- **workspace descriptor**: the instance-owned inventory of the repositories under a workspace root: path, role, capabilities, prohibited actions. See [unit 24](../units/24-instance-config-and-workspace-descriptor/).
 - **operations repository**: the master's own repository: contracts, runbooks, lineage, local config. The template renders into it.
 - **worktree**: a second checkout of a repository on its own branch in its own directory; every worker gets one. See [unit 06](../units/06-worker-wait-and-reap/).
 - **pane**, **terminal**, **handle** (Orca): one terminal session, and the id Orca gives it. A worker runs in a pane; the master reads and closes panes by handle. A handle begins with `term_` and lasts only as long as the Orca app runs.
@@ -34,6 +35,7 @@ Eighty-four entries for the words the unit, concept, and walkthrough pages use w
 - **contract**: the file the master writes for one worker: what to change, which paths it may write, what done means, and the proof to paste into the pull request. See [unit 12](../units/12-contract-delivery-read-token/).
 - **spec**: the short task text the worker sees first; the contract is its authority.
 - **standing rules**: named rule blocks a contract's front matter pulls in by name, appended to the spec. See [unit 12](../units/12-contract-delivery-read-token/).
+- **overlay**: `config/standing-rules.overlay.md`, a seat's own rule blocks beside the template's five; instance-owned, so a re-stamp never touches it. See [unit 12](../units/12-contract-delivery-read-token/).
 - **read token**, **acknowledgement token**: a short string appended to the delivered contract; a worker that quotes it proves it opened the file. The standing rule about it is named `ack-token`. See [unit 12](../units/12-contract-delivery-read-token/).
 - **FIRST ACTION**, **placement verdict**: the three lines a worker reports before any work: in the expected worktree or not, in the master's checkout or not, branch and head. See [one dispatch](../walkthroughs/01-one-dispatch.md), step 11.
 - **ask**, **reply** (Orca): a worker asks a question with `ask` and ends its turn; the master answers with `reply`, which wakes the worker. See the [Orca primer](orca-primer.md).
@@ -52,6 +54,8 @@ Eighty-four entries for the words the unit, concept, and walkthrough pages use w
 - **prepared prompt**: a pane state the wrapper recognizes as the runtime waiting for input; a pane that matches none is reported as `UNVERIFIED`. See [one dispatch](../walkthroughs/01-one-dispatch.md), step 10.
 - **delivery verdict**: the wrapper's last line about a dispatch: what the pane and Orca's status proved, or `UNVERIFIED` with the command to run next. See [one dispatch](../walkthroughs/01-one-dispatch.md), step 10.
 - **ledger**: the append-only file where each dispatch decision is recorded. See [unit 07](../units/07-dispatch-timeline-join/).
+- **collision warning**: the wrapper's fail-open check that a contract's scope overlaps an open pull request or an unfinished dispatch; it warns and never blocks. See [unit 02](../units/02-dispatch-tier-fanout-gate/).
+- **stall**: a worker progress log idle past a threshold, 360 seconds by default; the watchdog reports `STALLED`, or `MISSING` when there is no log. See [unit 26](../units/26-stall-watchdog-work-ledger-digest-loop/).
 - **adapter profile**: the class that holds one runtime's command-line flags behind the neutral `build_argv` interface; `adapter doctor` probes which tools are installed. See [unit 19](../units/19-adapter-layer-tool-neutral-profiles/).
 - **model probe**, **rollout**: reading the model name out of the worker's own transcript file (a rollout, in the codex runtime's terms) instead of trusting the declared name. See [unit 03](../units/03-transcript-model-identity-probe/).
 - **reasoning effort**: the codex runtime's setting for how long it reasons before it answers. The wrapper launches workers at `xhigh`, and the start screen shows the value after the model name. See [one dispatch](../walkthroughs/01-one-dispatch.md), step 7.
@@ -79,6 +83,7 @@ Eighty-four entries for the words the unit, concept, and walkthrough pages use w
 - **seat**: one installed copy of the template, rendered with its own values, with its own instance-owned files. A measurement "from one seat" comes from one such install.
 - **placeholder**: a `{{TOKEN}}` the render fills in, such as the workspace root.
 - **manifest**: the list of files the template owns, with the template version. See [unit 13](../units/13-template-manifest-instance-owned-paths/).
+- **instance runtime config**: `config/instance-runtime.json`, the facts onboarding writes about one install: host runtime, transcript locations, product repository, unavailable runtimes. See [unit 24](../units/24-instance-config-and-workspace-descriptor/).
 - **instance-owned path**: a file the template never overwrites: role state, lineage, local config, contracts, `LOCAL.md`. See [unit 13](../units/13-template-manifest-instance-owned-paths/).
 - **drift**: the difference between a seat's copy of a template file and the template's current one. The apply tool's dry run lists the files it would overwrite, and the self-check's `Card:` line checks the one deployed card; no check publishes whole-seat drift. See [template and seat](template-and-seat.md).
 - **dry run**: the plan pass of `template-apply`: it prints every file it would write, with a reason, and writes nothing. See [one template upgrade](../walkthroughs/03-one-template-upgrade.md).
@@ -95,7 +100,10 @@ Eighty-four entries for the words the unit, concept, and walkthrough pages use w
 - **compaction**: the runtime summarizing a long session and continuing with the summary. The harness's rule is continue-and-compact. See [one master generation](../walkthroughs/02-one-master-generation.md), step 9.
 - **turn-0 context**: the context a session has spent before its first action: instruction files, skill listings, tool schemas, hook output. `context-budget` reports it. See [unit 22](../units/22-context-cost-and-recall-ledger/).
 - **compaction recall probe**: the hook that fires after a compaction and has the master write what it remembers before it opens any source of truth. See [one master generation](../walkthroughs/02-one-master-generation.md), step 10.
-- **charter**: the numbered documents under `master-ops/docs/charter/` that state the harness's rules: execution principles, the dispatch gate, succession, and the rest.
+- **charter**: the ten numbered documents under `master-ops/docs/charter/` that state the harness's rules. See [charter map](charter-map.md).
+- **loop**, **progress file**: a bounded, owner-approved run over tracker items, recorded one row per item per state in a progress file that `loop-check` reads. See [unit 25](../units/25-bounded-loop-over-tracker-items/).
+- **digest loop**: the read-only timer that snapshots repositories, jobs, and processes and triages each change as echo, expected, or unexplained. See [unit 26](../units/26-stall-watchdog-work-ledger-digest-loop/).
+- **review voice**: the runbook of eleven rules for pull-request bodies, review replies, and every other public surface. See [unit 27](../units/27-pull-request-stewardship/).
 - **boot card**: the succession boot card, the runbook a successor master follows at boot: placement, role state, the model, the predecessor's retirement, and the lineage entry. See [one master generation](../walkthroughs/02-one-master-generation.md).
 - **Recovery Flow**: the numbered procedure, steps 0 to 6, a master follows after an abnormal end; `master-recover` runs it as reads only. See [unit 05](../units/05-read-only-recovery-flow/).
 - **Trace Archive**: the history index of past sessions. Charter §8 has a master query it only when the handoff, the ledger, and Git together do not answer a question. See [unit 05](../units/05-read-only-recovery-flow/).

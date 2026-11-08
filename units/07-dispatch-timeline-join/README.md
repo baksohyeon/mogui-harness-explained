@@ -20,7 +20,7 @@ TIMESTAMP   SOURCE   EVENT   OUTCOME   DETAIL
 missing sources: ledger, event-log, dispatch-show
 ```
 
-`--since` combined with an id exits 2.
+`--since` combined with an id exits 2. For a whole day instead of one dispatch, [`workstream-render.sh`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/workstream-render.sh) renders the ledger into a readable workstream; it reads only.
 
 ## Verified in mogui
 

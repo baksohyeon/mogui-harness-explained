@@ -19,7 +19,7 @@ DispatchRequest(runtime="codex", model="model-a", n_agents=1)
 -> allow=False  reason=TIER_POLICY   (ledger row reason "TIER_POLICY")
 ```
 
-The shipped policy lists the `top` and `efficient` tiers by model name. There, the dispatch wrapper refuses a top-tier model until the master passes the owner's approval with `--top-approved "<reason>"`. The shipped template sets `fanout_caps` to `{}`, so every tier is uncapped there; a cap applies only when a policy sets one.
+The shipped policy lists the `top` and `efficient` tiers by model name. There, the dispatch wrapper refuses a top-tier model until the master passes the owner's approval with `--top-approved "<reason>"`. The shipped template sets `fanout_caps` to `{}`, so every tier is uncapped there; a cap applies only when a policy sets one. Right after the gate allows, the wrapper runs [`dispatch-collision-check`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/dispatch-collision-check), which compares the contract's declared scope with open pull request files and unfinished dispatches and prints `WARNING:` lines for overlaps. It never blocks and never exits non-zero on an analysis miss.
 
 ## Verified in mogui
 

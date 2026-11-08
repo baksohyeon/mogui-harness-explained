@@ -17,6 +17,8 @@ SHA=abcdef0123456789beef; printf 'ack-%s\n' "${SHA:8:12}"
 ack-23456789beef
 ```
 
+The five shipped blocks are `headless`, `ack-token`, `placement`, `voice`, and `pr-house`. `headless` tells the worker not to background any command or start a watch and end its turn, and to poll in the foreground with a bounded loop. A seat adds its own blocks in `config/standing-rules.overlay.md`, which a re-stamp never touches. [`dispatch-smoke`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/dispatch-smoke) is the seat-run end-to-end check of the wrapper's created-pane path, for the claude runtime only.
+
 ## Verified in mogui
 
 - Implementation: [`master-ops/scripts/dispatch`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/scripts/dispatch), [`master-ops/rules/standing-rules.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/rules/standing-rules.md), [`master-ops/docs/runbooks/contract-conventions.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/docs/runbooks/contract-conventions.md)
