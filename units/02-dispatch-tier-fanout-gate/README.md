@@ -8,14 +8,14 @@
 
 ## Example (synthetic)
 
-With a test policy that denies the top tier for workers:
+With a test policy that places `model-a` in the top tier and denies that tier for workers:
 
 ```
-DispatchRequest(runtime="codex", model="gpt-5.6-sol", n_agents=1)
+DispatchRequest(runtime="codex", model="model-a", n_agents=1)
 -> allow=False  reason=TIER_POLICY   (ledger row reason "TIER_POLICY")
 ```
 
-The shipped template sets `fanout_caps` to `{}`, so every tier is uncapped there; a cap applies only when a policy sets one.
+The shipped policy lists the `top` and `efficient` tiers by model name. There, the dispatch wrapper refuses a top-tier model until the master passes the owner's approval and its reason with `--top-approved`. The shipped template sets `fanout_caps` to `{}`, so every tier is uncapped there; a cap applies only when a policy sets one.
 
 ## Verified in mogui
 

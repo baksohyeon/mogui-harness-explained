@@ -28,7 +28,4 @@ exit=2
 
 ## Glossary
 
-- **fail closed**: when a check cannot run, treat the result as a block.
-- **exit 2**: the scanner's code for "could not decide"; it is never a pass.
-- **strict mode**: the guard setting that admits only read-only commands it recognizes.
-- **CLOSED_PARTIAL**: a retirement where one of the three disappearance checks was skipped.
+The words on this page are defined in the [glossary](glossary.md).

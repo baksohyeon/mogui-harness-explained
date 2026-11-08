@@ -10,9 +10,9 @@ In this harness the master is the head chef. It writes a short order (a contract
 
 ## The five questions
 
-**What happened.** A tool update changed the shape of a JSON reply, and four readers in the dispatch script stopped seeing their values. No reader printed an error. The master found it when a dispatch returned an empty task id. The quickest move was to patch the script by hand. The fix for the shared template went through a worker contract, a pull request, and a new test instead, and the template now reads that JSON through one module (the v0.5.288 entry "One reader for orca orchestration JSON" in [`CHANGELOG.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/CHANGELOG.md)).
+**What happened.** A tool update changed the shape of a JSON reply, and four readers in the dispatch script stopped seeing their values. No reader printed an error. The master found it when a dispatch returned an empty task id. The quickest move was to patch the script by hand. The fix for the shared template went through a worker contract, a pull request, and a new test instead. The template now reads that JSON through one module (the v0.5.288 entry "One reader for orca orchestration JSON" in [`CHANGELOG.md`](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.288/master-ops/CHANGELOG.md)).
 
-**What is confirmed.** The hook blocks the master's file tools (`Edit`, `Write`, `NotebookEdit`) inside every configured product root, and parses Bash commands for writes into one: redirections, `cd` into a root, heredocs, and the shapes its test names. Bash parsing is best effort, and the test file lists the gaps it has closed one by one. A worker runs in its own checkout, so its writes never land in the master's tree.
+**What is confirmed.** The hook blocks the master's file tools (`Edit`, `Write`, `NotebookEdit`) inside every configured product root. It also parses Bash commands for writes into one: redirections, `cd` into a root, heredocs, and the shapes its test names. Bash parsing is best effort, and the test file lists the gaps it has closed one by one. A worker runs in its own checkout, so its writes never land in the master's tree.
 
 **What is inferred.** The rule costs one extra round trip per fix: write the contract, wait for the worker, verify. We did not measure how many bad fixes it prevented.
 
@@ -28,7 +28,4 @@ exit=2
 
 ## Glossary
 
-- **master**: the one agent the owner talks to. It plans, dispatches, and verifies.
-- **worker**: an agent the master starts in a separate checkout, with one contract.
-- **contract**: a short file that names the branch, the files a worker may write, and the proof of success.
-- **Role Lock**: the hook-enforced form of "the master does not write product code".
+The words on this page are defined in the [glossary](glossary.md).

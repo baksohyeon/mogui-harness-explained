@@ -1,20 +1,20 @@
-# Worker territory: one checkout, one contract, a different host
+# Worker territory: one checkout, one contract, a different runtime
 
-**In one breath.** A worker gets its own checkout, one contract that names what it may write, and by default a model host different from the master's. The master keeps the verification and the merge.
+**In one breath.** A worker gets its own checkout, one contract that names what it may write, and by default a runtime (the agent CLI that runs its model) different from the master's. The master keeps the verification and the merge.
 
 ## For a ten-year-old
 
 Three friends build a treehouse. One holds the drawing and checks each board. The others each get a corner, a list of boards for that corner, and their own toolbox. Nobody reaches into another corner. When a corner is done, the friend with the drawing climbs up and pulls on every board before anyone sits on it.
 
-The corner is a Git worktree. The list of boards is the contract: branch, allowed files, the proof it must paste into the pull request. The toolbox is a separate agent host, chosen so the master and the worker do not drain the same quota while one waits on the other. The pull on every board is the master's own verification: tests run again, diff compared against the allowed files, review threads counted.
+The corner is a Git worktree. The list of boards is the contract: branch, allowed files, the proof it must paste into the pull request. The toolbox is a separate runtime, chosen so the master and the worker do not drain the same quota while one waits on the other. The pull on every board is the master's own verification: tests run again, diff compared against the allowed files, review threads counted.
 
 ## The five questions
 
 **What happened.** On one day two dispatches failed in ways that looked like worker mistakes. One stopped at staging because it never saw the clause requiring a pull request. One asked for a line the contract quoted word for word. The contract had reached the gate and never reached the worker; only the one-line spec had been sent. Both were rescued by pasting the contract into the worker's terminal by hand, which made an unrecorded hand step load-bearing. The wrapper now copies the contract to a delivery directory, checks the copy byte for byte, and appends a token the worker must quote back.
 
-**What is confirmed.** The contract delivery block and its token are in the dispatch script with that history in its comment. The runtime choice defaults to a host other than the master's, and the ledger records each same-host choice with its reason. The reaper refuses to remove a worktree that is dirty, unmerged, or holds ignored media.
+**What is confirmed.** The contract delivery block and its token are in the dispatch script with that history in its comment. The runtime choice defaults to one other than the master's, and the ledger records each same-runtime choice with its reason. The reaper refuses to remove a worktree that is dirty, unmerged, or holds ignored media.
 
-**What is inferred.** Separate hosts cost a little setup per worker. The expected gain is a master that keeps dispatching while a worker burns through a long test run; that gain was not measured.
+**What is inferred.** Separate runtimes cost a little setup per worker. The expected gain is a master that keeps dispatching while a worker burns through a long test run; that gain was not measured.
 
 **What is unknown.** Whether the delivered contract should also live on the worker's own branch. It does not today, and the comment in the script says why.
 
@@ -27,7 +27,4 @@ The corner is a Git worktree. The list of boards is the contract: branch, allowe
 
 ## Glossary
 
-- **worktree**: a second checkout of the same repository on its own branch, in its own directory.
-- **contract**: the file that names the branch, the allowed files, and the verification to paste.
-- **read token**: a short string appended to the delivered copy; quoting it proves the file was opened.
-- **host diversity**: running the worker on a different agent host than the master.
+The words on this page are defined in the [glossary](glossary.md).

@@ -30,7 +30,4 @@ Card: deployed copy matches canonical
 
 ## Glossary
 
-- **measured**: read from the machine by the script that reports it, with the date.
-- **confirmed**: stated by a source the reader can open.
-- **inferred**: the author's reasoning from measured or confirmed facts, marked as such.
-- **self-check**: the boot script that prints one line per harness layer.
+The words on this page are defined in the [glossary](glossary.md).

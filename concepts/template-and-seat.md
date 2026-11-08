@@ -32,7 +32,4 @@ Type 'apply' to write template-layer files
 
 ## Glossary
 
-- **template**: the `master-ops/` tree in the public repository, with placeholder tokens.
-- **seat**: one rendered install of the template, with its own instance-owned files.
-- **manifest**: the file list and version the template claims to own.
-- **re-stamp**: applying a newer template onto a seat, file by file.
+The words on this page are defined in the [glossary](glossary.md).
