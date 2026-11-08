@@ -1,6 +1,6 @@
 # Glossary
 
-Seventy-three entries for the words the unit, concept, and walkthrough pages use without stopping to explain them; an entry covers one word or a few that mean the same thing. Each line says what the word means in this harness and where to read more. Words marked (Orca) come from Orca, the terminal program the harness runs inside; Orca's own documentation is the authority on them.
+Seventy-nine entries for the words the unit, concept, and walkthrough pages use without stopping to explain them; an entry covers one word or a few that mean the same thing. Each line says what the word means in this harness and where to read more. Words marked (Orca) come from Orca, the terminal program the harness runs inside; Orca's own documentation is the authority on them.
 
 ## People and roles
 
@@ -9,6 +9,7 @@ Seventy-three entries for the words the unit, concept, and walkthrough pages use
 - **coordinator** (Orca): Orca's name for the session that holds a Run and reads the mailbox. In this harness that session is the master.
 - **worker**: an agent the master starts to do one contract in its own checkout. See [worker territory](worker-territory.md).
 - **generation**: one master session, from boot to retirement. See [succession](succession.md).
+- **installer**: the agent session that founds a workspace by following the onboarding router, then retires; the router calls it the Herald. See [unit 18](../units/18-progressive-onboarding-and-install-checks/).
 - **predecessor**, **successor**: the retiring master and the one that replaces it. See [one master generation](../walkthroughs/02-one-master-generation.md).
 - **Role Lock**: the hook-enforced form of "the master does not write product code". See [role lock](role-lock.md).
 
@@ -50,6 +51,7 @@ Seventy-three entries for the words the unit, concept, and walkthrough pages use
 - **prepared prompt**: a pane state the wrapper recognizes as the runtime waiting for input; a pane that matches none is reported as `UNVERIFIED`. See [one dispatch](../walkthroughs/01-one-dispatch.md), step 10.
 - **delivery verdict**: the wrapper's last line about a dispatch: what the pane and Orca's status proved, or `UNVERIFIED` with the command to run next. See [one dispatch](../walkthroughs/01-one-dispatch.md), step 10.
 - **ledger**: the append-only file where each dispatch decision is recorded. See [unit 07](../units/07-dispatch-timeline-join/).
+- **adapter profile**: the class that holds one runtime's command-line flags behind the neutral `build_argv` interface; `adapter doctor` probes which tools are installed. See [unit 19](../units/19-adapter-layer-tool-neutral-profiles/).
 - **model probe**, **rollout**: reading the model name out of the worker's own transcript file (a rollout, in the codex runtime's terms) instead of trusting the declared name. See [unit 03](../units/03-transcript-model-identity-probe/).
 - **reasoning effort**: the codex runtime's setting for how long it reasons before it answers. The wrapper launches workers at `xhigh`, and the start screen shows the value after the model name. See [one dispatch](../walkthroughs/01-one-dispatch.md), step 7.
 - **reaper**: `worker-reap`, the script that closes a finished worker's pane and removes its worktree, and refuses when the pane is occupied or the worktree is dirty, unmerged, or holds ignored media. See [unit 06](../units/06-worker-wait-and-reap/).
@@ -58,6 +60,8 @@ Seventy-three entries for the words the unit, concept, and walkthrough pages use
 - **redaction scan**: the pre-push scan for secrets and internal identifiers. See [unit 08](../units/08-scope-stating-redaction-scan/).
 - **exit 2**: the code the redaction scan, the drift audit, and the self-check return for "could not decide"; it is never a pass. The same number is the bad-invocation code of several command-line tools and the block code of the product-path guard, so each script's header says what its 2 means. See [fail closed](fail-closed.md).
 - **fail closed**: when a check cannot run, treat the result as a block. See [fail closed](fail-closed.md).
+- **boot block**: the `[MASTER-BOOTSTRAP v1]` text a hook prints at every session start: role state, active tracks, charter pointer, audit and dual-instance lines. See [unit 17](../units/17-master-boot-block-and-live-hook/).
+- **dual instance**: a second master process found by the boot block's probe; reported on its `[DUAL-INSTANCE]` line. See [unit 17](../units/17-master-boot-block-and-live-hook/).
 - **self-check**: the boot script that prints one measured line per harness layer. See [measured, confirmed, inferred](measured-not-assumed.md).
 - **adoption ledger**: the file in which a seat records its progress adopting the template. The self-check's first `Template:` line reads `adoption ledger missing` when the seat has none. See [one template upgrade](../walkthroughs/03-one-template-upgrade.md), step 2.
 - **surface baseline**: a stored record of the Orca commands, flags, and output shapes the harness depends on; `orca-surface-check.sh` compares the installed Orca against it. See the [Orca primer](orca-primer.md).
@@ -78,6 +82,8 @@ Seventy-three entries for the words the unit, concept, and walkthrough pages use
 - **workspace card**, **session card**: the two identical files at the workspace root that tell a session what role it holds. See [unit 14](../units/14-workspace-card-scope-local-file/).
 - **changelog fragment**: one dated file per change, folded into the changelog at release time. See [unit 15](../units/15-changelog-fragment-gate/).
 - **placement**: proof that a session sits where it was meant to. A master proves it with three measured facts (selector, working directory, session namespace); a worker reports it as the three-line placement verdict. See [unit 04](../units/04-master-succession-placement-check/) and [one dispatch](../walkthroughs/01-one-dispatch.md), step 11.
+- **session mode**: the first question of an install: Founding, Reverify, Upgrade, or Template improve. Spawning is blocked in Reverify and Upgrade. See [unit 18](../units/18-progressive-onboarding-and-install-checks/).
+- **succession trigger**: the classification of a signal as `IMMEDIATE` (an explicit instruction), `ADVISORY` (context pressure or a milestone; propose only), or `NONE`. See [unit 16](../units/16-succession-triggers-and-duplicate-masters/).
 - **promotion audit**: the step before a spawn in which the sitting master moves what must survive into Git, the issue tracker, and the lineage. See [one master generation](../walkthroughs/02-one-master-generation.md), step 1.
 - **handshake**: the moment a successor gives its predecessor the three things retirement needs: the successor's identity, the operations repository's `main` sha, and the Run binding. See [one master generation](../walkthroughs/02-one-master-generation.md), step 3.
 - **three disappearances**: pane, process, and tty of the predecessor, each measured gone, in that order. See [succession](succession.md).
