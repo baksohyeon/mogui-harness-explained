@@ -8,32 +8,31 @@ REPO_ROOT=$(cd "$SCRIPT_DIR/../.." && pwd)
 TEMP_DIR=$(mktemp -d)
 trap "rm -rf $TEMP_DIR" EXIT
 
-cd "$TEMP_DIR"
-python3 "$SCRIPT_DIR/make-where.py" > /dev/null 2>&1
+python3 "$SCRIPT_DIR/make-where.py" "$TEMP_DIR" > /dev/null 2>&1
 
-# Compare the regenerated files against committed ones
-cd "$SCRIPT_DIR"
-for i in {01..27}; do
+# Compare all 27 files against committed ones
+DIFF_COUNT=0
+for i in $(seq -w 1 27); do
     if ! diff -q "$TEMP_DIR/$i-where.svg" "$SCRIPT_DIR/$i-where.svg" > /dev/null 2>&1; then
-        echo "Error: Regenerated $i-where.svg differs from committed version"
-        exit 1
+        DIFF_COUNT=$((DIFF_COUNT + 1))
     fi
 done
 
+if [ $DIFF_COUNT -gt 0 ]; then
+    echo "Error: $DIFF_COUNT regenerated files differ from committed versions"
+    exit 1
+fi
+
 # Check that each unit page references its image exactly once
 cd "$REPO_ROOT"
-for i in {01..27}; do
-    file_pattern="units/$(printf '%02d' $i)-*/README.md"
-    ref_pattern="$i-where\.svg"
-
-    # Find the README file for this unit
-    readme_file=$(ls $file_pattern 2>/dev/null | head -1)
+for i in $(seq -w 1 27); do
+    readme_file=$(ls units/$(printf '%02d' $((10#$i)))-*/README.md 2>/dev/null | head -1)
     if [ -z "$readme_file" ]; then
         echo "Error: Could not find README for unit $i"
         exit 1
     fi
 
-    # Check it references the right SVG exactly once
+    ref_pattern="$i-where\.svg"
     count=$(grep -c "$ref_pattern" "$readme_file" 2>/dev/null || echo 0)
     if [ "$count" -ne 1 ]; then
         echo "Error: Unit $i page references $ref_pattern $count times (expected 1)"

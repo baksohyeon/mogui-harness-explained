@@ -82,9 +82,10 @@ def create_inset(tree, unit_num):
         # Remove title and legend
         if 'mogui harness' in text_content:
             elements_to_remove.append(text)
-        elif class_attr == 'cue':
-            elements_to_remove.append(text)
         elif 'numbers are unit ids' in text_content:
+            # Remove the legend explanation text (both lines)
+            elements_to_remove.append(text)
+        elif class_attr == 'cue':
             elements_to_remove.append(text)
         elif text_content.strip() in [str(i) for i in range(1, 28)]:
             # Remove unit numbers that aren't this unit
@@ -167,11 +168,14 @@ def create_inset(tree, unit_num):
 
 def main():
     svg_path = Path(__file__).parent.parent / 'system.svg'
-    output_dir = Path(__file__).parent
+    output_dir = Path(__file__).parent if len(sys.argv) < 2 else Path(sys.argv[1])
 
     if not svg_path.exists():
         print(f'Error: {svg_path} not found', file=sys.stderr)
         sys.exit(1)
+
+    # Create output directory if needed
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     # Parse once
     tree = parse_svg(svg_path)
@@ -182,7 +186,6 @@ def main():
             inset_tree = create_inset(tree, unit_str)
             output_path = output_dir / f'{unit_str}-where.svg'
             inset_tree.write(str(output_path), encoding='utf-8', xml_declaration=True)
-            print(f'Generated {output_path.name}')
         except Exception as e:
             print(f'Error generating {unit_str}-where.svg: {e}', file=sys.stderr)
             import traceback
