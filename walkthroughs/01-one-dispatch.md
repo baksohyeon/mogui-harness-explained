@@ -8,7 +8,7 @@
 
 <p align="center"><sub>The player below shows in a web browser. In the GitHub mobile app, tap the picture; the release page has the film.</sub></p>
 
-https://github.com/user-attachments/assets/afbb6bf0-8bc8-4366-bded-4bd76df61685
+https://github.com/user-attachments/assets/c5bf6c3e-26fd-49a9-ab16-000ae0c45c6b
 
 Fifteen steps. The diagram below moves a ring from step to step; every label is readable with the animation off.
 

@@ -8,7 +8,7 @@
 
 <p align="center"><sub>The player below shows in a web browser. In the GitHub mobile app, tap the picture; the release page has the film.</sub></p>
 
-https://github.com/user-attachments/assets/cf8a11d4-1156-476d-877f-16cd4a2e36f8
+https://github.com/user-attachments/assets/d7d2b834-7758-4484-bdf6-8d40ccf25b1e
 
 Eleven steps, and the last one points back at the first.
 
