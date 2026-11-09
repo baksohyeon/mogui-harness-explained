@@ -2,6 +2,9 @@
 
 **In one breath.** Every hook writes one line when it fires, every gate decision writes one line to a second log, and every script that measures something maps its result to the same three exit codes: 0 pass, 1 finding, 2 undetermined. A wrapper puts a command's exit status on the first line of its output, where it cannot be skipped.
 
+<p align="center"><img src="../../assets/where/21-where.svg" alt="where unit 21 sits on the harness picture: on the pull request, in accept phase" width="480"></p>
+
+
 **When it runs.** Before, during, and after a dispatch, in every hook and gate; the reports are read by hand when the master asks which hooks fire and what the guard rejects.
 
 **Mechanism.** The fire log, `~/.mogui/hook-fire-log.jsonl`, takes one JSON line per hook invocation: timestamp, hook name, event, working directory, runtime hint, session kind (master, worker, unknown), and verdict (`pass`, `warn`, `block`, `skip`, `override`). `hook-coverage-report` turns it into a matrix of hook by runtime and session kind, with the last firing and a count per cell. The event log, `~/.mogui/event-log.jsonl`, is separate and takes decision events with value-free fields only: event name, outcome, evidence, reason, command class, target scope. Raw commands, absolute paths, and credentials are forbidden in it, and `mogui_log.py` scrubs secret shapes and home paths before a line is written. `measure-product-path-guard.sh` reads it and reports the guard's Bash rejection rate, or `N/A (0/0; no command observations)` when there is nothing to count.

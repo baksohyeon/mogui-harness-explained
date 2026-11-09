@@ -2,6 +2,9 @@
 
 **In one breath.** A hook stops the master's tools from writing into a product repository.
 
+<p align="center"><img src="../../assets/where/09-where.svg" alt="where unit 09 sits on the harness picture: on the instruction path, before dispatch" width="480"></p>
+
+
 **When it runs.** Before and during a dispatch, on every tool call the master makes.
 
 **Mechanism.** A `PreToolUse(Edit|Write|NotebookEdit|Bash)` hook that blocks writes into a configured product repository root.

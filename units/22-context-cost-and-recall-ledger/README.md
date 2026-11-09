@@ -2,6 +2,9 @@
 
 **In one breath.** Two things about a master's context are measured instead of felt: how much of it is spent before the first action, and how much is lost across a compaction. One script reports the first; one writes the ledger for the second, and it is the only writer.
 
+<p align="center"><img src="../../assets/where/22-where.svg" alt="where unit 22 sits on the harness picture: in master lifecycle, compact and succeed" width="480"></p>
+
+
 **When it runs.** In the master lifecycle: the turn-0 report by hand, weekly; the recall ledger at every compaction, after the probe of [one master generation](../../walkthroughs/02-one-master-generation.md), step 10.
 
 **Mechanism.** `context-budget` reads the session transcripts and reports the turn-0 payload: the context a session has consumed before it takes its first action. That payload is instruction files, skill and agent listings, tool schemas, and hook output. That cost is paid again at every succession and every worker dispatch, and nothing else in the harness measures it. The transcript location is derived from the workspace path, so the script carries no machine's username. `context-quality-log.sh` appends the recall records the compaction probe asks for and prints a seven-day summary with `--summary`. Its ledger path, `CONTEXT_QUALITY_LOG`, is required and has no default, because a default once let one seat write into another seat's ledger (2026-08-10). `context-quality-sampler.sh` prints the sources of truth the recall is compared against, the tracker's active tracks and recent Git history, and writes nothing.

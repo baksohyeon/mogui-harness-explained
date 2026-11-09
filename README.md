@@ -43,7 +43,7 @@ Every one of these checks exists because something measurable went wrong once. E
 
 ## Units, as an index
 
-Twenty-seven mechanisms, each explained in about five minutes and linked to its tested implementation. The 27 units cover release v0.5.294: a check on 2026-11-08 linked every mechanism file in that release to one unit. A later mechanism gets the next number. The number in front of a unit is its id, the number that starts its directory name; it carries no rank and no reading order. The map groups the units by when they act, from install to succession.
+Twenty-seven mechanisms, each explained in about five minutes and linked to its tested implementation. Each page shows the one picture with that unit's place lit. The 27 units cover release v0.5.294: a check on 2026-11-08 linked every mechanism file in that release to one unit. A later mechanism gets the next number. The number in front of a unit is its id, the number that starts its directory name; it carries no rank and no reading order. The map groups the units by when they act, from install to succession.
 
 <p align="center"><img src="assets/map.svg" alt="map of the three walkthroughs, the 27 units by lifecycle with an install group, and the concept notes" width="100%"></p>
 

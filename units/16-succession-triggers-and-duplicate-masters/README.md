@@ -2,6 +2,9 @@
 
 **In one breath.** Succession has one entry point, `master-succeed`, with six subcommands: classify the trigger, build the handoff (the thin file a successor boots from), verify the successor, find duplicate masters, retire the predecessor, and spawn. The trigger classifier can only propose; the duplicate check and the empty-seat rule keep two masters from holding one seat.
 
+<p align="center"><img src="../../assets/where/16-where.svg" alt="where unit 16 sits on the harness picture: in master lifecycle, compact and succeed" width="480"></p>
+
+
 **When it runs.** In the master lifecycle: at every boot (the duplicate check is part of the boot comparison set), and from the owner's word to succeed until the predecessor is measured gone.
 
 **Mechanism.** `detect` classifies a signal into three outcomes. Five explicit phrases, in English and Korean, give `IMMEDIATE`. A context ratio of 0.60 or more, or a named milestone, gives `ADVISORY`, and the report carries the sentence "Auto-succession is not permitted; propose succession only." Anything else gives `NONE`. `verify-successor` reads the recovery report of unit [05](../05-read-only-recovery-flow/): one `MISS` makes it `FAILED`; otherwise it counts three checks (open tracks recited, baseline matched, monitors rearmed) and reports `PASS` for all three, `PARTIAL` for fewer. `check-duplicates` lists Orca's terminals and returns every session that carries the seat's marker except the caller's own handle. Before a founding spawn, the onboarding spawn step lists the seat's terminals and proceeds only when there are zero. `retire` and `spawn` are covered by unit [04](../04-master-succession-placement-check/) and [one master generation](../../walkthroughs/02-one-master-generation.md).

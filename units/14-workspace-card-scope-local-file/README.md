@@ -2,6 +2,9 @@
 
 **In one breath.** The session card says who it is for, keeps its two files identical, and lets a seat add local rules in a separate file.
 
+<p align="center"><img src="../../assets/where/14-where.svg" alt="where unit 14 sits on the harness picture: In the master lifecycle, at every session start that reads the card" width="480"></p>
+
+
 **When it runs.** In the master lifecycle, at every session start that reads the card.
 
 **Mechanism.** The session card, the `CLAUDE.md` and `AGENTS.md` at the workspace root, opens with a sentence naming whom it applies to: the owner-appointed master and the workers it dispatches. It keeps the two card files byte-identical and reads optional instance-owned `LOCAL.md` after the card without overriding its rules.

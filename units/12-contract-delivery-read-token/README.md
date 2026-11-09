@@ -2,6 +2,9 @@
 
 **In one breath.** The worker gets its contract as a verified copy with a token it must quote back, so the master knows the contract was read.
 
+<p align="center"><img src="../../assets/where/12-where.svg" alt="where unit 12 sits on the harness picture: at contract and token, before dispatch" width="480"></p>
+
+
 **When it runs.** Before dispatch, in the wrapper, after the gate.
 
 **Mechanism.** With `--contract`, dispatch copies the contract to a delivery directory, compares the copy byte for byte, appends `ack-${SHA:8:12}`, and writes the delivered path into the spec. It then appends each standing-rule block the contract's front matter names.

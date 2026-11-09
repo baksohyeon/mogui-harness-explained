@@ -2,6 +2,9 @@
 
 **In one breath.** One module reads Orca's JSON in its old shape and its new one, so a renamed key cannot silently empty a value.
 
+<p align="center"><img src="../../assets/where/10-where.svg" alt="where unit 10 sits on the harness picture: at contract and token, before dispatch" width="480"></p>
+
+
 **When it runs.** Before dispatch and during, wherever a harness script reads Orca's JSON.
 
 **Mechanism.** The `orca_json` module reads old nested keys first and newer top-level keys second. It normalizes worker statuses so old `dispatched` and new `in_progress` both report `in_progress`.

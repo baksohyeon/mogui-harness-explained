@@ -2,6 +2,9 @@
 
 **In one breath.** A worker waiting on a prompt sends no message and lands no commit, so its silence reads as progress. A sweep classifies every live pane into seven states, a per-turn hook tells the master when a pane needs a decision, and one script answers the codex hook-review modal under the master's own authority.
 
+<p align="center"><img src="../../assets/where/20-where.svg" alt="where unit 20 sits on the harness picture: on the worker path, during execution" width="480"></p>
+
+
 **When it runs.** During a dispatch: the hook on every prompt the master submits, the sweep whenever the master runs it, the modal answer at a codex worker's launch.
 
 **Mechanism.** `worker-pane-sweep` reads every pane Orca lists, excluding the master's own, and prints one verdict per pane from seven classes: `working`, `idle`, `approval`, `start-screen`, `update`, `limit`, `shell`. Each class needs a different answer. The script is a classifier only: it exits non-zero when any pane needs a decision and never acts, because acting on a misread pane is how a start screen gets text fired into it. The approval markers it matches live in one shared file, `approval-prompt-markers.txt`, read by the sweep and by the hook. Two separate lists once drifted apart, and the sweep read a blocked pane as idle for two days. `worker-block-warn.sh` runs on every prompt the master submits, classifies from the pane previews one `orca terminal list` already returns, and decides only whether to look. `orch-inbox-warn.sh` warns once when unacknowledged orchestration messages exist. `codex-hooks-review-answer` handles one measured case: codex opens a modal asking to trust the installed hooks, Orca's wait reports `agent-hooks-review-prompt`, a keystroke is refused, and the script re-issues it the way Orca prescribes. Clearing a prompt inside the contract's scope is dispatch authority under charter §4, so these are the master's job.

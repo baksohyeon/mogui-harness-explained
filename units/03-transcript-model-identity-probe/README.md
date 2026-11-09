@@ -2,6 +2,9 @@
 
 **In one breath.** The model that answered is read from the session's own transcript, so a declared model name is never taken on faith.
 
+<p align="center"><img src="../../assets/where/03-where.svg" alt="where unit 03 sits on the harness picture: on the worker path, during execution" width="480"></p>
+
+
 **When it runs.** During a dispatch, right after the worker is registered; and at a master's boot and succession audit.
 
 **Mechanism.** Read the session transcript to measure which model answered, and report any model change across the whole session.

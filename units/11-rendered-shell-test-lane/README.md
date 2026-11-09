@@ -2,6 +2,9 @@
 
 **In one breath.** The template's shell tests run against a rendered copy, so a placeholder token cannot hide a failure.
 
+<p align="center"><img src="../../assets/where/11-where.svg" alt="where unit 11 sits on the harness picture: on the render and upgrade path, after acceptance" width="480"></p>
+
+
 **When it runs.** After a template change, in CI, in the map's "After / accept" group.
 
 **Mechanism.** The `rendered-shell-tests` job renders `master-ops` into a scratch install with `template-apply --write`, the confirmation phrase piped in. It runs every rendered `scripts/test-*.sh` file and reports each exit code and `SKIP` line.

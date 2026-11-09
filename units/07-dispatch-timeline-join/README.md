@@ -2,6 +2,9 @@
 
 **In one breath.** Everything recorded about one dispatch, from three sources, is shown as one table in time order.
 
+<p align="center"><img src="../../assets/where/07-where.svg" alt="where unit 07 sits on the harness picture: on the mailbox path, waking the master" width="480"></p>
+
+
 **When it runs.** During and after a dispatch, whenever the master asks what happened to one.
 
 **Mechanism.** Join the dispatch ledger, the event log, and the live `dispatch-show` record for one dispatch into one time-ordered table.

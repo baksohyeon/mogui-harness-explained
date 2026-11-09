@@ -2,6 +2,9 @@
 
 **In one breath.** Three small modules watch work from the outside. The watchdog says whether a worker's progress log has gone idle past a threshold. The work ledger replays a workspace's tracks from an append-only JSONL file. The digest loop takes a read-only snapshot of repositories, jobs, and processes on a timer and classifies each change as echo, expected, or unexplained.
 
+<p align="center"><img src="../../assets/where/26-where.svg" alt="where unit 26 sits on the harness picture: on the worker path, during execution" width="480"></p>
+
+
 **When it runs.** During a dispatch for the watchdog, through `dispatch-gate watch`. In the master lifecycle for the work ledger, when the recovery flow of unit [05](../05-read-only-recovery-flow/) replays active tracks. The digest loop runs on its own timer, ten minutes when something is active and thirty when nothing is.
 
 **Mechanism.** `watchdog.check_stall` reads a progress log's modification time, or the timestamps a caller's predicate extracts from its lines. It returns `OK`, `STALLED` past 360 seconds of idleness by default, or `MISSING` with the reason `LOG_MISSING` when the log does not exist. `dispatch-gate watch` is its command-line face, next to `report`, which prints the ledger's view of a dispatch. `JsonlWorkLedger` keeps one `TrackState` per track (status from `REGISTERED` on, references, a note, timestamps) and replays the file into the current state; `WorkspaceRuntime` holds the session cache around it. `l1-digest` runs the digest loop: it collects a `Snapshot` of configured repositories, job logs, and processes, triages every observed change against a saved baseline, renders a Markdown digest, and suggests the next interval. A job log is `running`, `stalled`, `dormant`, `finished`, or `missing`; a change is `echo` when the loop caused it, `expected` when the baseline predicted it, `unexplained` otherwise.
