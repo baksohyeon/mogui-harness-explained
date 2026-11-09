@@ -25,11 +25,12 @@ fi
 # Check that each unit page references its image exactly once
 cd "$REPO_ROOT"
 for i in $(seq -w 1 27); do
-    readme_file=$(ls units/$(printf '%02d' $((10#$i)))-*/README.md 2>/dev/null | head -1)
-    if [ -z "$readme_file" ]; then
-        echo "Error: Could not find README for unit $i"
+    readme_count=$(ls units/$(printf '%02d' $((10#$i)))-*/README.md 2>/dev/null | wc -l)
+    if [ "$readme_count" -ne 1 ]; then
+        echo "Error: Found $readme_count README.md files for unit $i (expected 1)"
         exit 1
     fi
+    readme_file=$(ls units/$(printf '%02d' $((10#$i)))-*/README.md 2>/dev/null)
 
     ref_pattern="$i-where\.svg"
     count=$(grep -o "$ref_pattern" "$readme_file" | wc -l)
