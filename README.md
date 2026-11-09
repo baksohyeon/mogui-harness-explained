@@ -16,7 +16,7 @@ https://github.com/user-attachments/assets/52b4e776-8514-4b63-9f77-e04375e8a6ba
 
 <p align="center"><a href="https://github.com/baksohyeon/mogui-harness-explained/releases/tag/architecture-film-20261109"><img src="assets/architecture-poster.jpg" alt="the harness in one picture, every part lit: the owner, the master pane, three workers in their own checkouts, the Orca mailbox, the pull request, the operations repository, the issue tracker, and the template" width="100%"></a></p>
 
-https://github.com/user-attachments/assets/76386a94-9900-4a5a-93c0-16609d09c85c
+https://github.com/user-attachments/assets/657a1571-be9a-456d-a866-97d1bc85da1a
 
 To run what the film shows, install Orca, `git`, `gh`, `python3`, Beads (`bd`), a master CLI such as `claude`, and a worker CLI (`codex` or `cursor-agent`); Getting Started lists the remaining checks. Then clone [mogui-ADE-orchestrator](https://github.com/baksohyeon/mogui-ADE-orchestrator), open it in Orca, and say "Wake the master." The repository's own [quickstart](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.294#quickstart) and [Getting Started](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/docs/public/getting-started.md) take it from there. These pages explain what each part of the film does and where its tested code lives, at release [v0.5.294](https://github.com/baksohyeon/mogui-ADE-orchestrator/releases/tag/v0.5.294).
 
