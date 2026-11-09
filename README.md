@@ -35,7 +35,7 @@ Every one of these checks exists because something measurable went wrong once. E
 
 ## Read further
 
-- Three walkthroughs follow a procedure from start to end, about fifteen minutes each: [one dispatch](walkthroughs/01-one-dispatch.md), [one master generation](walkthroughs/02-one-master-generation.md), and [one template upgrade](walkthroughs/03-one-template-upgrade.md). Index at [`walkthroughs/`](walkthroughs/).
+- Three walkthroughs follow a procedure from start to end, about fifteen minutes each: [one dispatch](walkthroughs/01-one-dispatch.md), [one master generation](walkthroughs/02-one-master-generation.md), and [one template upgrade](walkthroughs/03-one-template-upgrade.md). A fourth page, [one morning on the seat](walkthroughs/04-one-morning-on-the-seat.md), shows the three run on this repository itself. Index at [`walkthroughs/`](walkthroughs/).
 - Eight concept notes answer the same five questions each: what happened, what is confirmed, what is inferred, what is unknown, and where the evidence is. Start with the [Orca primer](concepts/orca-primer.md) and [measured, confirmed, inferred](concepts/measured-not-assumed.md). The [charter map](concepts/charter-map.md) says which of ten numbered sections owns which decision. Index at [`concepts/`](concepts/).
 - The [chat response rules](concepts/chat-response-rules.md) are the twelve sentence rules a master follows when it writes to its owner.
 - The [glossary](concepts/glossary.md) defines the words the pages use without stopping to explain them, one line each.
