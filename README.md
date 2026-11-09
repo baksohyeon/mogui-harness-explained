@@ -4,11 +4,17 @@
 
 **Why this exists.** A coding agent with write access can edit the wrong checkout, start from a contract it never opened, or lose its place when its context is compacted. This harness is built around those three failures. One agent, the **master**, is in charge. It writes a **contract** for each task, hands it to a **worker** agent in its own checkout, and verifies the worker's pull request instead of trusting its report. It all runs inside **Orca**, a separate desktop app that owns the terminal panes, the git worktrees, and the mailbox the agents talk through ([Orca primer](concepts/orca-primer.md)).
 
-**Watch the harness in one picture, 67 seconds.** The system diagram, part by part: the owner, the master, the contract and its read token, the workers in their own checkouts, the Orca mailbox, one pull request, the memory loop, and the template. Concept view, not a screen recording; the [release page](https://github.com/baksohyeon/mogui-harness-explained/releases/tag/architecture-film-20261109) has the file and the credits. The earlier [75-second walkthrough](https://github.com/baksohyeon/mogui-harness-explained/releases/tag/walkthrough-75s-v1), one dispatch and one succession as a story, stays on its release page.
+**Watch the 75-second walkthrough.** One owner, one master, two workers, one send-back, one succession. Concept view, not a screen recording; the [release page](https://github.com/baksohyeon/mogui-harness-explained/releases/tag/walkthrough-75s-v1) has the file and the credits.
 
-<p align="center"><a href="https://github.com/baksohyeon/mogui-harness-explained/releases/tag/architecture-film-20261109"><img src="assets/architecture-poster.jpg" alt="the harness in one picture, every part lit: the owner, the master pane, three workers in their own checkouts, the Orca mailbox, the pull request, the operations repository, the issue tracker, and the template" width="100%"></a></p>
+<p align="center"><a href="https://github.com/baksohyeon/mogui-harness-explained/releases/tag/walkthrough-75s-v1"><img src="assets/walkthrough-poster.jpg" alt="a frame of the walkthrough: the master runs the test itself, the test fails, approval is withheld, and the client worker is sent back" width="100%"></a></p>
 
 <p align="center"><sub>The player below shows in a web browser. In the GitHub mobile app, tap the picture; the release page has the film.</sub></p>
+
+https://github.com/user-attachments/assets/52b4e776-8514-4b63-9f77-e04375e8a6ba
+
+**Then the harness in one picture, 67 seconds.** The system diagram, part by part: the owner, the master, the contract and its read token, the workers in their own checkouts, the Orca mailbox, one pull request, the memory loop, and the template. Same concept view; the [release page](https://github.com/baksohyeon/mogui-harness-explained/releases/tag/architecture-film-20261109) has the file and the credits.
+
+<p align="center"><a href="https://github.com/baksohyeon/mogui-harness-explained/releases/tag/architecture-film-20261109"><img src="assets/architecture-poster.jpg" alt="the harness in one picture, every part lit: the owner, the master pane, three workers in their own checkouts, the Orca mailbox, the pull request, the operations repository, the issue tracker, and the template" width="100%"></a></p>
 
 https://github.com/user-attachments/assets/76386a94-9900-4a5a-93c0-16609d09c85c
 
