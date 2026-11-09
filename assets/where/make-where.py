@@ -77,13 +77,14 @@ def create_inset(tree, unit_num):
     elements_to_remove = []
     for text in root.findall('.//svg:text', ns):
         class_attr = text.get('class')
-        text_content = ''.join(text.itertext()) if text.text else ''
+        # Get all text content including from tspan children
+        text_content = ''.join(text.itertext())
 
         # Remove title and legend
         if 'mogui harness' in text_content:
             elements_to_remove.append(text)
         elif 'numbers are unit ids' in text_content:
-            # Remove the legend explanation text (both lines)
+            # Remove the legend explanation text
             elements_to_remove.append(text)
         elif class_attr == 'cue':
             elements_to_remove.append(text)
