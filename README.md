@@ -10,7 +10,7 @@
 
 <p align="center"><sub>The player below shows in a web browser. In the GitHub mobile app, tap the picture; the release page has the film.</sub></p>
 
-https://github.com/user-attachments/assets/52b4e776-8514-4b63-9f77-e04375e8a6ba
+https://github.com/user-attachments/assets/f49342a3-4b04-4bb9-9e35-403e9c8b666a
 
 **Then the harness in one picture, 67 seconds.** The system diagram, part by part: the owner, the master, the contract and its read token, the workers in their own checkouts, the Orca mailbox, one pull request, the memory loop, and the template. Same concept view; the [release page](https://github.com/baksohyeon/mogui-harness-explained/releases/tag/architecture-film-20261109) has the file and the credits.
 
