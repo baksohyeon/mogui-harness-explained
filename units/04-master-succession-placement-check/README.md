@@ -2,6 +2,9 @@
 
 **In one breath.** A newly spawned master must land in the worktree it was meant for, or its terminal is closed.
 
+<p align="center"><img src="../../assets/where/04-where.svg" alt="where unit 04 sits on the harness picture: in master lifecycle, compact and succeed" width="480"></p>
+
+
 **When it runs.** In the master lifecycle, at the moment a successor is spawned.
 
 **Mechanism.** When a successor master is spawned, the terminal's reported worktree must match the requested and expected placement, or the new terminal is closed.

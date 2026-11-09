@@ -2,6 +2,9 @@
 
 **In one breath.** A change to the template is not merged without a dated changelog fragment, and a release folds the fragments into the changelog.
 
+<p align="center"><img src="../../assets/where/15-where.svg" alt="where unit 15 sits on the harness picture: on the render and upgrade path, after acceptance" width="480"></p>
+
+
 **When it runs.** After a template change, in CI, and again at release time.
 
 **Mechanism.** The fragment gate requires a dated root file under `master-ops/changelog.d/` for a `master-ops/` change outside that directory. The release script folds fragments into `CHANGELOG.md` when a release is cut.

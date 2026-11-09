@@ -2,6 +2,9 @@
 
 **In one breath.** A master recovering after an abnormal end re-reads its context in a fixed order and writes nothing while it does.
 
+<p align="center"><img src="../../assets/where/05-where.svg" alt="where unit 05 sits on the harness picture: in master lifecycle, compact and succeed" width="480"></p>
+
+
 **When it runs.** In the master lifecycle, at a boot that follows an abnormal end.
 
 **Mechanism.** `master-recover` runs the Recovery Flow, the numbered procedure a master follows after an abnormal end, steps 0 to 6, as reads only and prints one status line per step (OK, MISS, WARN, SKIP).

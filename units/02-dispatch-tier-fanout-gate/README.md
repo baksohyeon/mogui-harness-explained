@@ -2,6 +2,9 @@
 
 **In one breath.** Before a worker starts, a gate checks that the dispatch fits the budget and the routing, and that the model's tier allows it.
 
+<p align="center"><img src="../../assets/where/02-where.svg" alt="where unit 02 sits on the harness picture: at contract and token, before dispatch" width="480"></p>
+
+
 **When it runs.** Before dispatch, as the first thing the dispatch wrapper does.
 
 **Mechanism.** Every worker dispatch request passes a gate that checks budget, routing, model tier, and per-tier fan-out before it runs.

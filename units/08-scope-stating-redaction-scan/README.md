@@ -2,6 +2,9 @@
 
 **In one breath.** Before a push, a scan looks for secrets and identifiers in the repository and in conversation surfaces, and says what it covered.
 
+<p align="center"><img src="../../assets/where/08-where.svg" alt="where unit 08 sits on the harness picture: on the pull request, in accept phase" width="480"></p>
+
+
 **When it runs.** After the work, before any push, in the map's "After / accept" group.
 
 **Mechanism.** Scan tracked content, commit messages, and conversation surfaces for secrets and identifiers, state what was covered, and separate "cannot decide" from "clean".

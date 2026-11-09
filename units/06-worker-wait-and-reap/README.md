@@ -2,6 +2,9 @@
 
 **In one breath.** The master waits on its workers from measured state and closes a pane only when the worker is gone.
 
+<p align="center"><img src="../../assets/where/06-where.svg" alt="where unit 06 sits on the harness picture: on the worker path, during execution" width="480"></p>
+
+
 **When it runs.** During a dispatch, from the worker's launch to its pane being closed.
 
 **Mechanism.** `worker-wait` waits on a Run's live dispatches and labels dead or stalled workers; `worker-reap` closes the terminal of a settled dispatch, one whose status is completed, accepted, failed, or abandoned, and cleans its worktree.

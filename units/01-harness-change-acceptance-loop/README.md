@@ -2,6 +2,9 @@
 
 **In one breath.** A change to the harness itself is kept only when it passes more test cases than before, counting cases the proposer could not see.
 
+<p align="center"><img src="../../assets/where/01-where.svg" alt="where unit 01 sits on the harness picture: on the pull request, in accept phase" width="480"></p>
+
+
 **When it runs.** After a change to the harness is proposed, in the map's "After / accept" group. It judges harness changes, not dispatches; the other fourteen units run inside a dispatch or a master's life.
 
 **Mechanism.** A candidate change is kept only when the combined pass count over the visible (train) and private (holdout) cases strictly rises.

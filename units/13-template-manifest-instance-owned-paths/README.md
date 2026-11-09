@@ -2,6 +2,9 @@
 
 **In one breath.** An upgrade applies the template's files from a manifest and refuses the files the seat owns.
 
+<p align="center"><img src="../../assets/where/13-where.svg" alt="where unit 13 sits on the harness picture: on the render and upgrade path, after acceptance" width="480"></p>
+
+
 **When it runs.** After a template release, when a seat upgrades, in the map's "After / accept" group.
 
 **Mechanism.** `template-apply` builds a manifest-based dry-run plan, refuses instance-owned and unclaimed paths, and asks for the phrase `apply` before writing. It replaces each file atomically after preflighting the planned sources and destinations.

@@ -2,6 +2,9 @@
 
 **In one breath.** A new workspace is installed by an agent that reads one step file per turn and opens the next only after the current step's checks pass. Before it starts, a preflight measures what the machine has; after it finishes, a rehearsal measures what the install can do, and reports a gap wherever it cannot measure.
 
+<p align="center"><img src="../../assets/where/18-where.svg" alt="where unit 18 sits on the harness picture: in operations repo, during lifecycle" width="480"></p>
+
+
 **When it runs.** At install time, before the first master exists, and again whenever an install is re-verified. The map's four groups start after this; the install is the step that produces the seat they run on.
 
 **Mechanism.** `master-ops/ONBOARDING.md` is a router. Its first act is to ask the owner which of four session modes this is. Founding is a new workspace. Reverify is a health check only, with spawning blocked. Upgrade brings the template forward, also with spawning blocked. Template improve is work on the template itself, not an install at all. It then loads one file under `onboarding/` per step, eleven steps from orientation to the installer's own retirement, and the next file opens only after the current step's Verify list passes. The step files are terse; the owner-facing turns are not, and the router forbids a list of technical words in owner speech.

@@ -2,6 +2,9 @@
 
 **In one breath.** Every vendor-specific flag for running a worker's CLI lives in one profile class per runtime, behind one neutral interface. A doctor command measures which tools are installed by running each one's own probe.
 
+<p align="center"><img src="../../assets/where/19-where.svg" alt="where unit 19 sits on the harness picture: at contract and token, before dispatch" width="480"></p>
+
+
 **When it runs.** Before dispatch, when the harness needs the command line that runs one prompt on a given runtime; and at install or re-verification, when `adapter doctor` is run.
 
 **Mechanism.** `SyncCliProfile` is the interface: one method, `build_argv`, returns the argument list that runs one prompt to completion on a synchronous CLI, with an optional model. Three reference profiles ship: Claude Code (`claude -p <prompt> --model <m>`), Codex in one-shot mode (`codex exec --model <m> <prompt>`), and the Cursor agent. `resolve_sync_cli_profile` returns the profile for a runtime name or `None` for an unknown one, and `sync_cli_runtimes` lists the known names. The doctor runs four checks, each a real probe command: `git --version`, `node --version`, `orca status --json`, and `bd --version`. The Orca probe is `status --json` on purpose. `orca --version` does not exist: it printed a usage banner and exited 0 on one host and launched the application on a Linux host, so it passed while proving nothing. The report lists present and missing tools with the probe that decided each.

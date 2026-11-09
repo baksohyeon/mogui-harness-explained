@@ -2,6 +2,9 @@
 
 **In one breath.** At every session start a hook prints a small block: the role state, the active tracks from the issue tracker, a pointer to the charter, and whether another master is running. It never fails the boot, and after a compaction it holds the role and the tracks back so recall can be measured first.
 
+<p align="center"><img src="../../assets/where/17-where.svg" alt="where unit 17 sits on the harness picture: in master lifecycle, compact and succeed" width="480"></p>
+
+
 **When it runs.** In the master lifecycle, at every session start, including the start that follows a compaction. Two smaller hooks run beside it: one injects the role state and the execution rule on every prompt, one warns when the issue tracker does not resolve from the workspace root.
 
 **Mechanism.** `master-bootstrap` is the static loader. It reads the charter and the handoff into a budget of 24,000 characters and marks what it cut with `[TRUNCATED:...]`. It parses the role state and runs a non-owning check for a second master process. `master-bootstrap-live` is the hook entry point around it. It emits a block headed `[MASTER-BOOTSTRAP v1]` with sections for role state, active tracks, and the charter pointer, then a `[BD-PRIME-AUDIT]` line about the tracker's memory block, a `[DUAL-INSTANCE]` line, and alerts. Every problem becomes an `[AUDIT-ALERT]` or `[BUDGET-ALERT]` line inside the block; the block itself is capped at 1,000 characters, tracks truncated first. When the session source is `compact`, the role-state and active-tracks sections are replaced by one `[E12]` line that says they were suppressed for the recall probe. A banner then tells the master to read the canonical role-state file before any tool action. Any internal error is reduced to a `[BOOTSTRAP-FALLBACK]` line, and the exit code is always 0.
