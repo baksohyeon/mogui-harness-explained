@@ -6,7 +6,6 @@ import sys
 from pathlib import Path
 from copy import deepcopy
 
-# Unit metadata: number -> (unit_name, place_in_words)
 UNITS = {
     '01': ('Unit 01', 'P6, after verifying and merging'),
     '02': ('Unit 02', 'P2, at contract and token'),
@@ -37,7 +36,6 @@ UNITS = {
     '27': ('Unit 27', 'P5, opening a pull request'),
 }
 
-# Circle to path mapping (which path ID each unit's circle is on)
 CIRCLE_PATH_MAP = {
     '01': 'P6', '02': 'P2', '03': 'P3', '04': 'P7', '05': 'P7',
     '06': 'P3', '07': 'P4', '08': 'P6', '09': 'P1', '10': 'P2',
@@ -50,98 +48,109 @@ CIRCLE_PATH_MAP = {
 DIM_GREY = '#cbd5e0'
 
 def parse_svg(path):
-    """Parse SVG and register namespace."""
     tree = ET.parse(path)
     return tree
 
 def create_inset(tree, unit_num):
-    """Create a where inset for the given unit number."""
     root = deepcopy(tree.getroot())
-
-    # Define namespace
     ns = {'svg': 'http://www.w3.org/2000/svg'}
     ET.register_namespace('', 'http://www.w3.org/2000/svg')
 
-    # Find circle and its color
     circle_id = f'check-{unit_num}'
     circle_elem = root.find(f".//svg:circle[@id='{circle_id}']", ns)
     if circle_elem is None:
         raise ValueError(f"Circle {circle_id} not found")
 
     circle_color = circle_elem.get('fill')
-
-    # Find the path this circle is on
     target_path_id = CIRCLE_PATH_MAP.get(unit_num, '')
 
-    # Remove text elements - only: title, legend, and other disc numbers
+    # Remove only: title, legend, cue texts, color-key labels, and other disc numbers
     elements_to_remove = []
+    color_key_labels = ['before dispatch', 'during', 'after, accept', 'master lifecycle', 'install']
+
     for text in root.findall('.//svg:text', ns):
         class_attr = text.get('class')
-        # Get all text content including from tspan children
         text_content = ''.join(text.itertext())
 
-        # Remove only these three kinds:
-        # 1. The main title
+        # Remove: title
         if 'the mogui harness in one picture' in text_content:
             elements_to_remove.append(text)
-        # 2. The legend text
+        # Remove: legend
         elif 'numbers are unit ids' in text_content:
             elements_to_remove.append(text)
-        # 3. Cue texts (hidden legend items)
+        # Remove: cue texts
         elif class_attr == 'cue':
             elements_to_remove.append(text)
-        # 4. Disc numbers of OTHER units (keep this unit's number, keep path/box labels)
-        elif text_content.strip() in [str(i).zfill(2) for i in range(1, 28)]:
-            # This is a 2-digit unit number - remove if not our unit
-            if text_content.strip() != unit_num:
+        # Remove: color-key labels (but not template box label)
+        elif text_content.strip() in color_key_labels:
+            elements_to_remove.append(text)
+        # Remove: disc numbers of OTHER units (zero-padded match)
+        elif text_content.strip().zfill(2) in [f'{i:02d}' for i in range(1, 28)]:
+            if text_content.strip().zfill(2) != unit_num:
                 elements_to_remove.append(text)
 
     for elem in elements_to_remove:
         root.remove(elem)
 
-    # Keep all paths and rects, but color them grey
+    # Color paths and rects
     for path in root.findall('.//svg:path', ns):
         path_id = path.get('id', '')
-        # Color the target path in the circle color, others in dim grey
         if path_id == target_path_id:
             path.set('stroke', circle_color)
+            # Use custom marker for highlighted path
+            path.set('marker-end', f'url(#highlight-arrow-{unit_num})')
         else:
             path.set('stroke', DIM_GREY)
 
     for rect in root.findall('.//svg:rect', ns):
-        # Keep white fill for boxes, but grey stroke
         rect.set('stroke', DIM_GREY)
 
     # Remove all circles except target
-    circles_to_remove = []
     for circle in root.findall('.//svg:circle', ns):
         if circle.get('id') != circle_id:
-            circles_to_remove.append(circle)
+            root.remove(circle)
 
-    for circle in circles_to_remove:
-        root.remove(circle)
-
-    # Enlarge and enhance the target circle
+    # Enhance target circle
     circle_elem.set('r', '26')
     circle_elem.set('stroke-width', '2')
     circle_elem.set('stroke', circle_color)
     circle_elem.set('fill-opacity', '0.95')
+    circle_elem.set('filter', f'url(#glow-{unit_num})')
 
-    # Add glow filter
+    # Update marker fill to dim grey
     defs = root.find('./svg:defs', ns)
+    if defs is not None:
+        for marker in defs.findall('./svg:marker', ns):
+            for path_elem in marker.findall('./svg:path', ns):
+                path_elem.set('fill', DIM_GREY)
+
+    # Create defs if needed
     if defs is None:
         defs = ET.Element('{http://www.w3.org/2000/svg}defs')
         root.insert(0, defs)
 
-    # Remove old glow filters
-    for filt in defs.findall('./svg:filter', ns):
+    # Remove old filters
+    for filt in list(defs.findall('./svg:filter', ns)):
         if 'glow' in filt.get('id', ''):
             defs.remove(filt)
 
-    # Create glow filter
-    filter_id = f'glow-unit-{unit_num}'
+    # Add highlight arrow marker
+    marker = ET.Element('{http://www.w3.org/2000/svg}marker')
+    marker.set('id', f'highlight-arrow-{unit_num}')
+    marker.set('markerWidth', '10')
+    marker.set('markerHeight', '10')
+    marker.set('refX', '8')
+    marker.set('refY', '5')
+    marker.set('orient', 'auto')
+    arrow_path = ET.Element('{http://www.w3.org/2000/svg}path')
+    arrow_path.set('d', 'M0,0 L10,5 L0,10 z')
+    arrow_path.set('fill', circle_color)
+    marker.append(arrow_path)
+    defs.append(marker)
+
+    # Create glow filter with crisp disc
     glow_filter = ET.Element('{http://www.w3.org/2000/svg}filter')
-    glow_filter.set('id', filter_id)
+    glow_filter.set('id', f'glow-{unit_num}')
     glow_filter.set('x', '-50%')
     glow_filter.set('y', '-50%')
     glow_filter.set('width', '200%')
@@ -153,10 +162,17 @@ def create_inset(tree, unit_num):
     blur.set('result', 'coloredBlur')
     glow_filter.append(blur)
 
+    fmerge = ET.Element('{http://www.w3.org/2000/svg}feMerge')
+    node1 = ET.Element('{http://www.w3.org/2000/svg}feMergeNode')
+    node1.set('in', 'coloredBlur')
+    node2 = ET.Element('{http://www.w3.org/2000/svg}feMergeNode')
+    node2.set('in', 'SourceGraphic')
+    fmerge.append(node1)
+    fmerge.append(node2)
+    glow_filter.append(fmerge)
     defs.append(glow_filter)
-    circle_elem.set('filter', f'url(#{filter_id})')
 
-    # Add title element
+    # Add title
     title = ET.Element('{http://www.w3.org/2000/svg}title')
     unit_name, place = UNITS[unit_num]
     title.text = f'{unit_name}: {place}'
@@ -172,10 +188,7 @@ def main():
         print(f'Error: {svg_path} not found', file=sys.stderr)
         sys.exit(1)
 
-    # Create output directory if needed
     output_dir.mkdir(parents=True, exist_ok=True)
-
-    # Parse once
     tree = parse_svg(svg_path)
 
     for unit_num in range(1, 28):

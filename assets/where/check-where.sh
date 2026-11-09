@@ -4,9 +4,8 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT=$(cd "$SCRIPT_DIR/../.." && pwd)
 
-# Regenerate the files in a temp location
 TEMP_DIR=$(mktemp -d)
-trap "rm -rf $TEMP_DIR" EXIT
+trap 'rm -rf "$TEMP_DIR"' EXIT
 
 python3 "$SCRIPT_DIR/make-where.py" "$TEMP_DIR" > /dev/null 2>&1
 
@@ -33,7 +32,7 @@ for i in $(seq -w 1 27); do
     fi
 
     ref_pattern="$i-where\.svg"
-    count=$(grep -c "$ref_pattern" "$readme_file" 2>/dev/null || echo 0)
+    count=$(grep -o "$ref_pattern" "$readme_file" | wc -l)
     if [ "$count" -ne 1 ]; then
         echo "Error: Unit $i page references $ref_pattern $count times (expected 1)"
         exit 1

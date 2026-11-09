@@ -2,7 +2,7 @@
 
 **In one breath.** With the owner's approval and a budget, the master carries several tracker items from ready to done in one stretch, one dispatch per round, without being prompted each time. A progress file records every round, and one script reads that file and says continue or stop, with the reason, against six stop conditions.
 
-<p align="center"><img src="../../assets/where/25-where.svg" alt="where unit 25 sits on the harness picture: on the render and upgrade path, after acceptance" width="480"></p>
+<p align="center"><img src="../../assets/where/25-where.svg" alt="where unit 25 sits on the harness picture: During a run the owner has approved by name, between rounds" width="480"></p>
 
 
 **When it runs.** During a run the owner has approved by name, between rounds. The loop is a procedure inside the master's own session, with no new agent and no background process. Every round still goes through the contract, the dispatch, and the verification of [one dispatch](../../walkthroughs/01-one-dispatch.md).

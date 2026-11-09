@@ -2,7 +2,7 @@
 
 **In one breath.** The session card says who it is for, keeps its two files identical, and lets a seat add local rules in a separate file.
 
-<p align="center"><img src="../../assets/where/14-where.svg" alt="where unit 14 sits on the harness picture: on the render and upgrade path, after acceptance" width="480"></p>
+<p align="center"><img src="../../assets/where/14-where.svg" alt="where unit 14 sits on the harness picture: In the master lifecycle, at every session start that reads the card" width="480"></p>
 
 
 **When it runs.** In the master lifecycle, at every session start that reads the card.
