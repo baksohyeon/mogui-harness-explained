@@ -73,31 +73,28 @@ def create_inset(tree, unit_num):
     # Find the path this circle is on
     target_path_id = CIRCLE_PATH_MAP.get(unit_num, '')
 
-    # Remove text elements (title, legend, labels)
+    # Remove text elements - only: title, legend, and other disc numbers
     elements_to_remove = []
     for text in root.findall('.//svg:text', ns):
         class_attr = text.get('class')
         # Get all text content including from tspan children
         text_content = ''.join(text.itertext())
 
-        # Remove title and legend
-        if 'mogui harness' in text_content:
+        # Remove only these three kinds:
+        # 1. The main title
+        if 'the mogui harness in one picture' in text_content:
             elements_to_remove.append(text)
+        # 2. The legend text
         elif 'numbers are unit ids' in text_content:
-            # Remove the legend explanation text
             elements_to_remove.append(text)
+        # 3. Cue texts (hidden legend items)
         elif class_attr == 'cue':
             elements_to_remove.append(text)
-        elif text_content.strip() in [str(i) for i in range(1, 28)]:
-            # Remove unit numbers that aren't this unit
+        # 4. Disc numbers of OTHER units (keep this unit's number, keep path/box labels)
+        elif text_content.strip() in [str(i).zfill(2) for i in range(1, 28)]:
+            # This is a 2-digit unit number - remove if not our unit
             if text_content.strip() != unit_num:
                 elements_to_remove.append(text)
-        elif any(p in text_content for p in ['P1 ', 'P2 ', 'P3 ', 'P4 ', 'P5 ', 'P6 ', 'P7 ', 'P8 ', 'P9 ', 'P10 ']):
-            # Remove path labels
-            elements_to_remove.append(text)
-        elif any(box in text_content for box in ['you', 'master', 'worker', 'mailbox', 'repo', 'tracker', 'request', 'template']):
-            # Remove box labels
-            elements_to_remove.append(text)
 
     for elem in elements_to_remove:
         root.remove(elem)
