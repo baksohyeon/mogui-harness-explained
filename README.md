@@ -18,6 +18,14 @@ https://github.com/user-attachments/assets/f49342a3-4b04-4bb9-9e35-403e9c8b666a
 
 https://github.com/user-attachments/assets/657a1571-be9a-456d-a866-97d1bc85da1a
 
+**Watch the workspace, second edition, 177 seconds.** The workspace, drawn as an animation: six scenes, 177 seconds, English narration, English captions burned in (and `harness-workspace.srt` beside the file). Same concept view; the [release page](https://github.com/baksohyeon/mogui-harness-explained/releases/tag/film-workspace-v2) has the file and the credits.
+
+<p align="center"><a href="https://github.com/baksohyeon/mogui-harness-explained/releases/tag/film-workspace-v2"><img src="assets/workspace-poster.jpg" alt="a frame of the workspace film: an operations repository sends a checked contract through a dispatch wrapper to a worker with a verified copy and read token" width="100%"></a></p>
+
+**Watch how the system remembers, second edition, 177 seconds.** How the system remembers, drawn as an animation: six scenes, 177 seconds, English narration, English captions burned in (and `harness-memory.srt` beside the file). Same concept view; the [release page](https://github.com/baksohyeon/mogui-harness-explained/releases/tag/film-memory-v2) has the file and the credits.
+
+<p align="center"><a href="https://github.com/baksohyeon/mogui-harness-explained/releases/tag/film-memory-v2"><img src="assets/memory-poster.jpg" alt="a frame of the memory film: an issue tracker moves a work card through contracted, dispatched, verifying, and closed states while a measured result closes" width="100%"></a></p>
+
 To run what the film shows, install Orca, `git`, `gh`, `python3`, Beads (`bd`), a master CLI such as `claude`, and a worker CLI (`codex` or `cursor-agent`); Getting Started lists the remaining checks. Then clone [mogui-ADE-orchestrator](https://github.com/baksohyeon/mogui-ADE-orchestrator), open it in Orca, and say "Wake the master." The repository's own [quickstart](https://github.com/baksohyeon/mogui-ADE-orchestrator/tree/v0.5.294#quickstart) and [Getting Started](https://github.com/baksohyeon/mogui-ADE-orchestrator/blob/v0.5.294/docs/public/getting-started.md) take it from there. These pages explain what each part of the film does and where its tested code lives, at release [v0.5.294](https://github.com/baksohyeon/mogui-ADE-orchestrator/releases/tag/v0.5.294).
 
 ## What you are looking at
